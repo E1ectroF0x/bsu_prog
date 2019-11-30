@@ -1,0 +1,80 @@
+
+.select-box {
+    position: relative;
+    display: block;
+    width: 330px;
+    height: 28px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    color: #60666d;
+}
+.select-box__current {
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid #1B386D;
+}
+.select-box__current:focus + .select-box__list {
+    opacity: 1;
+    animation-name: none;
+}
+.select-box__current:focus + .select-box__list .select-box__option {
+    cursor: pointer;
+}
+.select-box__icon {
+    position: absolute;
+    top: 45%;
+    right: 15px;
+    width: 20px;
+    opacity: 1;
+}
+.select-box__value {
+    width: 100%;
+    display: flex;
+    color: #222937;
+}
+.select-box__input {
+    display: none;
+}
+.select-box__input:checked + .select-box__input-text {
+    display: block;
+}
+.select-box__input-text {
+    display: none;
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+    background-color: #fff;
+}
+.select-box__list {
+    position: absolute;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    opacity: 0;
+    animation-name: HideList;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: step-start;
+    box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.3);
+}
+.select-box__option {
+    display: block;
+    padding: 5px;
+    background-color: #fff;
+    color: #222937;
+}
+.select-box__option:hover, .select-box__option:focus {
+    color: #FFE6C9;
+    background-color: #1B386D;
+}
+
+@keyframes HideList {
+    from {
+        transform: scaleY(1);
+    }
+    to {
+        transform: scaleY(0);
+    }
+}

@@ -1,0 +1,8 @@
+.left-nav .option:nth-child(5){
+    background-color: #425F90;
+}
+.left-nav .option:nth-child(5) *{
+    fill: #FFE6C9;
+    color: #FFE6C9;
+}
+

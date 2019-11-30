@@ -1,0 +1,113 @@
+.left-nav .option:nth-child(6){
+    background-color: #425F90;
+}
+.left-nav .option:nth-child(6) *{
+    fill: #FFE6C9;
+    color: #FFE6C9;
+}
+
+.blue-btn{
+    width: 224px;
+    height: 34px;
+    margin-left: 16px;
+    background-color: #1B386D;
+    border: 1px solid #1B386D;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+.white-btn{
+    width: 224px;
+    height: 34px;
+    margin-left: 16px;
+    background-color: #FFFFFF;
+    border: 1px solid #1B386D;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: #1B386D;
+}
+.left-btns-block input{
+    width: 130px;
+}
+.global-controller-event{
+    display: flex;
+    margin-top: 26px;
+}
+.right-btns-block{
+    position: absolute;
+    right: 20px;
+}
+
+.option-wrapper{
+    display: block;
+}
+.event-list{
+    margin-top: 36px;
+}
+
+.event-block{
+    display: flex;
+    width: 100%;
+}
+.event-info-block{
+    display: flex;
+    margin-top: 22px;
+    margin-left: 30px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 24px rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+    width: calc(100% - 60px);
+    height: 199px;
+}
+.event-info-block img{
+    width: 291px;
+    height: 199px;
+}
+.event-info-block .info-block{
+    width: calc(100% - 291px - 438px - 30px);
+    margin-left: 30px;
+}
+.event-info-block .btns-block{
+    width: 438px;
+    position: relative;
+    float: right;
+}
+.event-info-block .btns-block .btns{
+    margin-top: 143px;
+    display: flex;
+}
+.event-info-block .btns-block .btns input{
+    width: 192px;
+    height: 34px;
+}
+.event-info-block .btns-block .btns .blue-btn{
+    margin-left: 12px;
+    margin-right: 22px;
+}
+.event-info-block .info-block .event-label{
+    color: #1B386D;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 26px;
+}
+.event-info-block .info-block .info{
+    color: #5B5B5B;
+    font-size: 14px;
+    margin-top: 16px;
+}
+.event-info-block .info-block .guests-amount{
+    color: #5B5B5B;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 16px;
+}
+.bottom-data .unlock-btn{
+    margin-top: 145px;
+    margin-right: 20px;
+    float: right;
+}
+.checkbox-label{
+    margin-top: 100px;
+}
