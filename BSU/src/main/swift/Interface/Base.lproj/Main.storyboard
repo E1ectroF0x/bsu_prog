@@ -31,11 +31,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="4go-oP-fch"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem systemItem="reply" id="Eah-Zw-HYi"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Личный кабинет" id="85Z-ci-HXc">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="magnifyingglass" catalog="system" id="tAq-cd-t04">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cvd-40-TxK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
