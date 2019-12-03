@@ -16,20 +16,15 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.white
-        
         self.backButton.tintColor = .white
         self.navigationItem.leftBarButtonItem = backButton
         
         self.tableView.register(SettingsTableViewCell.self, forCellReuseIdentifier: "SettingsCell")
+    
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
-        self.navigationController!.navigationBar.barTintColor = UIColor(red: 20.0 / 255.0, green: 78.0 / 255.0, blue: 157.0 / 255.0, alpha: 1.0)
-        self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
-        
-        self.navigationItem.title = "Настройки"
-        
+       
         view.addSubview(tableView)
         
         updateLayout(with: self.view.frame.size)

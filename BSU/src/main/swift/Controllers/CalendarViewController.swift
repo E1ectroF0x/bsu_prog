@@ -25,11 +25,11 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        currentMonth = Months[month]
-        moyeLabel.text = "\(currentMonth) \(year)"
-        
-        calendarView.delegate = self
-        calendarView.dataSource = self
+//        currentMonth = Months[month]
+//        moyeLabel.text = "\(currentMonth) \(year)"
+//        
+//        calendarView.delegate = self
+//        calendarView.dataSource = self
         
     }
     
