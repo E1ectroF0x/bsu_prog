@@ -22,7 +22,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Личный кабинет"
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor.clear
         
         setUserImage(sender: userImage)
         setUserFIO(sender: userFIO)

@@ -18,6 +18,8 @@
 		A671B8E32382F15F006A6766 /* CalendarDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A671B8E22382F15F006A6766 /* CalendarDataModel.swift */; };
 		A6F03A95238D5118000FDB40 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F03A94238D5118000FDB40 /* ProfileViewController.swift */; };
 		A6F03A99238E5331000FDB40 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F03A98238E5331000FDB40 /* Constants.swift */; };
+		D856CBED2396B7F80055FD1B /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856CBEC2396B7F80055FD1B /* SettingsTableViewCell.swift */; };
+		D85E974E2395880800FFA40F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85E974D2395880800FFA40F /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		A671B8E22382F15F006A6766 /* CalendarDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDataModel.swift; sourceTree = "<group>"; };
 		A6F03A94238D5118000FDB40 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A6F03A98238E5331000FDB40 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D856CBEC2396B7F80055FD1B /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsTableViewCell.swift; path = ../../../../../SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		D85E974D2395880800FFA40F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				A671B8DE2382E414006A6766 /* CalendarViewController.swift */,
+				D856CBEC2396B7F80055FD1B /* SettingsTableViewCell.swift */,
+				D85E974D2395880800FFA40F /* SettingsViewController.swift */,
 				A671B8E22382F15F006A6766 /* CalendarDataModel.swift */,
 				A671B8E02382F040006A6766 /* DateCollectionViewCell.swift */,
 				A6F03A94238D5118000FDB40 /* ProfileViewController.swift */,
@@ -217,6 +223,8 @@
 				A661E7C5238D474E00464A51 /* UILineView.swift in Sources */,
 				A6627A90237AD86100AA0CC7 /* SceneDelegate.swift in Sources */,
 				A6F03A99238E5331000FDB40 /* Constants.swift in Sources */,
+				D856CBED2396B7F80055FD1B /* SettingsTableViewCell.swift in Sources */,
+				D85E974E2395880800FFA40F /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

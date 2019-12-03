@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "iconmonstr-user-2-24.png",
+      "filename" : "iconmonstr-door-4-24.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "iconmonstr-user-2-48.png",
+      "filename" : "iconmonstr-door-4-48.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "iconmonstr-user-2-72.png",
+      "filename" : "iconmonstr-door-4-72.png",
       "scale" : "3x"
     }
   ],

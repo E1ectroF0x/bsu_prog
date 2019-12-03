@@ -19,5 +19,14 @@ struct Constants {
     static let SEGMENT_SET_ITEMS = [UIImage(named: "education"),
                                     UIImage(named: "money"),
                                     UIImage(named: "star")]
-    }
+    
+    static let SETTINGS_NAME_CELL = ["Уведомления", "Приватность", "Аккаунт",
+                                     "Язык", "О приложении", "Выйти"]
+    
+    static let SETTINGS_ICONS_NAME_CELL = ["bell", "key", "user",
+                                           "globe", "info", "exit"]
+}
+
+
+
 
