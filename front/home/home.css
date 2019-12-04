@@ -32,6 +32,17 @@ body {
     height: 50px;
     width: 418px;
 }
+.selected {
+    background-color: #0A3470;
+}
+
+.selected svg {
+    fill: #CECECE;
+}
+
+.selected span {
+    color: #ffffff;
+}
 
 .option svg {
     margin-left: 20px;
@@ -62,8 +73,17 @@ body {
 }
 
 .select-wrapper {
-    margin-left: 20px;
+    display: flex;
+    margin-left: 15px;
     margin-top: 15px;
+}
+
+.wrap {
+    margin-left: 25px;
+}
+
+.semestr {
+    margin-left: 0;
 }
 
 .select-box {
@@ -75,11 +95,81 @@ body {
     font-size: 14px;
     color: #60666d;
 }
+
+#semestr {
+    width: 73px;
+}
+#speciality {
+    width: 285px;
+}
+#department {
+    width: 299px;
+}
+#group {
+    width: 97px;
+}
+#subject {
+    width: 203px;
+}
+#teacher {
+    width: 237px;
+}
+#auditory {
+    width: 103px;
+}
+
+.btn {
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #0A3470;
+    font-size: 16px;
+    font-weight: bold;
+    color: #0A3470;
+    margin-top: 20px;
+
+    box-shadow: 0 3px 6px #0A3470;
+}
+
+.subgroup {
+    margin-top: 20px;
+}
+
+.date {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.select-date {
+    width: 112px;
+    border-style: solid;
+    border-color: #0A3470;
+    border-width: 1px;
+    box-shadow: 0 3px 6px #0A3470;
+}
+
+.select-subgroup {
+    width: 57px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #0A3470;
+    box-shadow: 0 3px 6px #0A3470;
+}
+
+.selector-label {
+    font-weight: bold;
+    font-size: 16px;
+    color: #0A3470;
+}
+
 .select-box_current {
     position: relative;
     cursor: pointer;
     outline: none;
     border: 1px solid rgb(10, 52, 112);
+    margin-top: 7px;
+    box-shadow: 0 3px 6px #0A3470;
 }
 .select-box_current:focus + .select-box_list {
     opacity: 1;
@@ -91,14 +181,14 @@ body {
 .select-box_icon {
     position: absolute;
     top: 45%;
-    right: 15px;
+    right: 10px;
     width: 20px;
     opacity: 1;
 }
 .select-box_value {
     width: 100%;
-    display: flex;
     color: #222937;
+    display: flex;
 }
 .select-box_input {
     display: none;
@@ -133,11 +223,13 @@ body {
     display: block;
     padding: 5px;
     background-color: #fff;
-    color: #222937;
+    color: rgb(10, 52, 112);
+    font-size: 16px;
+    font-weight: bold;
 }
 .select-box_option:hover, .select-box_option:focus {
-    color: #FFE6C9;
-    background-color: #1B386D;
+    color: #fff;
+    background-color: rgb(10, 52, 112);
 }
 
 @keyframes HideList {
