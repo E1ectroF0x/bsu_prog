@@ -18,8 +18,8 @@
 		A6F03A95238D5118000FDB40 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F03A94238D5118000FDB40 /* ProfileViewController.swift */; };
 		A6F03A99238E5331000FDB40 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F03A98238E5331000FDB40 /* Constants.swift */; };
 		D856CBED2396B7F80055FD1B /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856CBEC2396B7F80055FD1B /* SettingsTableViewCell.swift */; };
-		D856CBEF2396D8B70055FD1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D856CBEE2396D8B70055FD1B /* Assets.xcassets */; };
 		D85E974E2395880800FFA40F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85E974D2395880800FFA40F /* SettingsViewController.swift */; };
+		D8B6724723982B6E00EF5917 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8B6724623982B6D00EF5917 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,9 +35,9 @@
 		A671B8E22382F15F006A6766 /* CalendarDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDataModel.swift; sourceTree = "<group>"; };
 		A6F03A94238D5118000FDB40 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A6F03A98238E5331000FDB40 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		D856CBEC2396B7F80055FD1B /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsTableViewCell.swift; path = ../../../../../SettingsTableViewCell.swift; sourceTree = "<group>"; };
-		D856CBEE2396D8B70055FD1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../../../Downloads/bsu_prog-ios-dev/BSU/src/main/resources/Assets.xcassets"; sourceTree = "<group>"; };
+		D856CBEC2396B7F80055FD1B /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsTableViewCell.swift; path = "New Group/SettingsTableViewCell.swift"; sourceTree = "<group>"; };
 		D85E974D2395880800FFA40F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D8B6724623982B6D00EF5917 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				A671B8DE2382E414006A6766 /* CalendarViewController.swift */,
-				D856CBEC2396B7F80055FD1B /* SettingsTableViewCell.swift */,
 				D85E974D2395880800FFA40F /* SettingsViewController.swift */,
+				D856CBEC2396B7F80055FD1B /* SettingsTableViewCell.swift */,
 				A671B8E22382F15F006A6766 /* CalendarDataModel.swift */,
 				A671B8E02382F040006A6766 /* DateCollectionViewCell.swift */,
 				A6F03A94238D5118000FDB40 /* ProfileViewController.swift */,
@@ -129,7 +129,7 @@
 		A6627AA6237AD98F00AA0CC7 /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				D856CBEE2396D8B70055FD1B /* Assets.xcassets */,
+				D8B6724623982B6D00EF5917 /* Assets.xcassets */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -203,7 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6627A9A237AD86300AA0CC7 /* LaunchScreen.storyboard in Resources */,
-				D856CBEF2396D8B70055FD1B /* Assets.xcassets in Resources */,
+				D8B6724723982B6E00EF5917 /* Assets.xcassets in Resources */,
 				A6627A95237AD86100AA0CC7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

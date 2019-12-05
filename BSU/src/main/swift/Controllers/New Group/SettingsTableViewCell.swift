@@ -10,15 +10,21 @@ import UIKit
 
 class SettingsTableViewCell: UITableViewCell {
     
+    var button = UIButton()
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+       // self.button.addTarget(self, action: #selector(presentVC(sender:)), for: .touchUpInside)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
-        // Configure the view for the selected state
+        
     }
+    
+    
     
 }

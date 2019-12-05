@@ -27,12 +27,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let settingsVC = SettingsViewController()
         settingsVC.title = "Настройки"
-        settingsVC.view.backgroundColor = UIColor.white
+        settingsVC.view.backgroundColor = .white
         
         //нужно будет делать для выбранных изображений
         profileVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "user"), tag: 0)
         calendarVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "calendar"), tag: 1)
-        settingsVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "gear"), tag: 2)
+        settingsVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "gear"), selectedImage: UIImage(named: "fill_gear"))
+        //settingsVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "gear"), tag: 2)
         
         let controllers = [profileVC, calendarVC, settingsVC]
         tabBarController.viewControllers = controllers
@@ -42,7 +43,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         customNavigationController(with: controllers)
         
         tabBarController.tabBar.barTintColor = UIColor(red: 20.0 / 255.0, green: 78.0 / 255.0, blue: 157.0 / 255.0, alpha: 1.0)
-        tabBarController.tabBar.tintColor = .black
+        tabBarController.tabBar.tintColor = .white
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
