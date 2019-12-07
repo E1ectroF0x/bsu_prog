@@ -167,17 +167,13 @@ body {
     position: relative;
     cursor: pointer;
     outline: none;
-    border: 1px solid rgb(10, 52, 112);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(10, 52, 112);
     margin-top: 7px;
     box-shadow: 0 3px 6px #0A3470;
 }
-.select-box_current:focus + .select-box_list {
-    opacity: 1;
-    animation-name: none;
-}
-.select-box_current:focus + .select-box_list .select-box_option {
-    cursor: pointer;
-}
+
 .select-box_icon {
     position: absolute;
     top: 45%;
@@ -185,17 +181,13 @@ body {
     width: 20px;
     opacity: 1;
 }
+
 .select-box_value {
     width: 100%;
     color: #222937;
     display: flex;
 }
-.select-box_input {
-    display: none;
-}
-.select-box_input:checked + .select-box_input-text {
-    display: block;
-}
+
 .select-box_input-text {
     font-weight: bold;
     font-size: 18px;
@@ -207,6 +199,9 @@ body {
     background-color: #fff;
 }
 .select-box_list {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #0A3470;
     position: absolute;
     width: 100%;
     padding: 0;
@@ -227,6 +222,21 @@ body {
     font-size: 16px;
     font-weight: bold;
 }
+
+
+.select-box_current:focus + .select-box_list {
+    opacity: 1;
+    animation-name: none;
+}
+.select-box_current:focus + .select-box_list .select-box_option {
+    cursor: pointer;
+}
+.select-box_input {
+    display: none;
+}
+.select-box_input:checked + .select-box_input-text {
+    display: block;
+}
 .select-box_option:hover, .select-box_option:focus {
     color: #fff;
     background-color: rgb(10, 52, 112);
@@ -239,4 +249,47 @@ body {
     to {
         transform: scaleY(0);
     }
+}
+
+.timetable-wrapper {
+    margin-top: 85px;
+}
+
+.timetable-table {
+    margin-left: 30px;
+    color: #0A3470;
+    font-size: 26px;
+    font-weight: normal;
+    border-collapse: collapse;
+    border-style: solid;
+    border-color: #0A3470;
+    border-width: 2px;
+}
+
+.timetable-table thead {
+    border-bottom: 2px solid #000;
+}
+.timetable-table tbody th {
+    border-right: 2px solid #000;
+}
+.timetable-table .empty {
+    border-right: 2px solid #000;
+    height: 51px;
+}
+
+.timetable-header {
+    width: 223px;
+    height: 51px;
+    border: 1px solid #707070;
+}
+
+.timetable-body-header {
+    width: 84px;
+    height: 228px;
+    border: 1px solid #707070;
+}
+
+.timetable-table td {
+    border: 1px solid #707070;
+    overflow: auto;
 }
