@@ -6,15 +6,29 @@
 
 .options-input {
     width: 200px;
+    margin-top: 20px;
 }
 
 .options-input input {
     margin-top: 10px;
     height: 30px;
+    border: 1px solid #0A3470;
+    box-shadow: 0 3px 6px #0A3470;
+}
+
+::placeholder {
+    padding-left: 10px;
+    color: rgba(10, 52, 112, .53);
+    font-weight: bold;
+}
+
+.options-input label {
+    font-weight: bold;
+    color: #0A3470;
 }
 
 .add-btn {
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 .add-btn button {
