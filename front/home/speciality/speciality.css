@@ -1,0 +1,99 @@
+.options-wrapper {
+    margin-left: 80px;
+    margin-top: 5px;
+    display: flex;
+}
+
+.options-input {
+    width: 200px;
+}
+
+.options-input input {
+    margin-top: 10px;
+    height: 30px;
+}
+
+.add-btn {
+    margin-top: 10px;
+}
+
+.add-btn button {
+    width: 240px;
+    height: 30px;
+}
+
+.selected-btn {
+    background-color: #0A3470;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #0A3470;
+    font-size: 16px;
+    font-weight: bold;
+    color: #CECECE;
+    margin-top: 20px;
+    box-shadow: 0 3px 6px #0A3470;
+}
+
+.speciality-header {
+    width: 63px;
+}
+
+.speciality-header-large {
+    height: 40px;
+}
+
+.speciality-body-header {
+    width: 193px;
+    height: 52px;
+    border: 1px solid #707070;
+}
+
+.speciality-table {
+    color: #0A3470;
+}
+
+.speciality-table {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.table-data {
+    text-align: center;
+    border: 1px solid #707070;
+}
+
+.br-strong {
+    border-right: 2px solid #000000;
+}
+
+.speciality-table {
+    margin-left: 80px;
+    margin-top: 80px;
+    border-collapse: collapse;
+}
+
+.empty {
+    border: none;
+}
+
+.del-btn {
+    color: #CECECE;
+    background-color: rgba(249, 0, 0, .62);
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    height: 26px;
+    box-shadow: 0 3px 6px #0A3470;
+    cursor: pointer;
+}
+
+.change-btn {
+    color: #CECECE;
+    background-color: rgba(10, 52, 112, .57);
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    height: 26px;
+    box-shadow: 0 3px 6px #0A3470;
+    cursor: pointer;
+}
