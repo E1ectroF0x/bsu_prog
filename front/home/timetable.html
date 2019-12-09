@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Admin panel</title>
-    <link rel="stylesheet" type="text/css" href="home.css">
+    <link rel="stylesheet" type="text/css" href="timetable.css">
 </head>
 <body>
     <div class="page-wrapper">
@@ -57,6 +57,9 @@
         <div class="side-wrapper">
             <nav class="nav-top">
                 <div class="page-label">Расписание</div>
+                <div class="btn-exit">
+                    <button>Выйти</button>
+                </div>
             </nav>
             <div class="content-wrapper">
                 <div class="select-wrapper">
@@ -65,7 +68,7 @@
                         <div class="select-box" id="semestr">
                             <div class="select-box_current" tabindex="1">
                                 <div class="select-box_value">
-                                    <input class="select-box_input" type="radio" id="sem1" value="sem1" name="category" checked="checked">
+                                    <input class="select-box_input" type="radio" id="semestr_1" value="semestr_1" name="semestr_1" checked="checked">
                                     <p class="select-box_input-text">1</p>
                                 </div>
                                 <svg class="select-box_icon" xmlns="http://www.w3.org/2000/svg" width="12.425" height="8.392" viewBox="0 0 12.425 8.392">
@@ -78,7 +81,7 @@
                             </div>
                             <ul class="select-box_list">
                                 <li>
-                                    <label class="select-box_option" for="sem1">1</label>
+                                    <label class="select-box_option" for="semestr_1">1</label>
                                 </li>
                             </ul>
                         </div>
@@ -88,7 +91,7 @@
                         <div class="select-box" id="speciality">
                             <div class="select-box_current" tabindex="1">
                                 <div class="select-box_value">
-                                    <input class="select-box_input" type="radio" id="spec1" value="sp1" name="category" checked="checked">
+                                    <input class="select-box_input" type="radio" id="speciality_1" value="speciality_1" name="speciality_1" checked="checked">
                                     <p class="select-box_input-text">Физическая электроника</p>
                                 </div>
                                 <svg class="select-box_icon" xmlns="http://www.w3.org/2000/svg" width="12.425" height="8.392" viewBox="0 0 12.425 8.392">
@@ -101,7 +104,7 @@
                             </div>
                             <ul class="select-box_list">
                                 <li>
-                                    <label class="select-box_option" for="spec1">Физическая электроника</label>
+                                    <label class="select-box_option" for="speciality_1">Физическая электроника</label>
                                 </li>
                             </ul>
                         </div>
@@ -109,9 +112,9 @@
                     <div class="wrap department">
                         <label for="department" class="selector-label">Кафедра:</label>
                         <div class="select-box" id="department">
-                            <div class="select-box_current" tabindex="1">
+                            <div class="select-box_current" tabindex="2">
                                 <div class="select-box_value">
-                                    <input class="select-box_input" type="radio" id="depart6" value="depart6" name="category" checked="checked">
+                                    <input class="select-box_input" type="radio" id="department_6" value="department_6" name="department_6" checked="checked">
                                     <p class="select-box_input-text">Телекоммуникаций и информационных технологий</p>
                                 </div>
                                 <svg class="select-box_icon" xmlns="http://www.w3.org/2000/svg" width="12.425" height="8.392" viewBox="0 0 12.425 8.392">
@@ -123,7 +126,7 @@
                             </div>
                             <ul class="select-box_list">
                                 <li>
-                                    <label class="select-box_option" for="depart6">Телекоммуникаций и информационных технологий</label>
+                                    <label class="select-box_option" for="department_6">Телекоммуникаций и информационных технологий</label>
                                 </li>
                             </ul>
                         </div>
@@ -133,7 +136,7 @@
                         <div class="select-box" id="group">
                             <div class="select-box_current" tabindex="1">
                                 <div class="select-box_value">
-                                    <input class="select-box_input" type="radio" id="gr1" value="gr1" name="category" checked="checked">
+                                    <input class="select-box_input" type="radio" id="group_1" value="group_1" name="group_1" checked="checked">
                                     <p class="select-box_input-text">1</p>
                                 </div>
                                 <svg class="select-box_icon" xmlns="http://www.w3.org/2000/svg" width="12.425" height="8.392" viewBox="0 0 12.425 8.392">
@@ -146,7 +149,7 @@
                             </div>
                             <ul class="select-box_list">
                                 <li>
-                                    <label class="select-box_option" for="gr1">1</label>
+                                    <label class="select-box_option" for="group_1">1</label>
                                 </li>
                             </ul>
                             <div class="divide-btn-group">
@@ -159,7 +162,7 @@
                         <div class="select-box" id="subject">
                             <div class="select-box_current" tabindex="1">
                                 <div class="select-box_value">
-                                    <input class="select-box_input" type="radio" id="subj1" value="subj1" name="category" checked="checked">
+                                    <input class="select-box_input" type="radio" id="subject_1" value="subject_1" name="subject_1" checked="checked">
                                     <p class="select-box_input-text">Технологии программирования</p>
                                 </div>
                                 <svg class="select-box_icon" xmlns="http://www.w3.org/2000/svg" width="12.425" height="8.392" viewBox="0 0 12.425 8.392">
@@ -171,7 +174,7 @@
                             </div>
                             <ul class="select-box_list">
                                 <li>
-                                    <label class="select-box_option" for="subj1">Технологии программирования</label>
+                                    <label class="select-box_option" for="subject_1">Технологии программирования</label>
                                 </li>
                             </ul>
                             <div class="subgroup">
@@ -186,7 +189,7 @@
                         <div class="select-box" id="teacher">
                             <div class="select-box_current" tabindex="1">
                                 <div class="select-box_value">
-                                    <input class="select-box_input" type="radio" id="teach1" value="teach1" name="category" checked="checked">
+                                    <input class="select-box_input" type="radio" id="teacher_1" value="teacher_1" name="teacher_1" checked="checked">
                                     <p class="select-box_input-text">Кизим С. А. (пн 9:00 - 10:20)</p>
                                 </div>
                                 <svg class="select-box_icon" xmlns="http://www.w3.org/2000/svg" width="12.425" height="8.392" viewBox="0 0 12.425 8.392">
@@ -198,7 +201,7 @@
                             </div>
                             <ul class="select-box_list">
                                 <li>
-                                    <label class="select-box_option" for="teach1">Кизим С. А. (пн 9:00 - 10:20)</label>
+                                    <label class="select-box_option" for="teacher_1">Кизим С. А. (пн 9:00 - 10:20)</label>
                                 </li>
                             </ul>
                             <div class="date">
@@ -212,7 +215,7 @@
                         <div class="select-box" id="auditory">
                             <div class="select-box_current" tabindex="1">
                                 <div class="select-box_value">
-                                    <input class="select-box_input" type="radio" id="aud1" value="aud1" name="category" checked="checked">
+                                    <input class="select-box_input" type="radio" id="auditory_1" value="auditory_1" name="auditory_1" checked="checked">
                                     <p class="select-box_input-text">100а</p>
                                 </div>
                                 <svg class="select-box_icon" xmlns="http://www.w3.org/2000/svg" width="12.425" height="8.392" viewBox="0 0 12.425 8.392">
@@ -224,7 +227,7 @@
                             </div>
                             <ul class="select-box_list">
                                 <li>
-                                    <label class="select-box_option" for="aud1">100а</label>
+                                    <label class="select-box_option" for="auditory_1">100а</label>
                                 </li>
                             </ul>
                             <button class="btn" type="button">Создать</button>
@@ -247,7 +250,17 @@
                         <tbody>
                             <tr>
                                 <th class="timetable-body-header">9:00</th>
-                                <td id="monday-900"></td>
+                                <td id="monday-900">ыыыыыыыыыыыыыыыыыыыыыы
+                                ыыыыыыыыыыыыыыыыыыыыыыыыы
+                                ыыыыыыыыыыыыыыыыыыыыыыыы
+                                ыыыыыыыыыыыыыыыыыыыыыы
+                                ыыыыыыыыыыыыыыыыыыыыыыы
+                                ыыыыыыыыыыыыыыыыыыыыыыыыыыы
+                                ыыыыыыыыыыыыыыыыыыыыыыыыыыы
+                                ыыыыыыыыыыыыыыыыыыыыыыыыыыы
+                                ыыыыыыыыыыыыыыыыыыыыыыыыыыы
+                                ыыыыыыыыыыыыыыыыыыыыыыыыыыы
+                                ыыыыыыыыыыыыыыыыыыыыыыыыыыы</td>
                                 <td id="tuesday-900"></td>
                                 <td id="wednesday-900"></td>
                                 <td id="thursday-900"></td>

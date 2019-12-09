@@ -61,8 +61,22 @@ body {
     border-width: 1px;
     border-color: rgba(10, 52, 112, .83);
     width: 100%;
-    height: 50px;
+    height: 74px;
     align-items: center;
+    justify-content: space-between;
+}
+
+.btn-exit {
+    margin-right: 54px;
+}
+
+.btn-exit button {
+    background-color: #ffffff;
+    border: none;
+    color: red;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .page-label {
@@ -279,6 +293,7 @@ body {
 
 .timetable-header {
     width: 223px;
+    max-width: 223px;
     height: 51px;
     border: 1px solid #707070;
 }
@@ -290,6 +305,8 @@ body {
 }
 
 .timetable-table td {
+    max-width: 223px;
     border: 1px solid #707070;
-    overflow: auto;
+    overflow: scroll;
 }
+
