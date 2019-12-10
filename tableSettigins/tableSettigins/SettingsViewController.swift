@@ -11,8 +11,7 @@ import UIKit
 class SettingsViewController: UIViewController{
    
     let tableView = UITableView(frame: .zero, style: .grouped)
-    let backButton = UIBarButtonItem(image: UIImage(named: "inv_arrow"), style: .plain, target: self, action: #selector(buckButton(sender:)))
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,9 +24,7 @@ class SettingsViewController: UIViewController{
     }
     
     private func updateUI(){
-        self.backButton.tintColor = .white
-        self.navigationItem.setLeftBarButton(backButton, animated: true)
-        
+     
         self.tableView.register(SettingsTableViewCell.self, forCellReuseIdentifier: "SettingsCell")
         
         self.tableView.dataSource = self
@@ -38,11 +35,11 @@ class SettingsViewController: UIViewController{
     }
     
     
-    @objc func buckButton(sender : UIBarButtonItem){
-        print("suka")
-        self.navigationController?.popToRootViewController(animated: true)
-    }
+  
     
+    @IBAction func backButton(_ sender: Any) {
+        print("sosi")
+    }
     
     
 }
