@@ -35,13 +35,6 @@ class SettingsViewController: UIViewController{
     }
     
     
-  
-    
-    @IBAction func backButton(_ sender: Any) {
-        print("sosi")
-    }
-    
-    
 }
 
 extension SettingsViewController: UITableViewDataSource, UITableViewDelegate{

@@ -17,14 +17,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="UBc-O4-tae"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Настройки" id="R21-hV-gGV">
-                        <barButtonItem key="leftBarButtonItem" image="inv_arrow" id="Nj0-3R-hhJ">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="backButton:" destination="vwZ-xr-dpF" id="w1j-0x-PM8"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Настройки" id="R21-hV-gGV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OU7-BH-Hwi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -261,7 +254,6 @@
         <image name="calendar" width="24" height="24"/>
         <image name="education" width="24" height="24"/>
         <image name="gear" width="24" height="24"/>
-        <image name="inv_arrow" width="24" height="24"/>
         <image name="money" width="24" height="24"/>
         <image name="star" width="24" height="24"/>
         <image name="user" width="24" height="24"/>

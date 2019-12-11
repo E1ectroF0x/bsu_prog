@@ -12,9 +12,9 @@ class InfoPageTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.register(UserInfoCell.self, forCellReuseIdentifier: "UserInfoCell")
-
         
+        tableView.register(UserInfoCell.self, forCellReuseIdentifier: "UserInfoCell")
+        tableView.allowsSelection = false
     }
     
 
@@ -34,6 +34,10 @@ class InfoPageTableViewController: UITableViewController {
         cell.infoLabel.text = Constants.INFO_TABLE_INFO[indexPath.row]
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
     
     // MARK: -Delegate
