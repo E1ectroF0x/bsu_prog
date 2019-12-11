@@ -11,7 +11,7 @@ import Foundation
 let data = Date()
 let calendar = Calendar.current
 
-let date = calendar.component(.day, from: data)
+let day = calendar.component(.day, from: data)
 let weekday = calendar.component(.weekday, from: data)
 let month = calendar.component(.month, from: data)
 let year = calendar.component(.year, from: data)

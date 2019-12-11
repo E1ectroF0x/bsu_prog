@@ -24,6 +24,7 @@
 		D876207F239979480026352A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D876207E239979480026352A /* Constants.swift */; };
 		D8C8B64D23A18882008E6825 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C8B64C23A18882008E6825 /* HistoryCell.swift */; };
 		D8C8B64F23A18BEF008E6825 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C8B64E23A18BEF008E6825 /* HistoryViewController.swift */; };
+		D8C8B65123A19FD3008E6825 /* HeaderHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C8B65023A19FD3008E6825 /* HeaderHistoryView.swift */; };
 		D8D06D0E239FB94700AF3D84 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D06D0D239FB94700AF3D84 /* PageViewController.swift */; };
 		D8D06D10239FB99A00AF3D84 /* InfoPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D06D0F239FB99A00AF3D84 /* InfoPageTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,7 @@
 		D876207E239979480026352A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D8C8B64C23A18882008E6825 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
 		D8C8B64E23A18BEF008E6825 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		D8C8B65023A19FD3008E6825 /* HeaderHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderHistoryView.swift; sourceTree = "<group>"; };
 		D8D06D0D239FB94700AF3D84 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		D8D06D0F239FB99A00AF3D84 /* InfoPageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPageTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +109,7 @@
 				D859F915239FCF4300F276F0 /* StudyProgressTableViewController.swift */,
 				D8C8B64C23A18882008E6825 /* HistoryCell.swift */,
 				D8C8B64E23A18BEF008E6825 /* HistoryViewController.swift */,
+				D8C8B65023A19FD3008E6825 /* HeaderHistoryView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				D8762079239978CF0026352A /* CalendarDataModel.swift in Sources */,
 				D8411EE92399839E00FF7F3D /* UserInfoCell.swift in Sources */,
 				D876207F239979480026352A /* Constants.swift in Sources */,
+				D8C8B65123A19FD3008E6825 /* HeaderHistoryView.swift in Sources */,
 				D8C8B64D23A18882008E6825 /* HistoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

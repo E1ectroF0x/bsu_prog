@@ -1,21 +1,22 @@
 //
-//  HistoryCell.swift
+//  HeaderHistoryView.swift
 //  tableSettigins
 //
-//  Created by Li on 12/11/19.
+//  Created by Li on 12/12/19.
 //  Copyright © 2019 Li. All rights reserved.
 //
 
 import UIKit
 
-class HistoryCell: UITableViewCell {
-    
+class HeaderHistoryView: UIView {
+
     let typeLabel : UILabel = {
         let lbl = UILabel()
         lbl.textColor = .black
         lbl.font = UIFont.systemFont(ofSize: 17)
         lbl.textAlignment = .left
         lbl.numberOfLines = 0
+        lbl.text = "Тип платежа"
         return lbl
     }()
     let amountLabel : UILabel = {
@@ -24,6 +25,7 @@ class HistoryCell: UITableViewCell {
         lbl.font = UIFont.systemFont(ofSize: 17)
         lbl.textAlignment = .center
         lbl.numberOfLines = 0
+        lbl.text = "Сумма оплаты"
         return lbl
     }()
     
@@ -33,37 +35,35 @@ class HistoryCell: UITableViewCell {
         lbl.font = UIFont.systemFont(ofSize: 17)
         lbl.textAlignment = .right
         lbl.numberOfLines = 0
+        lbl.text = "Дата"
         return lbl
     }()
-    
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        updateUI()
-    }
-    
-    func updateUI(){
+   
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        backgroundColor = .white
+        
         let stackView = UIStackView(arrangedSubviews: [typeLabel, amountLabel, dateLabel])
-        stackView.distribution = .fill
+        stackView.distribution = .fillProportionally
+        stackView.alignment = .fill
         stackView.axis = .horizontal
+        stackView.frame = frame
         
-        stackView.frame = contentView.frame
+//        let blackLine = UIView(frame: CGRect(x: 0, y: 44, width: frame.width + 40, height: 1))
+//        blackLine.backgroundColor = .black
+//        let fullStackView = UIStackView(arrangedSubviews: [stackView, blackLine])
+//        fullStackView.axis = .vertical
+//        fullStackView.frame = frame
         
-        contentView.addSubview(stackView)
+        addSubview(stackView)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    override func draw(_ rect: CGRect) {
         
-        // Configure the view for the selected state
     }
-    
+   
+
 }

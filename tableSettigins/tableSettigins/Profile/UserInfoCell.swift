@@ -14,7 +14,7 @@ class UserInfoCell: UITableViewCell {
     let infoNameLabel : UILabel = {
         let lbl = UILabel()
         lbl.textColor = .black
-        lbl.font = UIFont.systemFont(ofSize: 15)
+        lbl.font = UIFont.systemFont(ofSize: 16)
         lbl.textAlignment = .left
         lbl.numberOfLines = 0
         return lbl
@@ -22,7 +22,7 @@ class UserInfoCell: UITableViewCell {
     let infoLabel : UILabel = {
         let lbl = UILabel()
         lbl.textColor = .black
-        lbl.font = UIFont.systemFont(ofSize: 15)
+        lbl.font = UIFont.systemFont(ofSize: 16)
         lbl.textAlignment = .right
         lbl.numberOfLines = 0
         return lbl
