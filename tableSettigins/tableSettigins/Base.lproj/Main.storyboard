@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ThA-Fo-Z7e">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ThA-Fo-Z7e">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,7 +12,7 @@
             <objects>
                 <viewController id="vwZ-xr-dpF" customClass="SettingsViewController" customModule="tableSettigins" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Z3-Sr-x4b">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="UBc-O4-tae"/>
@@ -28,21 +28,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OU7-BH-Hwi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6228" y="-466"/>
+            <point key="canvasLocation" x="6227.536231884058" y="-466.07142857142856"/>
         </scene>
         <!--Личный кабинет-->
         <scene sceneID="UTS-QG-JIp">
             <objects>
                 <viewController id="BYx-8q-bQ5" customClass="ProfileViewController" customModule="tableSettigins" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O7i-AJ-ev0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZDc-xt-QSh">
-                                <rect key="frame" x="0.0" y="655" width="414" height="158"/>
+                                <rect key="frame" x="0.0" y="361" width="320" height="158"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FSE-BC-nuP">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="ewb-eC-vwF"/>
                                         </constraints>
@@ -56,25 +56,31 @@
                                         </connections>
                                     </segmentedControl>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DoU-zI-PJF">
-                                        <rect key="frame" x="0.0" y="30" width="414" height="128"/>
+                                        <rect key="frame" x="0.0" y="30" width="320" height="128"/>
                                         <connections>
                                             <segue destination="zvx-9M-VFd" kind="embed" id="P1W-7I-CQp"/>
                                         </connections>
                                     </containerView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="DoU-zI-PJF" firstAttribute="leading" secondItem="ZDc-xt-QSh" secondAttribute="leading" id="NO5-ix-flP"/>
+                                    <constraint firstAttribute="trailing" secondItem="DoU-zI-PJF" secondAttribute="trailing" id="dea-x4-gbS"/>
+                                    <constraint firstItem="DoU-zI-PJF" firstAttribute="top" secondItem="FSE-BC-nuP" secondAttribute="bottom" id="gyR-ks-fSG"/>
+                                    <constraint firstAttribute="bottom" secondItem="DoU-zI-PJF" secondAttribute="bottom" id="x8C-KY-SE8"/>
+                                </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nhI-tl-WwF">
-                                <rect key="frame" x="20" y="118" width="374" height="497"/>
+                                <rect key="frame" x="20" y="74" width="280" height="247"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yakusheva" translatesAutoresizingMaskIntoConstraints="NO" id="mJ9-PC-8x2">
-                                        <rect key="frame" x="0.0" y="184.66666666666669" width="128" height="128"/>
+                                        <rect key="frame" x="0.0" y="59.5" width="128" height="128"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="128" id="0ji-al-KNP"/>
                                             <constraint firstAttribute="width" constant="128" id="Hyw-hX-LkY"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Якушева Диана Анатольевна" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NdV-yD-JIb">
-                                        <rect key="frame" x="148" y="228.33333333333331" width="226" height="40.666666666666686"/>
+                                        <rect key="frame" x="148" y="103" width="132" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -111,14 +117,14 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="zvx-9M-VFd" customClass="PageViewController" customModule="tableSettigins" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q8i-0C-S4X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6939" y="240"/>
+            <point key="canvasLocation" x="7061" y="240"/>
         </scene>
         <!--Календарь-->
         <scene sceneID="mz6-sg-SxK">
             <objects>
                 <viewController id="6vt-3P-4yv" customClass="CalendarViewController" customModule="tableSettigins" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ueM-MA-E7y">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djt-lG-q6N">
@@ -160,7 +166,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WbE-j8-OCA">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.078431372550000003" green="0.30588235289999999" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
@@ -208,7 +214,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wSd-FN-LaY">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.078431372550000003" green="0.30588235289999999" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
@@ -233,7 +239,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wnv-H0-316">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.078431372550000003" green="0.30588235289999999" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.078431372550000003" green="0.30588235289999999" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -259,6 +265,6 @@
         <image name="money" width="24" height="24"/>
         <image name="star" width="24" height="24"/>
         <image name="user" width="24" height="24"/>
-        <image name="yakusheva" width="179" height="183"/>
+        <image name="yakusheva" width="268.5" height="274.5"/>
     </resources>
 </document>
