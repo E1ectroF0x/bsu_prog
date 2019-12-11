@@ -10,6 +10,7 @@ import UIKit
 
 class CreditTableViewController: UITableViewController {
     
+    let historyVC = HistoryViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,8 +43,8 @@ class CreditTableViewController: UITableViewController {
             alert.addAction(action)
             present(alert, animated: true, completion: nil)
         default:
-            break
-            //present(InfoPageTableViewController(index: 0), animated: true, completion: nil)
+            show(historyVC, sender: nil)
+            
         }
     }
     
