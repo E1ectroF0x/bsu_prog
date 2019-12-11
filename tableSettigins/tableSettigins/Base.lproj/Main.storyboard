@@ -110,7 +110,7 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="zvx-9M-VFd" customClass="PageViewController" customModule="tableSettigins" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q8i-0C-S4X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7387" y="260"/>
+            <point key="canvasLocation" x="7170" y="240"/>
         </scene>
         <!--Календарь-->
         <scene sceneID="mz6-sg-SxK">

@@ -19,8 +19,15 @@ class HistoryViewController: UIViewController {
     
     private func updateUI() {
         
-        view.backgroundColor = .white
+       view.backgroundColor = .white
+        
         navigationItem.title = "История платежей"
+        navigationController?.navigationBar.tintColor = .white
+        
+        let button = UIBarButtonItem()
+        button.title = ""
+        navigationController?.navigationBar.topItem?.backBarButtonItem = button
+
     
     }
 

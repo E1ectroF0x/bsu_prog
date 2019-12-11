@@ -43,7 +43,8 @@ class CreditTableViewController: UITableViewController {
             alert.addAction(action)
             present(alert, animated: true, completion: nil)
         default:
-            show(historyVC, sender: nil)
+            show(historyVC, sender: self)
+            
             
         }
     }

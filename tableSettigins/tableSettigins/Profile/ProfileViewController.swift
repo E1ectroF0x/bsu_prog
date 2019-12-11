@@ -21,6 +21,7 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func changeTableView(_ sender: UISegmentedControl) {
+        
         let pageViewController = self.children[0] as! PageViewController
         pageViewController.nextPageWithIndex(index: sender.selectedSegmentIndex)
     }

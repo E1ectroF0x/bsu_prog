@@ -134,7 +134,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "E9F1D0E8-4628-4799-8448-EC8883D10739"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "tableSettigins/Profile/InfoPageTableViewController.swift"
@@ -143,6 +143,116 @@
             startingLineNumber = "31"
             endingLineNumber = "31"
             landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E6B8DED6-10FE-4FEF-A07C-CEFED4094FC6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tableSettigins/Profile/CreditTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "CreditTableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "E6B8DED6-10FE-4FEF-A07C-CEFED4094FC6 - bd9d73793b404015"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tableSettigins.CreditTableViewController.historyVC.getter : tableSettigins.HistoryViewController"
+                  moduleName = "tableSettigins"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chiki-briki/bsu_prog/tableSettigins/tableSettigins/Profile/CreditTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "59">
+               </Location>
+               <Location
+                  uuid = "E6B8DED6-10FE-4FEF-A07C-CEFED4094FC6 - 7e0653a7dd784205"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tableSettigins.CreditTableViewController.init(style: __C.UITableViewStyle) -&gt; tableSettigins.CreditTableViewController"
+                  moduleName = "tableSettigins"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chiki-briki/bsu_prog/tableSettigins/tableSettigins/Profile/CreditTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "42">
+               </Location>
+               <Location
+                  uuid = "E6B8DED6-10FE-4FEF-A07C-CEFED4094FC6 - 18e12b4d0a0d13d3"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tableSettigins.CreditTableViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; tableSettigins.CreditTableViewController"
+                  moduleName = "tableSettigins"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chiki-briki/bsu_prog/tableSettigins/tableSettigins/Profile/CreditTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "E6B8DED6-10FE-4FEF-A07C-CEFED4094FC6 - 71df7789bb039700"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tableSettigins.CreditTableViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;tableSettigins.CreditTableViewController&gt;"
+                  moduleName = "tableSettigins"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chiki-briki/bsu_prog/tableSettigins/tableSettigins/Profile/CreditTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "96">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C238B816-03F8-4EBC-ACC5-5F0E9D97C5F1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tableSettigins/Profile/HistoryViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F3DAA206-9B7C-4AFC-9E04-6147D01D76A6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tableSettigins/Profile/ProfileViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "changeTableView(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
