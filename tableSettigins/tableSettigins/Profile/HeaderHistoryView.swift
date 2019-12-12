@@ -17,7 +17,7 @@ class HeaderHistoryView: UIView {
         lbl.font = UIFont.systemFont(ofSize: 16)
         lbl.textAlignment = .left
         lbl.numberOfLines = 1
-        lbl.text = "Тип платежа"
+        lbl.text = "Платеж"
         return lbl
     }()
     let amountLabel : UILabel = {
