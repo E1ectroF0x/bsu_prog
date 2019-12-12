@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D81DBBF923A26C540027D580 /* StudyProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81DBBF823A26C540027D580 /* StudyProgressCell.swift */; };
 		D8411EE92399839E00FF7F3D /* UserInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8411EE82399839E00FF7F3D /* UserInfoCell.swift */; };
 		D856CBD72396A8EA0055FD1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856CBD62396A8EA0055FD1B /* AppDelegate.swift */; };
 		D856CBD92396A8EA0055FD1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856CBD82396A8EA0055FD1B /* SceneDelegate.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D81DBBF823A26C540027D580 /* StudyProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyProgressCell.swift; sourceTree = "<group>"; };
 		D8411EE82399839E00FF7F3D /* UserInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoCell.swift; sourceTree = "<group>"; };
 		D856CBD32396A8EA0055FD1B /* tableSettiginsBSU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tableSettiginsBSU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D856CBD62396A8EA0055FD1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				D8D06D0F239FB99A00AF3D84 /* InfoPageTableViewController.swift */,
 				D859F913239FCDA100F276F0 /* CreditTableViewController.swift */,
 				D859F915239FCF4300F276F0 /* StudyProgressTableViewController.swift */,
+				D81DBBF823A26C540027D580 /* StudyProgressCell.swift */,
 				D8C8B64C23A18882008E6825 /* HistoryCell.swift */,
 				D8C8B64E23A18BEF008E6825 /* HistoryViewController.swift */,
 				D8C8B65023A19FD3008E6825 /* HeaderHistoryView.swift */,
@@ -204,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D81DBBF923A26C540027D580 /* StudyProgressCell.swift in Sources */,
 				D8762076239978CF0026352A /* CalendarViewController.swift in Sources */,
 				D856CBD72396A8EA0055FD1B /* AppDelegate.swift in Sources */,
 				D859F916239FCF4300F276F0 /* StudyProgressTableViewController.swift in Sources */,
