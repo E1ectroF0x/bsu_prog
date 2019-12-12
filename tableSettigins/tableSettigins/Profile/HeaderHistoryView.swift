@@ -10,21 +10,22 @@ import UIKit
 
 class HeaderHistoryView: UIView {
 
+    
     let typeLabel : UILabel = {
         let lbl = UILabel()
         lbl.textColor = .black
-        lbl.font = UIFont.systemFont(ofSize: 17)
+        lbl.font = UIFont.systemFont(ofSize: 16)
         lbl.textAlignment = .left
-        lbl.numberOfLines = 0
+        lbl.numberOfLines = 1
         lbl.text = "Тип платежа"
         return lbl
     }()
     let amountLabel : UILabel = {
         let lbl = UILabel()
         lbl.textColor = .black
-        lbl.font = UIFont.systemFont(ofSize: 17)
+        lbl.font = UIFont.systemFont(ofSize: 16)
         lbl.textAlignment = .center
-        lbl.numberOfLines = 0
+        lbl.numberOfLines = 1
         lbl.text = "Сумма оплаты"
         return lbl
     }()
@@ -32,9 +33,9 @@ class HeaderHistoryView: UIView {
     let dateLabel : UILabel = {
         let lbl = UILabel()
         lbl.textColor = .black
-        lbl.font = UIFont.systemFont(ofSize: 17)
+        lbl.font = UIFont.systemFont(ofSize: 16)
         lbl.textAlignment = .right
-        lbl.numberOfLines = 0
+        lbl.numberOfLines = 1
         lbl.text = "Дата"
         return lbl
     }()
@@ -44,18 +45,25 @@ class HeaderHistoryView: UIView {
         backgroundColor = .white
         
         let stackView = UIStackView(arrangedSubviews: [typeLabel, amountLabel, dateLabel])
-        stackView.distribution = .fillProportionally
+        stackView.distribution = .equalCentering
         stackView.alignment = .fill
         stackView.axis = .horizontal
         stackView.frame = frame
         
-//        let blackLine = UIView(frame: CGRect(x: 0, y: 44, width: frame.width + 40, height: 1))
-//        blackLine.backgroundColor = .black
-//        let fullStackView = UIStackView(arrangedSubviews: [stackView, blackLine])
-//        fullStackView.axis = .vertical
-//        fullStackView.frame = frame
+        let blackLine = UIImageView(frame: CGRect(origin: .zero, size: CGSize(width: frame.width + 40, height: 0.5)))
+        blackLine.backgroundColor = .black
+        blackLine.translatesAutoresizingMaskIntoConstraints = false
+       let fullStackView = UIStackView(arrangedSubviews: [stackView, blackLine])
+        fullStackView.axis = .vertical
+        fullStackView.distribution = .fill
+        fullStackView.spacing = 1
+        fullStackView.frame = frame
         
-        addSubview(stackView)
+        let views = ["blackLine" : blackLine, "stackView" : stackView]
+        let constraint =  NSLayoutConstraint.constraints(withVisualFormat: "V:[stackView]-[blackLine(1)]", options: NSLayoutConstraint.FormatOptions.alignAllCenterX, metrics: nil, views: views)
+        NSLayoutConstraint.activate(constraint)
+        
+        addSubview(fullStackView)
     }
     
     required init?(coder: NSCoder) {

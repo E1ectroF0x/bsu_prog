@@ -13,7 +13,7 @@ class HistoryCell: UITableViewCell {
     let typeLabel : UILabel = {
         let lbl = UILabel()
         lbl.textColor = .black
-        lbl.font = UIFont.systemFont(ofSize: 17)
+        lbl.font = UIFont.systemFont(ofSize: 16)
         lbl.textAlignment = .left
         lbl.numberOfLines = 0
         return lbl
@@ -21,7 +21,7 @@ class HistoryCell: UITableViewCell {
     let amountLabel : UILabel = {
         let lbl = UILabel()
         lbl.textColor = .black
-        lbl.font = UIFont.systemFont(ofSize: 17)
+        lbl.font = UIFont.systemFont(ofSize: 16)
         lbl.textAlignment = .center
         lbl.numberOfLines = 0
         return lbl
@@ -30,7 +30,7 @@ class HistoryCell: UITableViewCell {
     let dateLabel : UILabel = {
         let lbl = UILabel()
         lbl.textColor = .black
-        lbl.font = UIFont.systemFont(ofSize: 17)
+        lbl.font = UIFont.systemFont(ofSize: 16)
         lbl.textAlignment = .right
         lbl.numberOfLines = 0
         return lbl
@@ -43,7 +43,8 @@ class HistoryCell: UITableViewCell {
     
     func updateUI(){
         let stackView = UIStackView(arrangedSubviews: [typeLabel, amountLabel, dateLabel])
-        stackView.distribution = .fill
+        stackView.distribution = .equalCentering
+        stackView.alignment = .fill
         stackView.axis = .horizontal
         
         stackView.frame = contentView.frame

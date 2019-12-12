@@ -10,7 +10,7 @@ import UIKit
 
 class HistoryViewController: UIViewController {
     
-    let tableView = UITableView(frame: .zero, style: .grouped)
+    let tableView = UITableView(frame: .zero, style: .plain)
     
     override func viewDidLoad() {
         super.viewDidLoad()
