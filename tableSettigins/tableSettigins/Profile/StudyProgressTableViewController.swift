@@ -22,12 +22,12 @@ class StudyProgressTableViewController: UITableViewController {
                  "Прикладное программирование",
                  "Физическая культура"]]
     
-    let headerText = ["Текущий семестр", "Экзамены", "Зачеты"]
+    let headerText = ["Выбрать семестр", "Экзамены", "Зачеты"]
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.backgroundColor = .white
+        //tableView.backgroundColor = .white
         tableView.allowsSelection = false
         tableView.register(ExamProgressCell.self, forCellReuseIdentifier: "ExamProgressCell")
         tableView.register(TestProgressCell.self, forCellReuseIdentifier: "TestProgressCell")
@@ -54,7 +54,7 @@ class StudyProgressTableViewController: UITableViewController {
             cell.contentView.frame = CGRect(x: 20, y: 0, width: view.frame.width-40, height: 70)
             cell.updateUI()
             cell.infoNameLabel.text = data[indexPath.section][indexPath.row]
-            cell.infoLabel.text = "10"
+            cell.infoLabel.text = "4"
             return cell
             
         }
@@ -76,8 +76,9 @@ class StudyProgressTableViewController: UITableViewController {
         let label = UILabel()
         label.frame = CGRect(x: 20, y: 0, width: headerView.frame.width-40, height: headerView.frame.height)
         label.text = headerText[section]
-        label.font = .boldSystemFont(ofSize: 20)
-        label.textColor = UIColor(red: 20.0 / 255.0, green: 78.0 / 255.0, blue: 157.0 / 255.0, alpha: 1.0)
+        label.font = .systemFont(ofSize: 17)
+        //label.textColor = UIColor(red: 20.0 / 255.0, green: 78.0 / 255.0, blue: 157.0 / 255.0, alpha: 1.0)
+        label.textColor = .systemGray
 
         headerView.addSubview(label)
 

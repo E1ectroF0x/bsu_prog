@@ -34,7 +34,7 @@
 /* Begin PBXFileReference section */
 		D81DBBF823A26C540027D580 /* ExamProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamProgressCell.swift; sourceTree = "<group>"; };
 		D8411EE82399839E00FF7F3D /* UserInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoCell.swift; sourceTree = "<group>"; };
-		D856CBD32396A8EA0055FD1B /* tableSettiginsBSU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tableSettiginsBSU.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D856CBD32396A8EA0055FD1B /* BSU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BSU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D856CBD62396A8EA0055FD1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D856CBD82396A8EA0055FD1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D856CBDD2396A8EA0055FD1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 		D856CBD42396A8EA0055FD1B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D856CBD32396A8EA0055FD1B /* tableSettiginsBSU.app */,
+				D856CBD32396A8EA0055FD1B /* BSU.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,7 +156,7 @@
 			);
 			name = tableSettigins;
 			productName = tableSettigins;
-			productReference = D856CBD32396A8EA0055FD1B /* tableSettiginsBSU.app */;
+			productReference = D856CBD32396A8EA0055FD1B /* BSU.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -381,7 +381,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = liCompany.tableSettiginsBSU;
-				PRODUCT_NAME = tableSettiginsBSU;
+				PRODUCT_NAME = BSU;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -400,7 +400,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = liCompany.tableSettiginsBSU;
-				PRODUCT_NAME = tableSettiginsBSU;
+				PRODUCT_NAME = BSU;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
