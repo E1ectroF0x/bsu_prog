@@ -13,6 +13,7 @@ class CreditTableViewController: UITableViewController {
     let historyVC = HistoryViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.backgroundColor = .white
         
     }
     
@@ -47,6 +48,14 @@ class CreditTableViewController: UITableViewController {
             
             
         }
+    }
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: 0, height: 0))
+        return headerView
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0
     }
     
 }

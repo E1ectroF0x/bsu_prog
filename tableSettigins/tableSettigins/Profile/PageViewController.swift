@@ -10,7 +10,7 @@ import UIKit
 
 class PageViewController: UIPageViewController {
     
-    let infoTableView = InfoPageTableViewController()
+    let infoTableView = InfoPageTableViewController(style: .grouped)
     override func viewDidLoad() {
         super.viewDidLoad()
         setViewControllers([infoTableView], direction: .forward, animated: false, completion: nil)
@@ -18,9 +18,9 @@ class PageViewController: UIPageViewController {
     
     func switchTableVC(index: Int) -> UITableViewController{
         switch index {
-        case 0: return InfoPageTableViewController()
-        case 1: return CreditTableViewController()
-        case 2: return StudyProgressTableViewController()
+        case 0: return InfoPageTableViewController(style: .grouped)
+        case 1: return CreditTableViewController(style: .grouped)
+        case 2: return StudyProgressTableViewController(style: .grouped)
        
             
         default: return UITableViewController()

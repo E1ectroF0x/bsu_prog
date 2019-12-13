@@ -14,13 +14,23 @@ class StudyProgressTableViewController: UITableViewController {
                     "Общая физика",
                     "Численные методы",
                     "Дифференциальные уравнения",
-                    "Теория вероятностей и математическая статистика",
-        "Программно-аппаратные средства обеспечения информационной безопасности"]
-        , ["1,0", "1,1", "1,2"]]
+                    "Теория вероятностей и математическая статистика"],
+                ["Математический анализ",
+                 "Общая физика",
+                 "Численные методы",
+                 "Имитационное и статистическое моделирование",
+                 "Прикладное программирование",
+                 "Физическая культура"]]
+    
+    let headerText = ["Текущий семестр", "Экзамены", "Зачеты"]
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.backgroundColor = .white
         tableView.allowsSelection = false
-        tableView.register(StudyProgressCell.self, forCellReuseIdentifier: "StudyProgressCell")
+        tableView.register(ExamProgressCell.self, forCellReuseIdentifier: "ExamProgressCell")
+        tableView.register(TestProgressCell.self, forCellReuseIdentifier: "TestProgressCell")
     }
     
     // MARK: - Table view data source
@@ -40,7 +50,7 @@ class StudyProgressTableViewController: UITableViewController {
         
         if indexPath.section == 1 {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: "StudyProgressCell", for: indexPath) as! StudyProgressCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ExamProgressCell", for: indexPath) as! ExamProgressCell
             cell.contentView.frame = CGRect(x: 20, y: 0, width: view.frame.width-40, height: 70)
             cell.updateUI()
             cell.infoNameLabel.text = data[indexPath.section][indexPath.row]
@@ -49,23 +59,35 @@ class StudyProgressTableViewController: UITableViewController {
             
         }
         else{
-            let cell = UITableViewCell()
-            cell.textLabel?.text = "10"
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TestProgressCell", for: indexPath) as! TestProgressCell
+            cell.contentView.frame = CGRect(x: 20, y: 0, width: view.frame.width-40, height: 70)
+            cell.infoNameLabel.text = data[indexPath.section][indexPath.row]
+            cell.test = true
+            cell.updateUI()
             return cell
         }
-       
+        
         
         
     }
-//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let headerView = HeaderHistoryView.init(frame: CGRect.init(x: 20, y: 0, width: view.frame.width - 40, height: 44))
-//
-//        return headerView
-//    }
-//
-//    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 45
-//    }
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 30))
+
+        let label = UILabel()
+        label.frame = CGRect(x: 20, y: 0, width: headerView.frame.width-40, height: headerView.frame.height)
+        label.text = headerText[section]
+        label.font = .boldSystemFont(ofSize: 20)
+        label.textColor = UIColor(red: 20.0 / 255.0, green: 78.0 / 255.0, blue: 157.0 / 255.0, alpha: 1.0)
+
+        headerView.addSubview(label)
+
+        return headerView
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
+    }
+
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
