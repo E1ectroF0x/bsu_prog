@@ -19,6 +19,7 @@ class UserInfoCell: UITableViewCell {
         lbl.numberOfLines = 0
         return lbl
     }()
+    
     let infoLabel : UILabel = {
         let lbl = UILabel()
         lbl.textColor = .black
@@ -27,8 +28,6 @@ class UserInfoCell: UITableViewCell {
         lbl.numberOfLines = 0
         return lbl
     }()
-    
- 
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -39,7 +38,6 @@ class UserInfoCell: UITableViewCell {
         let stackView = UIStackView(arrangedSubviews: [infoNameLabel, infoLabel])
         stackView.distribution = .fill
         stackView.axis = .horizontal
-        
         stackView.frame = contentView.frame
         
         contentView.addSubview(stackView)
@@ -48,10 +46,9 @@ class UserInfoCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        
     }
     
     

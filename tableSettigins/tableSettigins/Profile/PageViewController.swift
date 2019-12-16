@@ -21,8 +21,6 @@ class PageViewController: UIPageViewController {
         case 0: return InfoPageTableViewController(style: .grouped)
         case 1: return CreditTableViewController(style: .grouped)
         case 2: return StudyProgressTableViewController(style: .grouped)
-       
-            
         default: return UITableViewController()
             
         }
@@ -31,7 +29,6 @@ class PageViewController: UIPageViewController {
     func nextPageWithIndex(index: Int){
        let controller = switchTableVC(index: index)
            setViewControllers([controller], direction: .forward, animated: false, completion: nil)
-
        }
     
 }

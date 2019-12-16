@@ -46,7 +46,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
             endingLineNumber = "29"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -85,22 +85,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9E8129DF-C1AF-4DE4-8A4A-2ABACB82C461"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "tableSettigins/Profile/UserInfoCell.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "UserInfoCell"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "7423D383-8CA3-4D6B-AF1E-526EDFC9A4E0"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -110,7 +94,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
             endingLineNumber = "50"
-            landmarkName = "init(coder:)"
+            landmarkName = "awakeFromNib()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -126,7 +110,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
             endingLineNumber = "28"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -266,17 +250,49 @@
             filePath = "tableSettigins/Profile/HeaderHistoryView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "draw(_:)"
-            landmarkType = "7">
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "HeaderHistoryView"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "1CC637E1-274E-4B35-A0C2-565B056DB00D - 273ec43c2dfb0e4c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BSU.HeaderHistoryView.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;BSU.HeaderHistoryView&gt;"
+                  moduleName = "BSU"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chiki-briki/bsu_prog/tableSettigins/tableSettigins/Profile/HeaderHistoryView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "1CC637E1-274E-4B35-A0C2-565B056DB00D - db9f1dc92e9cfd25"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BSU.HeaderHistoryView.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;BSU.HeaderHistoryView&gt;"
+                  moduleName = "BSU"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chiki-briki/bsu_prog/tableSettigins/tableSettigins/Profile/HeaderHistoryView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "82">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "ADBE9401-C00C-44CC-86F6-2E7E53F483E6"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "tableSettigins/Profile/HeaderHistoryView.swift"
@@ -286,6 +302,38 @@
             endingLineNumber = "44"
             landmarkName = "init(frame:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "ADBE9401-C00C-44CC-86F6-2E7E53F483E6 - b447e15c5c9dfce1"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BSU.HeaderHistoryView.__allocating_init(frame: __C.CGRect) -&gt; BSU.HeaderHistoryView"
+                  moduleName = "BSU"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chiki-briki/bsu_prog/tableSettigins/tableSettigins/Profile/HeaderHistoryView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "10">
+               </Location>
+               <Location
+                  uuid = "ADBE9401-C00C-44CC-86F6-2E7E53F483E6 - b33d62696fc394b9"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BSU.HeaderHistoryView.init(frame: __C.CGRect) -&gt; BSU.HeaderHistoryView"
+                  moduleName = "BSU"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chiki-briki/bsu_prog/tableSettigins/tableSettigins/Profile/HeaderHistoryView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "95">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -330,8 +378,8 @@
             filePath = "tableSettigins/Profile/TestProgressCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "updateUI()"
             landmarkType = "7">
          </BreakpointContent>
@@ -339,16 +387,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8575559E-86A6-4A41-9375-FC835B9FB1DB"
+            uuid = "3481E0FE-E207-40A5-85B0-B678A516DB0B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "tableSettigins/Profile/TestProgressCell.swift"
+            filePath = "tableSettigins/Profile/StudyProgressTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "init(style:reuseIdentifier:)"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "tableView(_:viewForHeaderInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "65A9F90A-1E07-46F5-A3B2-477EB1F0C093"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tableSettigins/Profile/HeaderHistoryView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "init(frame:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

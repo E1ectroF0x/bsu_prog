@@ -17,6 +17,8 @@ class ExamProgressCell: UITableViewCell {
         lbl.font = UIFont.systemFont(ofSize: 16)
         lbl.textAlignment = .left
         lbl.numberOfLines = 0
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        lbl.addConstraint(attribute : .width,  constant: 250)
         return lbl
     }()
     let infoLabel : UILabel = {
@@ -28,22 +30,6 @@ class ExamProgressCell: UITableViewCell {
         return lbl
     }()
     
-    let plusImage : UIImageView = {
-        let im = UIImage(systemName: "plus")
-        let view = UIImageView(image: im)
-        view.backgroundColor = UIColor(red: 20.0 / 255.0, green: 78.0 / 255.0, blue: 157.0 / 255.0, alpha: 1.0)
-        return view
-    }()
-    
-    let minusImage : UIImageView = {
-        let im = UIImage(systemName: "minus")
-        let view = UIImageView(image: im)
-        view.backgroundColor = UIColor(red: 20.0 / 255.0, green: 78.0 / 255.0, blue: 157.0 / 255.0, alpha: 1.0)
-        return view
-    }()
-    
-    let cellTag = 0
-    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         updateUI()
@@ -54,15 +40,8 @@ class ExamProgressCell: UITableViewCell {
         stackView.alignment = .center
         stackView.distribution = .equalCentering
         stackView.axis = .horizontal
-        
         stackView.frame = contentView.frame
         
-        
-        infoNameLabel.translatesAutoresizingMaskIntoConstraints = false
-        infoLabel.translatesAutoresizingMaskIntoConstraints = false
-        let constraint =
-            NSLayoutConstraint(item: infoNameLabel, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.greaterThanOrEqual, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 250)
-        stackView.addConstraint(constraint)
         contentView.addSubview(stackView)
     }
     
@@ -73,10 +52,8 @@ class ExamProgressCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        
     }
-    
-    
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         

@@ -11,10 +11,10 @@ import UIKit
 class StudyProgressTableViewController: UITableViewController {
     
     let data = [[],["Математический анализ",
-                    "Общая физика",
-                    "Численные методы",
-                    "Дифференциальные уравнения",
-                    "Теория вероятностей и математическая статистика"],
+                       "Общая физика",
+                       "Численные методы",
+                       "Дифференциальные уравнения",
+                       "Теория вероятностей и математическая статистика"],
                 ["Математический анализ",
                  "Общая физика",
                  "Численные методы",
@@ -24,15 +24,18 @@ class StudyProgressTableViewController: UITableViewController {
     
     let headerText = ["Выбрать семестр", "Экзамены", "Зачеты"]
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //tableView.backgroundColor = .white
+        
+        updateUI()
+    }
+    
+    func updateUI() {
         tableView.allowsSelection = false
         tableView.register(ExamProgressCell.self, forCellReuseIdentifier: "ExamProgressCell")
         tableView.register(TestProgressCell.self, forCellReuseIdentifier: "TestProgressCell")
     }
-    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -45,16 +48,15 @@ class StudyProgressTableViewController: UITableViewController {
         return data[section].count
     }
     
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section == 1 {
-            
             let cell = tableView.dequeueReusableCell(withIdentifier: "ExamProgressCell", for: indexPath) as! ExamProgressCell
             cell.contentView.frame = CGRect(x: 20, y: 0, width: view.frame.width-40, height: 70)
             cell.updateUI()
             cell.infoNameLabel.text = data[indexPath.section][indexPath.row]
             cell.infoLabel.text = "4"
+            
             return cell
             
         }
@@ -64,6 +66,7 @@ class StudyProgressTableViewController: UITableViewController {
             cell.infoNameLabel.text = data[indexPath.section][indexPath.row]
             cell.test = true
             cell.updateUI()
+            
             return cell
         }
         
@@ -71,26 +74,38 @@ class StudyProgressTableViewController: UITableViewController {
         
     }
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 30))
-
+        let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 55))
+        
         let label = UILabel()
         label.frame = CGRect(x: 20, y: 0, width: headerView.frame.width-40, height: headerView.frame.height)
+        if section == 0 {
+            headerView.backgroundColor = .white
+        }
         label.text = headerText[section]
         label.font = .systemFont(ofSize: 17)
-        //label.textColor = UIColor(red: 20.0 / 255.0, green: 78.0 / 255.0, blue: 157.0 / 255.0, alpha: 1.0)
         label.textColor = .systemGray
-
+        
         headerView.addSubview(label)
-
+        
         return headerView
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 30
+        return 55
     }
-
     
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: 0, height: 0))
+        
+        return footerView
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        
+        return 0
+    }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
         return 70
     }
     

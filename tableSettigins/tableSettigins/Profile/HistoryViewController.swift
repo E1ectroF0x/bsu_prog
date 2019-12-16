@@ -70,13 +70,10 @@ extension HistoryViewController: UITableViewDataSource, UITableViewDelegate{
         
         cell.contentView.frame = CGRect(x: 20, y: 0, width: view.frame.width-40, height: 44)
         cell.updateUI()
-        
-
-        
-        
         cell.typeLabel.text = "Оплата за общежитие"
         cell.amountLabel.text = "30.6 руб"
         cell.dateLabel.text = "\(day).\(month).\(year)"
+        
         return cell
         
     }

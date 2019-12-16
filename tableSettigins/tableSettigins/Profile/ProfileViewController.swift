@@ -17,7 +17,6 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
     }
     
     @IBAction func changeTableView(_ sender: UISegmentedControl) {

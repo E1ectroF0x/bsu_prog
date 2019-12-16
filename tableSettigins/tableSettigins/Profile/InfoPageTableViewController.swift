@@ -12,12 +12,15 @@ class InfoPageTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        updateUI()
+    }
+    
+    func updateUI() {
         tableView.backgroundColor = .white
         tableView.register(UserInfoCell.self, forCellReuseIdentifier: "UserInfoCell")
         tableView.allowsSelection = false
     }
-    
-    
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -37,6 +40,7 @@ class InfoPageTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: 0, height: 0))
+        
         return headerView
     }
     

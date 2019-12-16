@@ -43,10 +43,9 @@ class HistoryCell: UITableViewCell {
     
     func updateUI(){
         let stackView = UIStackView(arrangedSubviews: [typeLabel, amountLabel, dateLabel])
-        stackView.distribution = .equalCentering
-        stackView.alignment = .fill
+//        stackView.distribution = .equalCentering
+//        stackView.alignment = .fill
         stackView.axis = .horizontal
-        
         stackView.frame = contentView.frame
         
         contentView.addSubview(stackView)
