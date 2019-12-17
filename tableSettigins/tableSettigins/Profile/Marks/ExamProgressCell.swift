@@ -17,7 +17,6 @@ class ExamProgressCell: UITableViewCell {
         lbl.font = UIFont.systemFont(ofSize: 16)
         lbl.textAlignment = .left
         lbl.numberOfLines = 0
-        lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.addConstraint(attribute : .width,  constant: 250)
         return lbl
     }()

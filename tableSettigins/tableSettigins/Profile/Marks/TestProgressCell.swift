@@ -17,7 +17,7 @@ class TestProgressCell: UITableViewCell {
         lbl.font = UIFont.systemFont(ofSize: 16)
         lbl.textAlignment = .left
         lbl.numberOfLines = 0
-        lbl.translatesAutoresizingMaskIntoConstraints = false
+
         lbl.addConstraint(attribute : .width,  constant: 250)
         return lbl
     }()
@@ -25,7 +25,6 @@ class TestProgressCell: UITableViewCell {
     let Image : UIImageView = {
         let view = UIImageView()
         view.tintColor = UIColor(red: 20.0 / 255.0, green: 78.0 / 255.0, blue: 157.0 / 255.0, alpha: 1.0)
-        view.translatesAutoresizingMaskIntoConstraints = false
         view.addConstraint(attribute : .width,  constant: 24)
         view.addConstraint(attribute : .height,  constant: 24)
         return view

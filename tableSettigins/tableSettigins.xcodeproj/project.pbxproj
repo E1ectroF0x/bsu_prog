@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D81DBBF923A26C540027D580 /* ExamProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81DBBF823A26C540027D580 /* ExamProgressCell.swift */; };
+		D820A9C723A9519800AEE4E3 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D820A9C623A9519800AEE4E3 /* PickerViewController.swift */; };
 		D8411EE92399839E00FF7F3D /* UserInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8411EE82399839E00FF7F3D /* UserInfoCell.swift */; };
 		D856CBD72396A8EA0055FD1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856CBD62396A8EA0055FD1B /* AppDelegate.swift */; };
 		D856CBD92396A8EA0055FD1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856CBD82396A8EA0055FD1B /* SceneDelegate.swift */; };
@@ -30,10 +31,12 @@
 		D8D06D10239FB99A00AF3D84 /* InfoPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D06D0F239FB99A00AF3D84 /* InfoPageTableViewController.swift */; };
 		D8DAA92723A36D0700FE7161 /* TestProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DAA92623A36D0700FE7161 /* TestProgressCell.swift */; };
 		D8F0CE6323A798E700B970C6 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F0CE6223A798E700B970C6 /* Layout.swift */; };
+		D8F0CE6523A7BB5000B970C6 /* SelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F0CE6423A7BB5000B970C6 /* SelectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D81DBBF823A26C540027D580 /* ExamProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamProgressCell.swift; sourceTree = "<group>"; };
+		D820A9C623A9519800AEE4E3 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		D8411EE82399839E00FF7F3D /* UserInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoCell.swift; sourceTree = "<group>"; };
 		D856CBD32396A8EA0055FD1B /* BSU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BSU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D856CBD62396A8EA0055FD1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +61,7 @@
 		D8D06D0F239FB99A00AF3D84 /* InfoPageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPageTableViewController.swift; sourceTree = "<group>"; };
 		D8DAA92623A36D0700FE7161 /* TestProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProgressCell.swift; sourceTree = "<group>"; };
 		D8F0CE6223A798E700B970C6 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		D8F0CE6423A7BB5000B970C6 /* SelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,15 +114,9 @@
 			children = (
 				D8D06D0D239FB94700AF3D84 /* PageViewController.swift */,
 				D8762073239978CF0026352A /* ProfileViewController.swift */,
-				D8411EE82399839E00FF7F3D /* UserInfoCell.swift */,
-				D8D06D0F239FB99A00AF3D84 /* InfoPageTableViewController.swift */,
-				D859F913239FCDA100F276F0 /* CreditTableViewController.swift */,
-				D859F915239FCF4300F276F0 /* StudyProgressTableViewController.swift */,
-				D8DAA92623A36D0700FE7161 /* TestProgressCell.swift */,
-				D81DBBF823A26C540027D580 /* ExamProgressCell.swift */,
-				D8C8B64C23A18882008E6825 /* HistoryCell.swift */,
-				D8C8B64E23A18BEF008E6825 /* HistoryViewController.swift */,
-				D8C8B65023A19FD3008E6825 /* HeaderHistoryView.swift */,
+				D8C7B3DA23A7FCEE00F4C3A9 /* Info */,
+				D8C7B3D923A7FCDA00F4C3A9 /* Marks */,
+				D8C7B3D823A7FCB500F4C3A9 /* Credit */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -140,6 +138,38 @@
 				D876206F239978CF0026352A /* SettingsTableViewCell.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		D8C7B3D823A7FCB500F4C3A9 /* Credit */ = {
+			isa = PBXGroup;
+			children = (
+				D8C8B64C23A18882008E6825 /* HistoryCell.swift */,
+				D8C8B65023A19FD3008E6825 /* HeaderHistoryView.swift */,
+				D8C8B64E23A18BEF008E6825 /* HistoryViewController.swift */,
+				D859F913239FCDA100F276F0 /* CreditTableViewController.swift */,
+			);
+			path = Credit;
+			sourceTree = "<group>";
+		};
+		D8C7B3D923A7FCDA00F4C3A9 /* Marks */ = {
+			isa = PBXGroup;
+			children = (
+				D859F915239FCF4300F276F0 /* StudyProgressTableViewController.swift */,
+				D820A9C623A9519800AEE4E3 /* PickerViewController.swift */,
+				D8F0CE6423A7BB5000B970C6 /* SelectView.swift */,
+				D8DAA92623A36D0700FE7161 /* TestProgressCell.swift */,
+				D81DBBF823A26C540027D580 /* ExamProgressCell.swift */,
+			);
+			path = Marks;
+			sourceTree = "<group>";
+		};
+		D8C7B3DA23A7FCEE00F4C3A9 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				D8411EE82399839E00FF7F3D /* UserInfoCell.swift */,
+				D8D06D0F239FB99A00AF3D84 /* InfoPageTableViewController.swift */,
+			);
+			path = Info;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,7 +245,9 @@
 			files = (
 				D81DBBF923A26C540027D580 /* ExamProgressCell.swift in Sources */,
 				D8762076239978CF0026352A /* CalendarViewController.swift in Sources */,
+				D8F0CE6523A7BB5000B970C6 /* SelectView.swift in Sources */,
 				D856CBD72396A8EA0055FD1B /* AppDelegate.swift in Sources */,
+				D820A9C723A9519800AEE4E3 /* PickerViewController.swift in Sources */,
 				D859F916239FCF4300F276F0 /* StudyProgressTableViewController.swift in Sources */,
 				D8D06D0E239FB94700AF3D84 /* PageViewController.swift in Sources */,
 				D876207D239978CF0026352A /* SettingsViewController.swift in Sources */,

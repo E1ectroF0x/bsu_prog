@@ -33,6 +33,7 @@ struct Constants {
     static let INFO_TABLE_INFO = ["РФиКТ", "Компьютерная безопастность", "2 курс, 7 группа", "Дневная, бюджет", "rct.truhov@bsu.by", "+375259612924", "Курчатова 8, Б84б"]
 }
 
+let customBlue = UIColor(red: 20.0 / 255.0, green: 78.0 / 255.0, blue: 157.0 / 255.0, alpha: 1.0)
 
 
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ThA-Fo-Z7e">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -66,14 +66,14 @@
                                 <rect key="frame" x="20" y="118" width="374" height="497"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yakusheva" translatesAutoresizingMaskIntoConstraints="NO" id="mJ9-PC-8x2">
-                                        <rect key="frame" x="0.0" y="184.5" width="128" height="128"/>
+                                        <rect key="frame" x="0.0" y="184.66666666666669" width="128" height="128"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="128" id="0ji-al-KNP"/>
                                             <constraint firstAttribute="width" constant="128" id="Hyw-hX-LkY"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Якушева Диана Анатольевна" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NdV-yD-JIb">
-                                        <rect key="frame" x="148" y="228" width="226" height="41"/>
+                                        <rect key="frame" x="148" y="228.33333333333331" width="226" height="40.666666666666686"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -126,7 +126,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DUp-E6-7Mz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6228" y="974"/>
+            <point key="canvasLocation" x="6227.536231884058" y="973.66071428571422"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gU7-g2-IGc">
@@ -235,6 +235,6 @@
         <image name="money" width="24" height="24"/>
         <image name="star" width="24" height="24"/>
         <image name="user" width="24" height="24"/>
-        <image name="yakusheva" width="268.5" height="274.5"/>
+        <image name="yakusheva" width="179" height="183"/>
     </resources>
 </document>

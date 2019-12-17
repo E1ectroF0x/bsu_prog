@@ -46,7 +46,6 @@ class HeaderHistoryView: UIView {
         backgroundColor = .white
         
         let stackView = UIStackView(arrangedSubviews: [typeLabel, amountLabel, dateLabel])
-      //  stackView.frame = frame
         stackView.distribution = .equalCentering
         stackView.alignment = .fill
         stackView.frame = CGRect(x: 0, y: 0, width: frame.width, height: 0)
@@ -54,7 +53,6 @@ class HeaderHistoryView: UIView {
                 
         let blackLine = UIImageView(frame: CGRect(origin: .zero, size: CGSize(width: frame.width , height: 1)))
         blackLine.backgroundColor = .black
-        blackLine.translatesAutoresizingMaskIntoConstraints = false
         
         blackLine.addConstraint(attribute : .width,  constant: frame.width)
         blackLine.addConstraint(attribute : .height,  constant: 1)
