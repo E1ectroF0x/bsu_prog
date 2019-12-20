@@ -1,25 +1,5 @@
-.select-wrapper {
-    display: flex;
-    margin-left: 15px;
-    margin-top: 15px;
-}
-
-.wrap {
-    margin-left: 25px;
-}
-
 .semestr {
     margin-left: 0;
-}
-
-.select-box {
-    position: relative;
-    display: block;
-    width: 100px;
-    height: 28px;
-    font-family: "Open Sans", sans-serif;
-    font-size: 14px;
-    color: #60666d;
 }
 
 #semestr {
@@ -43,7 +23,6 @@
 #auditory {
     width: 103px;
 }
-
 
 .subgroup {
     margin-top: 20px;
@@ -71,100 +50,6 @@
     box-shadow: 0 3px 6px #0A3470;
 }
 
-.selector-label {
-    font-weight: bold;
-    font-size: 16px;
-    color: #0A3470;
-}
-
-.select-box_current {
-    position: relative;
-    cursor: pointer;
-    outline: none;
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(10, 52, 112);
-    margin-top: 7px;
-    box-shadow: 0 3px 6px #0A3470;
-}
-
-.select-box_icon {
-    position: absolute;
-    top: 45%;
-    right: 10px;
-    width: 20px;
-    opacity: 1;
-}
-
-.select-box_value {
-    width: 100%;
-    color: #222937;
-    display: flex;
-}
-
-.select-box_input-text {
-    font-weight: bold;
-    font-size: 18px;
-    color: rgb(10, 52, 112);
-    display: none;
-    width: 100%;
-    margin: 0;
-    padding: 5px;
-    background-color: #fff;
-}
-.select-box_list {
-    border-style: solid;
-    border-width: 1px;
-    border-color: #0A3470;
-    position: absolute;
-    width: 100%;
-    padding: 0;
-    list-style: none;
-    opacity: 0;
-    animation-name: HideList;
-    animation-duration: 0.5s;
-    animation-delay: 0.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: step-start;
-    box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.3);
-}
-.select-box_option {
-    display: block;
-    padding: 5px;
-    background-color: #fff;
-    color: rgb(10, 52, 112);
-    font-size: 16px;
-    font-weight: bold;
-}
-
-
-.select-box_current:focus + .select-box_list {
-    opacity: 1;
-    animation-name: none;
-}
-.select-box_current:focus + .select-box_list .select-box_option {
-    cursor: pointer;
-}
-.select-box_input {
-    display: none;
-}
-.select-box_input:checked + .select-box_input-text {
-    display: block;
-}
-.select-box_option:hover, .select-box_option:focus {
-    color: #fff;
-    background-color: rgb(10, 52, 112);
-}
-
-@keyframes HideList {
-    from {
-        transform: scaleY(1);
-    }
-    to {
-        transform: scaleY(0);
-    }
-}
-
 .timetable-wrapper {
     margin-top: 85px;
 }
@@ -182,6 +67,7 @@
 
 .timetable-table thead {
     border-bottom: 2px solid #000;
+
 }
 .timetable-table tbody th {
     border-right: 2px solid #000;
@@ -207,6 +93,12 @@
 .timetable-table td {
     max-width: 223px;
     border: 1px solid #707070;
+    text-overflow: clip;
     overflow: scroll;
+}
+
+.timetable-table td::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
 }
 

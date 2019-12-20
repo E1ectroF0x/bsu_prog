@@ -1,0 +1,177 @@
+.content-wrapper {
+    margin-left: 40px;
+}
+
+.button-group button {
+    width: 237px;
+    height: 30px;
+    margin-right: 50px;
+}
+
+.selected-btn {
+    background-color: #0A3470;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #0A3470;
+    font-size: 16px;
+    font-weight: bold;
+    color: #CECECE;
+    margin-top: 20px;
+    box-shadow: 0 3px 6px #0A3470;
+}
+
+.option-group {
+    margin-top: 30px;
+}
+
+#start {
+    margin-left: -15px;
+}
+#speciality {
+    width: 285px;
+}
+#department {
+    width: 300px;
+}
+
+.students-table-wrapper {
+    margin-top: 30px;
+}
+
+.students-table {
+    border-collapse: collapse;
+}
+
+.table-data {
+    text-align: center;
+    border: 1px solid #707070;
+}
+
+.del-btn {
+    color: #CECECE;
+    background-color: rgba(249, 0, 0, .62);
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    height: 26px;
+    box-shadow: 0 3px 6px #0A3470;
+    cursor: pointer;
+}
+
+.change-btn {
+    color: #CECECE;
+    background-color: rgba(10, 52, 112, .57);
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    height: 26px;
+    box-shadow: 0 3px 6px #0A3470;
+    cursor: pointer;
+}
+
+.br-empty {
+    border: none;
+}
+
+.speciality-header {
+    text-align: start;
+    font-weight: bold;
+    font-size: 11px;
+    color: #0A3470;
+}
+
+.table-fio {
+    width: 112px;
+}
+.table-course {
+    width: 40px;
+}
+.table-group {
+    width: 44px;
+}
+.table-speciality {
+    width: 146px;
+}
+.table-department {
+    width: 161px;
+}
+.table-study_form {
+    width: 72px;
+}
+.table-record_book {
+    width: 74px;
+}
+.table-gender {
+    width: 44px;
+}
+.table-start_year {
+    width: 81px;
+}
+.table-number {
+    width: 148px;
+}
+.btn2 {
+
+}
+
+.speciality-body-header {
+    height: 50px;
+}
+
+tbody {
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    color: #0A3470;
+}
+
+.input-wrapper {
+    display: flex;
+    margin-top: 26px;
+}
+
+.input-label {
+    font-weight: bold;
+    font-size: 16px;
+    color: #0A3470;
+}
+
+.input-wrap {
+    margin-left: 37px;
+}
+
+.surname {
+    margin-left: 0;
+}
+
+.input-field {
+    width: 200px;
+    height: 30px;
+    margin-top: 9px;
+    border: 1px solid #0A3470;
+    box-shadow: 0 3px 6px #0A3470;
+}
+::placeholder {
+    padding-left: 10px;
+    color: rgba(10, 52, 112, .53);
+    font-weight: bold;
+}
+
+#gender {
+    height: 30px;
+    width: 55px;
+}
+
+.button-wrapper {
+    margin-top: 33px;
+    display: flex;
+}
+
+.button-wrapper button {
+    height: 30px;
+    width: 237px;
+}
+
+
+
+
