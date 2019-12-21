@@ -24,6 +24,10 @@
     margin-top: 30px;
 }
 
+.wrap.course > .select-box {
+    width: 48px;
+}
+
 #start {
     margin-left: -15px;
 }
@@ -182,7 +186,7 @@ tbody {
 .input-wrap.record-book {
     width: 200px;
 }
-.input-wrap.study-form > .select-box > .select-box_current {
+.input-wrap.study-form > .select-box {
     width: 152px;
 }
 .button-wrapper {
