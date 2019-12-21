@@ -147,17 +147,21 @@ body {
     width: 100%;
     color: #222937;
     display: flex;
+    max-height: 30px;
 }
 
 .select-box_input-text {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 14px;
     color: rgb(10, 52, 112);
     display: none;
-    width: 100%;
+    width: calc(100% - 40px);
     margin: 0;
     padding: 5px;
     background-color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip;
 }
 .select-box_list {
     border-style: solid;
