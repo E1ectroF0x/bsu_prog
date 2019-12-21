@@ -93,8 +93,8 @@
 .timetable-table td {
     max-width: 223px;
     border: 1px solid #707070;
-    text-overflow: clip;
     overflow: scroll;
+
 }
 
 .timetable-table td::-webkit-scrollbar {

@@ -137,6 +137,7 @@ tbody {
 }
 
 .input-wrap {
+
     margin-left: 37px;
 }
 
@@ -157,11 +158,33 @@ tbody {
     font-weight: bold;
 }
 
-#gender {
+.input-wrap.surname {
+    margin-left: 0;
+    width: 200px;
+}
+.input-wrap.first-name {
+    width: 200px;
+}
+.input-wrap.last-name {
+    width: 200px;
+}
+.input-wrap.gender {
     height: 30px;
     width: 55px;
 }
+.input-wrap.gender > .select-box {
+    width: inherit;
+}
 
+.input-wrap.birthday {
+    width: 200px;
+}
+.input-wrap.record-book {
+    width: 200px;
+}
+.input-wrap.study-form > .select-box > .select-box_current {
+    width: 152px;
+}
 .button-wrapper {
     margin-top: 33px;
     display: flex;
