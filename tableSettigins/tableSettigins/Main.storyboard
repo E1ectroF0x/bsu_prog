@@ -252,26 +252,25 @@
                                     <outlet property="delegate" destination="6vt-3P-4yv" id="YbX-Mn-Hot"/>
                                 </connections>
                             </tableView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="V8e-3N-ivA">
-                                <rect key="frame" x="12" y="209" width="390" height="297"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GgA-99-KW7">
+                                <rect key="frame" x="0.0" y="205.33333333333337" width="414" height="309"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="4" minimumInteritemSpacing="5" id="XhA-eY-htK">
-                                    <size key="itemSize" width="41" height="40"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WOa-Fd-uFc">
+                                    <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="C1" id="nyf-VP-Y62" customClass="DateCollectionViewCell" customModule="BSU" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="C1" id="33z-cF-T31" customClass="DateCollectionViewCell" customModule="BSU" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="EkG-Gq-rdh" customClass="DateCollectionViewCell" customModule="BSU" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="AjI-2l-hqK">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pet-f2-NMZ">
-                                                    <rect key="frame" x="4" y="10" width="33" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3BS-iv-OTo">
+                                                    <rect key="frame" x="4" y="15" width="42" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -279,15 +278,14 @@
                                                 </label>
                                             </subviews>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="40" height="40"/>
                                         <connections>
-                                            <outlet property="cellDateLabel" destination="pet-f2-NMZ" id="Kt3-yH-C4F"/>
+                                            <outlet property="cellDateLabel" destination="3BS-iv-OTo" id="SE3-78-asr"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
-                                    <outlet property="dataSource" destination="6vt-3P-4yv" id="yr7-Wy-YrB"/>
-                                    <outlet property="delegate" destination="6vt-3P-4yv" id="K17-ZC-uVc"/>
+                                    <outlet property="dataSource" destination="6vt-3P-4yv" id="pmC-0l-PyS"/>
+                                    <outlet property="delegate" destination="6vt-3P-4yv" id="1Ow-Pk-Vbb"/>
                                 </connections>
                             </collectionView>
                         </subviews>
@@ -295,16 +293,20 @@
                         <constraints>
                             <constraint firstItem="U38-dt-hqu" firstAttribute="leading" secondItem="5uN-AS-X8A" secondAttribute="leading" constant="25" id="2kc-Or-ONl"/>
                             <constraint firstItem="5uN-AS-X8A" firstAttribute="trailing" secondItem="U38-dt-hqu" secondAttribute="trailing" constant="25" id="5Ms-5y-RgL"/>
+                            <constraint firstItem="5uN-AS-X8A" firstAttribute="bottom" secondItem="GgA-99-KW7" secondAttribute="bottom" constant="298.66666666666663" id="AEu-q2-0j0"/>
+                            <constraint firstItem="GgA-99-KW7" firstAttribute="trailing" secondItem="5uN-AS-X8A" secondAttribute="trailing" id="R89-5i-14w"/>
                             <constraint firstItem="M0w-XR-ACb" firstAttribute="bottom" secondItem="5uN-AS-X8A" secondAttribute="bottom" id="T0A-oK-nFj"/>
                             <constraint firstItem="U38-dt-hqu" firstAttribute="top" secondItem="5uN-AS-X8A" secondAttribute="top" constant="92" id="VpK-Cq-TNM"/>
+                            <constraint firstItem="GgA-99-KW7" firstAttribute="leading" secondItem="5uN-AS-X8A" secondAttribute="leading" id="fMz-xH-Zit"/>
                             <constraint firstItem="M0w-XR-ACb" firstAttribute="trailing" secondItem="5uN-AS-X8A" secondAttribute="trailing" id="jMH-9O-J7U"/>
+                            <constraint firstItem="GgA-99-KW7" firstAttribute="top" secondItem="5uN-AS-X8A" secondAttribute="top" constant="117.33333333333337" id="kZV-Cw-3vE"/>
                             <constraint firstItem="M0w-XR-ACb" firstAttribute="leading" secondItem="5uN-AS-X8A" secondAttribute="leading" id="yOI-d4-py6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5uN-AS-X8A"/>
                     </view>
                     <navigationItem key="navigationItem" title="Календарь" id="AbJ-Hg-Szh"/>
                     <connections>
-                        <outlet property="Calendar" destination="V8e-3N-ivA" id="BhT-4Y-nxi"/>
+                        <outlet property="Calendar" destination="GgA-99-KW7" id="C0l-V9-gfz"/>
                         <outlet property="dateLabel" destination="wBL-NI-FYb" id="hlp-sp-DTa"/>
                         <outlet property="scheduleView" destination="M0w-XR-ACb" id="nT3-2Z-tUS"/>
                     </connections>

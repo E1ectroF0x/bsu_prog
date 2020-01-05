@@ -68,62 +68,64 @@ extension CalendarViewController: UITableViewDataSource, UITableViewDelegate {
 extension CalendarViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     // MARK: Calendar(UICollectionView) protocols methods
-       
-       func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-           switch direction {
-           case 0:
-               return DaysInMonth[month] + numberOfEmptyBoxes
-           case 1...:
-               return DaysInMonth[month] + nextNumberOfEmptyBox
-           case -1:
-               return DaysInMonth[month] + nextNumberOfEmptyBox
-           default:
-               fatalError()
-           }
-       }
-       
-//       func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//           print("tapped at \(indexPath)")
-//       }
-       
-       func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-           let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IDForCalendar, for: indexPath) as! DateCollectionViewCell
-           cell.backgroundColor = UIColor.clear
-           cell.cellDateLabel.textColor = UIColor.black
-           
-           if cell.isHidden {
-               cell.isHidden = false
-           }
-           
-           switch direction {
-           case 0:
-               cell.cellDateLabel.text = "\(indexPath.row + 1 - numberOfEmptyBoxes)"
-           case 1:
-               cell.cellDateLabel.text = "\(indexPath.row + 1 - nextNumberOfEmptyBox)"
-           case -1:
-               cell.cellDateLabel.text = "\(indexPath.row + 1 - previosNumberOfEmptyBox)"
-           default:
-               fatalError()
-           }
-           
-           if Int(cell.cellDateLabel.text!)! < 1 {
-               cell.isHidden = true
-           }
-           
-           switch indexPath.row {
-           case 5,6,12,13,19,20,26,27,33,34:
-               if Int(cell.cellDateLabel.text!)! > 0 {
-                   cell.cellDateLabel.textColor = UIColor.lightGray
-               }
-           default:
-               break
-           }
-           
-           if currentMonth == Months[calendar.component(.month, from: date) - 1] && year == calendar.component(.year, from: date) && indexPath.row + 1 == day{
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        switch direction {
+        case 0:
+            return DaysInMonth[month] + numberOfEmptyBoxes
+        case 1...:
+            return DaysInMonth[month] + nextNumberOfEmptyBox
+        case -1:
+            return DaysInMonth[month] + nextNumberOfEmptyBox
+        default:
+            fatalError()
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        day = indexPath.row + 1
+        collectionView.reloadData()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IDForCalendar, for: indexPath) as! DateCollectionViewCell
+        cell.backgroundColor = UIColor.clear
+        cell.cellDateLabel.textColor = UIColor.black
+        
+        if cell.isHidden {
+            cell.isHidden = false
+        }
+        
+        switch direction {
+        case 0:
+            cell.cellDateLabel.text = "\(indexPath.row + 1 - numberOfEmptyBoxes)"
+        case 1:
+            cell.cellDateLabel.text = "\(indexPath.row + 1 - nextNumberOfEmptyBox)"
+        case -1:
+            cell.cellDateLabel.text = "\(indexPath.row + 1 - previosNumberOfEmptyBox)"
+        default:
+            fatalError()
+        }
+        
+        if Int(cell.cellDateLabel.text!)! < 1 {
+            cell.isHidden = true
+        }
+        
+        switch indexPath.row {
+        case 5,6,12,13,19,20,26,27,33,34:
+            if Int(cell.cellDateLabel.text!)! > 0 {
+                cell.cellDateLabel.textColor = UIColor.lightGray
+            }
+        default:
+            break
+        }
+        
+        if currentMonth == Months[calendar.component(.month, from: date) - 1] && year == calendar.component(.year, from: date) && indexPath.row + 1 == day{
             cell.backgroundColor = Constants.customBlue
-               cell.cellDateLabel.textColor = UIColor.white
-           }
-           return cell
-       }
+            cell.layer.cornerRadius = 24.0
+            cell.cellDateLabel.textColor = UIColor.white
+        }
+        return cell
+    }
     
 }
