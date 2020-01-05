@@ -17,13 +17,13 @@ class PickerViewController: UIViewController {
     
     let chouseButton: UIBarButtonItem = {
         let button = UIBarButtonItem(title: "OK", style: .plain, target: self, action: #selector(ok(sender:)))
-        button.tintColor = customBlue
+        button.tintColor = Constants.customBlue
         return button
     }()
     
     let cancelButton: UIBarButtonItem = {
         let button = UIBarButtonItem(title: "Отмена", style: .plain, target: self, action: #selector(cancel(sender:)))
-        button.tintColor = customBlue
+        button.tintColor = Constants.customBlue
         return button
     }()
     
@@ -43,7 +43,7 @@ class PickerViewController: UIViewController {
     func updateUI() {
         let navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 44))
         
-        picker.frame = CGRect(x: 0, y: 44, width: view.frame.width, height: 200)
+        picker.frame = CGRect(x: 0, y: 44, width: view.frame.width, height: 183)
         picker.backgroundColor = .white
         
         let navigationItem = UINavigationItem(title: "Семестр")

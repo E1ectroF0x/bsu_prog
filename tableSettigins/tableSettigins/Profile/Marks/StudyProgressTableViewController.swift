@@ -126,7 +126,7 @@ class StudyProgressTableViewController: UITableViewController {
         view.addSubview(childPicker.view)
         childPicker.picker.selectRow(2, inComponent: 0, animated: false)
         let offset = self.tableView.contentOffset
-        childPicker.view.frame = CGRect(x: 0, y: tableView.frame.maxY - 244 + offset.y, width: tableView.frame.width, height: 244)
+        childPicker.view.frame = CGRect(x: 0, y: tableView.frame.maxY - 227 + offset.y, width: tableView.frame.width, height: 227)
         childPicker.updateUI()
         childPicker.didMove(toParent: self)
     }

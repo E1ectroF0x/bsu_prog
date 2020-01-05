@@ -10,9 +10,13 @@
 		D81DBBF923A26C540027D580 /* ExamProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81DBBF823A26C540027D580 /* ExamProgressCell.swift */; };
 		D820A9C723A9519800AEE4E3 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D820A9C623A9519800AEE4E3 /* PickerViewController.swift */; };
 		D8411EE92399839E00FF7F3D /* UserInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8411EE82399839E00FF7F3D /* UserInfoCell.swift */; };
+		D8422BF323C2270D00BD11D0 /* ScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8422BF223C2270D00BD11D0 /* ScheduleTableViewController.swift */; };
+		D842CDF523AE40F3008E6744 /* ExtensionCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D842CDF423AE40F3008E6744 /* ExtensionCalendarViewController.swift */; };
+		D842CDF723AE414B008E6744 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D842CDF623AE414A008E6744 /* Main.storyboard */; };
+		D842CDFA23AE41BD008E6744 /* ScheduleTableViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D842CDF823AE41BD008E6744 /* ScheduleTableViewControllerCell.swift */; };
+		D842CDFB23AE41BD008E6744 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D842CDF923AE41BD008E6744 /* ScheduleTableViewCell.swift */; };
 		D856CBD72396A8EA0055FD1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856CBD62396A8EA0055FD1B /* AppDelegate.swift */; };
 		D856CBD92396A8EA0055FD1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856CBD82396A8EA0055FD1B /* SceneDelegate.swift */; };
-		D856CBDE2396A8EA0055FD1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D856CBDC2396A8EA0055FD1B /* Main.storyboard */; };
 		D856CBE32396A8EC0055FD1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D856CBE12396A8EC0055FD1B /* LaunchScreen.storyboard */; };
 		D859F914239FCDA100F276F0 /* CreditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D859F913239FCDA100F276F0 /* CreditTableViewController.swift */; };
 		D859F916239FCF4300F276F0 /* StudyProgressTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D859F915239FCF4300F276F0 /* StudyProgressTableViewController.swift */; };
@@ -32,16 +36,21 @@
 		D8DAA92723A36D0700FE7161 /* TestProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DAA92623A36D0700FE7161 /* TestProgressCell.swift */; };
 		D8F0CE6323A798E700B970C6 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F0CE6223A798E700B970C6 /* Layout.swift */; };
 		D8F0CE6523A7BB5000B970C6 /* SelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F0CE6423A7BB5000B970C6 /* SelectView.swift */; };
+		D8FEAFA723C11FC80099FA17 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FEAFA623C11FC80099FA17 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D81DBBF823A26C540027D580 /* ExamProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamProgressCell.swift; sourceTree = "<group>"; };
 		D820A9C623A9519800AEE4E3 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		D8411EE82399839E00FF7F3D /* UserInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoCell.swift; sourceTree = "<group>"; };
+		D8422BF223C2270D00BD11D0 /* ScheduleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewController.swift; sourceTree = "<group>"; };
+		D842CDF423AE40F3008E6744 /* ExtensionCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCalendarViewController.swift; sourceTree = "<group>"; };
+		D842CDF623AE414A008E6744 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D842CDF823AE41BD008E6744 /* ScheduleTableViewControllerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewControllerCell.swift; sourceTree = "<group>"; };
+		D842CDF923AE41BD008E6744 /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		D856CBD32396A8EA0055FD1B /* BSU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BSU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D856CBD62396A8EA0055FD1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D856CBD82396A8EA0055FD1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D856CBDD2396A8EA0055FD1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D856CBE22396A8EC0055FD1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D856CBE42396A8EC0055FD1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D859F913239FCDA100F276F0 /* CreditTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditTableViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +71,7 @@
 		D8DAA92623A36D0700FE7161 /* TestProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProgressCell.swift; sourceTree = "<group>"; };
 		D8F0CE6223A798E700B970C6 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		D8F0CE6423A7BB5000B970C6 /* SelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectView.swift; sourceTree = "<group>"; };
+		D8FEAFA623C11FC80099FA17 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +108,8 @@
 				D856CBD82396A8EA0055FD1B /* SceneDelegate.swift */,
 				D876207E239979480026352A /* Constants.swift */,
 				D8F0CE6223A798E700B970C6 /* Layout.swift */,
-				D856CBDC2396A8EA0055FD1B /* Main.storyboard */,
+				D842CDF623AE414A008E6744 /* Main.storyboard */,
+				D8FEAFA623C11FC80099FA17 /* LoginViewController.swift */,
 				D856CBE12396A8EC0055FD1B /* LaunchScreen.storyboard */,
 				D85A531E239FD98F00FFE3DB /* Calendar */,
 				D859F917239FCF5400F276F0 /* Profile */,
@@ -124,9 +135,13 @@
 		D85A531E239FD98F00FFE3DB /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				D8422BF223C2270D00BD11D0 /* ScheduleTableViewController.swift */,
 				D8762071239978CF0026352A /* CalendarDataModel.swift */,
 				D8762074239978CF0026352A /* DateCollectionViewCell.swift */,
+				D842CDF923AE41BD008E6744 /* ScheduleTableViewCell.swift */,
+				D842CDF823AE41BD008E6744 /* ScheduleTableViewControllerCell.swift */,
 				D876206E239978CF0026352A /* CalendarViewController.swift */,
+				D842CDF423AE40F3008E6744 /* ExtensionCalendarViewController.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -232,7 +247,7 @@
 			files = (
 				D876206D23996DEA0026352A /* Images.xcassets in Resources */,
 				D856CBE32396A8EC0055FD1B /* LaunchScreen.storyboard in Resources */,
-				D856CBDE2396A8EA0055FD1B /* Main.storyboard in Resources */,
+				D842CDF723AE414B008E6744 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,16 +262,20 @@
 				D8762076239978CF0026352A /* CalendarViewController.swift in Sources */,
 				D8F0CE6523A7BB5000B970C6 /* SelectView.swift in Sources */,
 				D856CBD72396A8EA0055FD1B /* AppDelegate.swift in Sources */,
+				D842CDFA23AE41BD008E6744 /* ScheduleTableViewControllerCell.swift in Sources */,
 				D820A9C723A9519800AEE4E3 /* PickerViewController.swift in Sources */,
 				D859F916239FCF4300F276F0 /* StudyProgressTableViewController.swift in Sources */,
 				D8D06D0E239FB94700AF3D84 /* PageViewController.swift in Sources */,
 				D876207D239978CF0026352A /* SettingsViewController.swift in Sources */,
+				D8422BF323C2270D00BD11D0 /* ScheduleTableViewController.swift in Sources */,
 				D859F914239FCDA100F276F0 /* CreditTableViewController.swift in Sources */,
 				D8762077239978CF0026352A /* SettingsTableViewCell.swift in Sources */,
 				D8C8B64F23A18BEF008E6825 /* HistoryViewController.swift in Sources */,
 				D856CBD92396A8EA0055FD1B /* SceneDelegate.swift in Sources */,
+				D842CDF523AE40F3008E6744 /* ExtensionCalendarViewController.swift in Sources */,
 				D8D06D10239FB99A00AF3D84 /* InfoPageTableViewController.swift in Sources */,
 				D876207B239978CF0026352A /* ProfileViewController.swift in Sources */,
+				D842CDFB23AE41BD008E6744 /* ScheduleTableViewCell.swift in Sources */,
 				D876207C239978CF0026352A /* DateCollectionViewCell.swift in Sources */,
 				D8DAA92723A36D0700FE7161 /* TestProgressCell.swift in Sources */,
 				D8762079239978CF0026352A /* CalendarDataModel.swift in Sources */,
@@ -264,6 +283,7 @@
 				D876207F239979480026352A /* Constants.swift in Sources */,
 				D8F0CE6323A798E700B970C6 /* Layout.swift in Sources */,
 				D8C8B65123A19FD3008E6825 /* HeaderHistoryView.swift in Sources */,
+				D8FEAFA723C11FC80099FA17 /* LoginViewController.swift in Sources */,
 				D8C8B64D23A18882008E6825 /* HistoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,14 +291,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D856CBDC2396A8EA0055FD1B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D856CBDD2396A8EA0055FD1B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D856CBE12396A8EC0055FD1B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
