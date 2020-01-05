@@ -37,7 +37,7 @@ class CalendarViewController: UIViewController{
     let DaysOfMonth = ["Monday", "Thuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     var DaysInMonth = [31,28,31,30,31,30,31,31,30,31,30,31]
     // Calendar logic
-    var numberOfEmptyBoxes = Int()      // The number of empty cells at the start of the current month
+    var numberOfEmptyBoxes = 2      // The number of empty cells at the start of the current month
     var nextNumberOfEmptyBox = Int()
     var previosNumberOfEmptyBox = Int()
     var direction = 0                   // == 0 if current, == 1 if future, == -1 if in past
@@ -64,24 +64,7 @@ class CalendarViewController: UIViewController{
         currentMonth = Months[month]
         dateLabel.text = "\(currentMonth) " + "\(year)"
         
-        //         Calendar.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap)))
-        
-        // Tap set
-        //        let tap = UITapGestureRecognizer(target: self, action: #selector(cellTap(_:)))
-        //        tap.numberOfTapsRequired = 1
-        //        tap.numberOfTouchesRequired = 1
-        //        tap.delegate = self
-        //        Calendar.addGestureRecognizer(tap)
-        
     }
-    
-    //    @objc func cellTap(_ sender: UITapGestureRecognizer){
-    //        let point = sender.location(in: Calendar)
-    //
-    //        if let indexPath = Calendar?.indexPathForItem(at: point) {
-    //            print(#function, indexPath)
-    //        }
-    //    }
     
     @IBAction func back(_ sender: Any) {
         switch currentMonth {
@@ -202,26 +185,7 @@ class CalendarViewController: UIViewController{
             fatalError()
         }
     }
-    
-    //    @objc func cellTap(_ sender: DateCollectionViewCell){
-    //        if sender = DateCollectionViewCell{
-    //        print("good morning")
-    //        }
-    //    }
-    
-    
-    
-    
-    
-    //    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-    //        let point = touch.location(in: Calendar)
-    //        if let indexPath = Calendar?.indexPathForItem(at: point),
-    //            let cell = Calendar?.cellForItem(at: indexPath) {
-    //            return touch.location(in: cell).y > 50
-    //        }
-    //
-    //        return false
-    //    }
+ 
 }
 
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ThA-Fo-Z7e">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z1o-uM-H1B">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -396,6 +396,7 @@
                         <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="NQM-il-Rou"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WbE-j8-OCA">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -413,10 +414,10 @@
             </objects>
             <point key="canvasLocation" x="5317.3913043478269" y="240.40178571428569"/>
         </scene>
-        <!--Login View Controller-->
+        <!--View Controller-->
         <scene sceneID="7FY-b9-cKU">
             <objects>
-                <viewController id="Z1o-uM-H1B" customClass="LoginViewController" customModule="BSU" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Z1o-uM-H1B" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qY8-NG-EFB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -436,7 +437,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Вход"/>
                                 <connections>
-                                    <action selector="request:" destination="Z1o-uM-H1B" eventType="touchUpInside" id="Fzk-bD-XjM"/>
+                                    <segue destination="ThA-Fo-Z7e" kind="modal" modalPresentationStyle="fullScreen" id="Ogx-eV-16i"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="LUn-Gk-7aK">
@@ -482,9 +483,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZuC-91-NzG"/>
                     </view>
-                    <connections>
-                        <outlet property="loginButton" destination="PMW-VT-icL" id="gnq-Ph-ya0"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Isi-Jh-7mO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

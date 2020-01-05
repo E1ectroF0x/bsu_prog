@@ -32,18 +32,7 @@ extension CalendarViewController: UITableViewDataSource, UITableViewDelegate {
         cell.lessonName.text = Constants.currentDayLesson[indexPath.row]
         cell.lessonLocation.text = Constants.currentDayLocation[indexPath.row]
         cell.teacherName.text = Constants.currentDayName[indexPath.row]
-        //
-        //    if tapLogic == true {
-        //    cell.lessonTime.text = Constants.currentDayTime[indexPath.row]
-        //    cell.lessonType.text = Constants.otherDayType[indexPath.row]
-        //    cell.lessonName.text = Constants.otherDayLesson[indexPath.row]
-        //    cell.lessonLocation.text = Constants.otherDayLocation[indexPath.row]
-        //    cell.teacherName.text = Constants.otherDayName[indexPath.row]
-        //
-        //    tableView.reloadData()
-        //    }
-        
-        
+   
         return cell
     }
     
@@ -85,7 +74,7 @@ extension CalendarViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         day = indexPath.row + 1
         collectionView.reloadData()
-        
+        scheduleView.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

@@ -36,7 +36,6 @@
 		D8DAA92723A36D0700FE7161 /* TestProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DAA92623A36D0700FE7161 /* TestProgressCell.swift */; };
 		D8F0CE6323A798E700B970C6 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F0CE6223A798E700B970C6 /* Layout.swift */; };
 		D8F0CE6523A7BB5000B970C6 /* SelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F0CE6423A7BB5000B970C6 /* SelectView.swift */; };
-		D8FEAFA723C11FC80099FA17 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FEAFA623C11FC80099FA17 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,7 +70,6 @@
 		D8DAA92623A36D0700FE7161 /* TestProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProgressCell.swift; sourceTree = "<group>"; };
 		D8F0CE6223A798E700B970C6 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		D8F0CE6423A7BB5000B970C6 /* SelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectView.swift; sourceTree = "<group>"; };
-		D8FEAFA623C11FC80099FA17 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +107,6 @@
 				D876207E239979480026352A /* Constants.swift */,
 				D8F0CE6223A798E700B970C6 /* Layout.swift */,
 				D842CDF623AE414A008E6744 /* Main.storyboard */,
-				D8FEAFA623C11FC80099FA17 /* LoginViewController.swift */,
 				D856CBE12396A8EC0055FD1B /* LaunchScreen.storyboard */,
 				D85A531E239FD98F00FFE3DB /* Calendar */,
 				D859F917239FCF5400F276F0 /* Profile */,
@@ -283,7 +280,6 @@
 				D876207F239979480026352A /* Constants.swift in Sources */,
 				D8F0CE6323A798E700B970C6 /* Layout.swift in Sources */,
 				D8C8B65123A19FD3008E6825 /* HeaderHistoryView.swift in Sources */,
-				D8FEAFA723C11FC80099FA17 /* LoginViewController.swift in Sources */,
 				D8C8B64D23A18882008E6825 /* HistoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
