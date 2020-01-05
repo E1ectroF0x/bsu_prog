@@ -85,6 +85,7 @@ extension CalendarViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         day = indexPath.row + 1
         collectionView.reloadData()
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -120,7 +121,7 @@ extension CalendarViewController: UICollectionViewDelegate, UICollectionViewData
             break
         }
         
-        if currentMonth == Months[calendar.component(.month, from: date) - 1] && year == calendar.component(.year, from: date) && indexPath.row + 1 == day{
+        if  indexPath.row + 1 == day{
             cell.backgroundColor = Constants.customBlue
             cell.layer.cornerRadius = 24.0
             cell.cellDateLabel.textColor = UIColor.white

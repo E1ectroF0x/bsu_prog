@@ -67,21 +67,21 @@ class CalendarViewController: UIViewController{
         //         Calendar.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap)))
         
         // Tap set
-//        let tap = UITapGestureRecognizer(target: self, action: #selector(cellTap(_:)))
-//        tap.numberOfTapsRequired = 1
-//        tap.numberOfTouchesRequired = 1
-//        tap.delegate = self
-//        Calendar.addGestureRecognizer(tap)
-            
+        //        let tap = UITapGestureRecognizer(target: self, action: #selector(cellTap(_:)))
+        //        tap.numberOfTapsRequired = 1
+        //        tap.numberOfTouchesRequired = 1
+        //        tap.delegate = self
+        //        Calendar.addGestureRecognizer(tap)
+        
     }
     
-//    @objc func cellTap(_ sender: UITapGestureRecognizer){
-//        let point = sender.location(in: Calendar)
-//
-//        if let indexPath = Calendar?.indexPathForItem(at: point) {
-//            print(#function, indexPath)
-//        }
-//    }
+    //    @objc func cellTap(_ sender: UITapGestureRecognizer){
+    //        let point = sender.location(in: Calendar)
+    //
+    //        if let indexPath = Calendar?.indexPathForItem(at: point) {
+    //            print(#function, indexPath)
+    //        }
+    //    }
     
     @IBAction func back(_ sender: Any) {
         switch currentMonth {
@@ -115,6 +115,11 @@ class CalendarViewController: UIViewController{
             currentMonth = Months[month]
             dateLabel.text = "\(currentMonth) " + "\(year)"
             Calendar.reloadData()
+        }
+        if current_month_i == month && current_year_i == year {
+            day = current_day_i
+        } else {
+            day = -1
         }
     }
     
@@ -155,6 +160,12 @@ class CalendarViewController: UIViewController{
             dateLabel.text = "\(currentMonth) " + "\(year)"
             Calendar.reloadData()
         }
+        if current_month_i == month && current_year_i == year {
+            day = current_day_i
+        } else {
+            day = -1
+        }
+        
     }
     
     
@@ -202,15 +213,15 @@ class CalendarViewController: UIViewController{
     
     
     
-//    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-//        let point = touch.location(in: Calendar)
-//        if let indexPath = Calendar?.indexPathForItem(at: point),
-//            let cell = Calendar?.cellForItem(at: indexPath) {
-//            return touch.location(in: cell).y > 50
-//        }
-//        
-//        return false
-//    }
+    //    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+    //        let point = touch.location(in: Calendar)
+    //        if let indexPath = Calendar?.indexPathForItem(at: point),
+    //            let cell = Calendar?.cellForItem(at: indexPath) {
+    //            return touch.location(in: cell).y > 50
+    //        }
+    //
+    //        return false
+    //    }
 }
 
 
