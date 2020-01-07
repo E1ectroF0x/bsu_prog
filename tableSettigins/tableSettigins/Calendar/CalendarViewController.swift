@@ -37,7 +37,7 @@ class CalendarViewController: UIViewController{
     let DaysOfMonth = ["Monday", "Thuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     var DaysInMonth = [31,28,31,30,31,30,31,31,30,31,30,31]
     // Calendar logic
-    var numberOfEmptyBoxes = 2      // The number of empty cells at the start of the current month
+    var numberOfEmptyBoxes = 0      // The number of empty cells at the start of the current month
     var nextNumberOfEmptyBox = Int()
     var previosNumberOfEmptyBox = Int()
     var direction = 0                   // == 0 if current, == 1 if future, == -1 if in past
@@ -60,7 +60,6 @@ class CalendarViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         currentMonth = Months[month]
         dateLabel.text = "\(currentMonth) " + "\(year)"
         

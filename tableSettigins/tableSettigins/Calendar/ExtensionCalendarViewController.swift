@@ -59,6 +59,7 @@ extension CalendarViewController: UICollectionViewDelegate, UICollectionViewData
     // MARK: Calendar(UICollectionView) protocols methods
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        GetStartDateDayPosition()
         switch direction {
         case 0:
             return DaysInMonth[month] + numberOfEmptyBoxes

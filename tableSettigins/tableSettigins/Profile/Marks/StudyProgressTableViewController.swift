@@ -10,6 +10,7 @@ import UIKit
 
 class StudyProgressTableViewController: UITableViewController {
     
+    //убрать
     let data = [[],["Математический анализ",
                     "Общая физика",
                     "Численные методы",
@@ -22,6 +23,7 @@ class StudyProgressTableViewController: UITableViewController {
                  "Прикладное программирование",
                  "Физическая культура"]]
     
+    //не трогать
     let headerText = ["Выбрать семестр", "Экзамены", "Зачеты"]
 
     let childPicker = PickerViewController()
@@ -39,12 +41,12 @@ class StudyProgressTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+        //менять(кол-во предметов)
         return data.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+        //менять
         return data[section].count
     }
     

@@ -28,6 +28,7 @@
 		D876207C239978CF0026352A /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8762074239978CF0026352A /* DateCollectionViewCell.swift */; };
 		D876207D239978CF0026352A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8762075239978CF0026352A /* SettingsViewController.swift */; };
 		D876207F239979480026352A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D876207E239979480026352A /* Constants.swift */; };
+		D88536E823C3BB9C00D77D9F /* LoginViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88536E723C3BB9C00D77D9F /* LoginViewController1.swift */; };
 		D8C8B64D23A18882008E6825 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C8B64C23A18882008E6825 /* HistoryCell.swift */; };
 		D8C8B64F23A18BEF008E6825 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C8B64E23A18BEF008E6825 /* HistoryViewController.swift */; };
 		D8C8B65123A19FD3008E6825 /* HeaderHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C8B65023A19FD3008E6825 /* HeaderHistoryView.swift */; };
@@ -62,6 +63,7 @@
 		D8762074239978CF0026352A /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
 		D8762075239978CF0026352A /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D876207E239979480026352A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D88536E723C3BB9C00D77D9F /* LoginViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController1.swift; sourceTree = "<group>"; };
 		D8C8B64C23A18882008E6825 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
 		D8C8B64E23A18BEF008E6825 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		D8C8B65023A19FD3008E6825 /* HeaderHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderHistoryView.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				D856CBD82396A8EA0055FD1B /* SceneDelegate.swift */,
 				D876207E239979480026352A /* Constants.swift */,
 				D8F0CE6223A798E700B970C6 /* Layout.swift */,
+				D88536E723C3BB9C00D77D9F /* LoginViewController1.swift */,
 				D842CDF623AE414A008E6744 /* Main.storyboard */,
 				D856CBE12396A8EC0055FD1B /* LaunchScreen.storyboard */,
 				D85A531E239FD98F00FFE3DB /* Calendar */,
@@ -255,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D88536E823C3BB9C00D77D9F /* LoginViewController1.swift in Sources */,
 				D81DBBF923A26C540027D580 /* ExamProgressCell.swift in Sources */,
 				D8762076239978CF0026352A /* CalendarViewController.swift in Sources */,
 				D8F0CE6523A7BB5000B970C6 /* SelectView.swift in Sources */,
