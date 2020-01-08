@@ -7,7 +7,8 @@
 //
 
 import UIKit
-//ничего менять не нужно
+
+
 class UserInfoCell: UITableViewCell {
     
     let infoNameLabel : UILabel = {
