@@ -19,7 +19,7 @@ class PageViewController: UIPageViewController {
     
     func switchTableVC(index: Int) -> UITableViewController{
         switch index {
-        case 0: return InfoPageTableViewController(style: .grouped)
+        case 0: return infoTableView
         case 1: return CreditTableViewController(style: .grouped)
         case 2: return StudyProgressTableViewController(style: .grouped)
         default: return UITableViewController()
@@ -28,9 +28,16 @@ class PageViewController: UIPageViewController {
     }
     
     func nextPageWithIndex(index: Int){
-       let controller = switchTableVC(index: index)
-           setViewControllers([controller], direction: .forward, animated: false, completion: nil)
-       }
+        let controller = switchTableVC(index: index)
+        if let info = controller as? InfoPageTableViewController {
+            info.profile = self.profile
+            setViewControllers([info], direction: .forward, animated: false, completion: nil)
+        }
+        else {
+            setViewControllers([controller], direction: .forward, animated: false, completion: nil)
+        }
+        
+    }
     
 }
 

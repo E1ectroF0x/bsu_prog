@@ -17,7 +17,6 @@ enum APIError: Error {
 
 struct ApiRequest {
     let resourse: URL
-    
     init(endpoint: String) {
         let resourseString = "http://93.125.18.58:3333/\(endpoint)"
         guard let resourse = URL(string: resourseString) else {fatalError()}
@@ -32,7 +31,7 @@ struct ApiRequest {
         let session = URLSession.shared
         session.dataTask(with: request) { (data, response, error) in
             if let response = response {
-                print(response)
+               // print(response)
             }
             
             guard let data = data else { return }
@@ -55,12 +54,11 @@ struct ApiRequest {
         let token = UserDefaults.standard.object(forKey: "Token") as! String
         let auth = "Bearer \(token)"
         request.setValue(auth, forHTTPHeaderField: "Authorization")
-        print(auth)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         let session = URLSession.shared
         session.dataTask(with: request) { (data, response, error) in
             if let response = response {
-                print(response)
+                //print(response)
             }
             
             guard let data = data else { return }

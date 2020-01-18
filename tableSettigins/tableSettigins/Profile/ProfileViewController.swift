@@ -14,6 +14,9 @@ class ProfileViewController: UIViewController {
         didSet {
             DispatchQueue.main.async {
                 self.nameLabel.text = "\(self.profile.surname) \(self.profile.name)  \(self.profile.fathername)"
+                let pageViewController = self.children[0] as! PageViewController
+                pageViewController.profile = self.profile
+                pageViewController.nextPageWithIndex(index: 0)
             }
         }
     }
@@ -33,13 +36,10 @@ class ProfileViewController: UIViewController {
             }
         }
     }
-
-
-@IBAction func changeTableView(_ sender: UISegmentedControl) {
     
-    let pageViewController = self.children[0] as! PageViewController
-    pageViewController.profile = self.profile
-    pageViewController.nextPageWithIndex(index: sender.selectedSegmentIndex)
-}
-
+    
+    @IBAction func changeTableView(_ sender: UISegmentedControl) {
+        let pageViewController = self.children[0] as! PageViewController
+        pageViewController.nextPageWithIndex(index: sender.selectedSegmentIndex)
+    }
 }

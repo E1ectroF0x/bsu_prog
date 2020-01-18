@@ -37,30 +37,20 @@ class CalendarViewController: UIViewController{
     let DaysOfMonth = ["Monday", "Thuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     var DaysInMonth = [31,28,31,30,31,30,31,31,30,31,30,31]
     // Calendar logic
-    var numberOfEmptyBoxes = 2      // The number of empty cells at the start of the current month
+    var numberOfEmptyBoxes = (weekday - day % 7)      // The number of empty cells at the start of the current month
+   
     var nextNumberOfEmptyBox = Int()
     var previosNumberOfEmptyBox = Int()
     var direction = 0                   // == 0 if current, == 1 if future, == -1 if in past
-    var positionIndex = 0
-    var LeapYearCounter = 2             // == 2 (february day == 29 || 28)
+    var positionIndex = (weekday - day % 7)
     var currentMonth = String()
-    
-    var tapLogic = false
-    
-    // MARK: Date for schedule
-    
-    //    let currentDaySchedule = ["time": ["9:00 - 10:20", "10:30 - 11:50"],
-    //                              "type": ["Практическое занятие", "Практическое занятие"],
-    //                              "lesson":["Теоритическая физика", "Методы мат.физики"],
-    //                              "name": ["Жилко Виталий Владимирович", "Егоров Андрей Александрович"],
-    //                              "location": ["каб.321","каб.613"] ]
-    
-    
+
     public var headerForLessonsTable = UITableViewHeaderFooterView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(weekday)
+           print(day)
         currentMonth = Months[month]
         dateLabel.text = "\(currentMonth) " + "\(year)"
         
@@ -72,14 +62,9 @@ class CalendarViewController: UIViewController{
             month = 11
             year -= 1
             direction = -1
-            
-            if LeapYearCounter > 0 {
-                LeapYearCounter -= 1
-            }
-            
-            if LeapYearCounter == 0 {
+    
+            if year % 4 == 0 {
                 DaysInMonth[1] = 29
-                LeapYearCounter = 4
             } else {
                 DaysInMonth[1] = 28
             }
@@ -108,25 +93,18 @@ class CalendarViewController: UIViewController{
     
     
     @IBAction func next(_ sender: Any) {
+        if year % 4 == 0 {
+            DaysInMonth[1] = 29
+        }
+        else {
+            DaysInMonth[1] = 28
+        }
         switch currentMonth {
         case "Декабрь":
             month = 0
             year += 1
             direction = 1
-            
-            if LeapYearCounter < 5 {
-                LeapYearCounter += 1
-            }
-            
-            if LeapYearCounter == 4 {
-                DaysInMonth[1] = 29
-            }
-            
-            if LeapYearCounter == 5 {
-                LeapYearCounter = 1
-                DaysInMonth[1] = 28
-            }
-            
+       
             GetStartDateDayPosition()
             
             currentMonth = Months[month]
@@ -176,7 +154,7 @@ class CalendarViewController: UIViewController{
             positionIndex = nextNumberOfEmptyBox
             
         case -1:
-            previosNumberOfEmptyBox = (7 - (DaysInMonth[month] - positionIndex)%7)
+            previosNumberOfEmptyBox = (7 - (DaysInMonth[month] - positionIndex) % 7)
             if previosNumberOfEmptyBox == 7 {
                 previosNumberOfEmptyBox = 0
             }
@@ -185,7 +163,7 @@ class CalendarViewController: UIViewController{
             fatalError()
         }
     }
- 
+    
 }
 
 

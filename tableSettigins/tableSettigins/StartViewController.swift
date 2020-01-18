@@ -15,7 +15,6 @@ class StartViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     var token = Token() {
         didSet {
-            print(self.token)
             DispatchQueue.main.async {
                 self.loginTextField.text = ""
                 self.passwordTextField.text = ""

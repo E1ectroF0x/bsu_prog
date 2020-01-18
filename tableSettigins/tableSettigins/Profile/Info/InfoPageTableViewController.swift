@@ -10,10 +10,14 @@ import UIKit
 
 class InfoPageTableViewController: UITableViewController {
     
-    var profile = Profile()
+    var profile = Profile() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         updateUI()
     }
 
@@ -32,13 +36,18 @@ class InfoPageTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "UserInfoCell", for: indexPath) as! UserInfoCell
         
-        cell.contentView.frame = CGRect(x: 20, y: 0, width: view.frame.width-40, height: 44)
+        cell.contentView.frame = CGRect(x: 20, y: 0, width: view.frame.width-40, height: 70)
         cell.updateUI()
         cell.infoNameLabel.text = Constants.USER_INFO_NAME_CELL[indexPath.row]
-        cell.infoLabel.text = Constants.INFO_TABLE_INFO[indexPath.row]
+        cell.infoLabel.text = profile.getProperty(index: indexPath.row)
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
+    
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: 0, height: 0))
         

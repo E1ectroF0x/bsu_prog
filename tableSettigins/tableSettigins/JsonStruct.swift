@@ -14,17 +14,39 @@ struct DataProfile: Decodable {
 }
 
 struct Profile: Decodable {
+    let faculty:     String
+    let speciality:   String
+    let course:      String
+    let group_number:String
+    let form:        String
+    let email:       String
+    let address:     String
     let name:        String
     let surname:     String
     let fathername:  String
-    let address:     String
-    let email:       String
-    let course:      Int
-    let form:        Int
-    let birthdate:   String
-    let group_number:String
-    let speciality:   String
-    let faculty:     String
+    
+    func getProperty(index : Int) -> String {
+        switch index {
+        case 0: return self.faculty
+        case 1: return self.speciality
+        case 2: return "\(self.course), \(group_number)"
+        case 3:
+            if self.form == "1" {
+                           return "Дневная, бюджет"
+                       } else {
+                           return "Дневная, платная"
+                       }
+        case 4: return self.email
+        case 5: return self.address
+        default:
+            return "error"
+        }
+    }
+    
+    
+    
+    
+    
     
     init() {
         self.name = String()
@@ -32,9 +54,8 @@ struct Profile: Decodable {
         self.fathername =  String()
         self.address =     String()
         self.email =       String()
-        self.course =      Int()
-        self.form =        Int()
-        self.birthdate =   String()
+        self.course =      String()
+        self.form =        String()
         self.group_number = String()
         self.speciality =   String()
         self.faculty =      String()
