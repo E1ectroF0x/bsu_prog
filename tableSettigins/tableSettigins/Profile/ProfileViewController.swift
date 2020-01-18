@@ -10,6 +10,13 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
+    var profile = Profile()  {
+        didSet {
+            DispatchQueue.main.async {
+                self.nameLabel.text = "\(self.profile.surname) \(self.profile.name)  \(self.profile.fathername)"
+            }
+        }
+    }
     
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -17,12 +24,22 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let api = ApiRequest(endpoint: "api/get-private-profile/")
+        api.getPrivateProfile { (result) in
+            switch result {
+            case.failure(let error) : print(error)
+            case.success(let profile) :
+                self.profile = profile
+            }
+        }
     }
+
+
+@IBAction func changeTableView(_ sender: UISegmentedControl) {
     
-    @IBAction func changeTableView(_ sender: UISegmentedControl) {
-        
-        let pageViewController = self.children[0] as! PageViewController
-        pageViewController.nextPageWithIndex(index: sender.selectedSegmentIndex)
-    }
-    
+    let pageViewController = self.children[0] as! PageViewController
+    pageViewController.profile = self.profile
+    pageViewController.nextPageWithIndex(index: sender.selectedSegmentIndex)
+}
+
 }

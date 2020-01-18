@@ -9,18 +9,36 @@
 import Foundation
 import UIKit
 
-struct Profile: Codable {
-    let surname:    String
-    let vorName:    String
-    let FatherName: String
-    let kurs:       String
-    let specialty:  String
-    let birthday:   String
-    let email:      String
-    let Faculty:    String
-    let groop:      String
-    let address:    String
-    let form:       String
+struct DataProfile: Decodable {
+    let data: Profile
+}
+
+struct Profile: Decodable {
+    let name:        String
+    let surname:     String
+    let fathername:  String
+    let address:     String
+    let email:       String
+    let course:      Int
+    let form:        Int
+    let birthdate:   String
+    let group_number:String
+    let speciality:   String
+    let faculty:     String
+    
+    init() {
+        self.name = String()
+        self.surname =   String()
+        self.fathername =  String()
+        self.address =     String()
+        self.email =       String()
+        self.course =      Int()
+        self.form =        Int()
+        self.birthdate =   String()
+        self.group_number = String()
+        self.speciality =   String()
+        self.faculty =      String()
+    }
 }
 
 final class Login: Codable {
@@ -33,10 +51,7 @@ final class Login: Codable {
         self.password = pass
     }
 }
-final class Token: Codable {
-    let token: String
-    init(token: String){
-        self.token = token
-    }
+struct Token: Decodable {
+    var token = String()
 }
 

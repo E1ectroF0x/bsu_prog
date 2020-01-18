@@ -10,12 +10,13 @@ import UIKit
 
 class InfoPageTableViewController: UITableViewController {
     
+    var profile = Profile()
     override func viewDidLoad() {
         super.viewDidLoad()
         
         updateUI()
     }
-    
+
     func updateUI() {
         tableView.backgroundColor = .white
         tableView.register(UserInfoCell.self, forCellReuseIdentifier: "UserInfoCell")

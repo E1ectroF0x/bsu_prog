@@ -10,11 +10,7 @@ import Foundation
 import UIKit
 
 struct Constants {
-    static let USER_NAME_STRING: String = """
-                                            Якушева
-                                            Диана
-                                            Анатольевна
-                                          """
+   
     
     static let SEGMENT_SET_ITEMS = [UIImage(named: "education"),
                                     UIImage(named: "money"),
@@ -30,7 +26,7 @@ struct Constants {
                                       "Форма обучения", "Почта", "Номер телефона",
                                       "Адресс проживания"]
     static let CREDIT_NAME_CELL = ["Оплата за обучение", "Пересдачи", "За общежитие", "Истроия платежей"]
-    static let INFO_TABLE_INFO = ["РФиКТ", "Компьютерная безопастность", "2 курс, 7 группа", "Дневная, бюджет", "rct.truhov@bsu.by", "+375259612924", "Курчатова 8, Б84б"]
+    static let INFO_TABLE_INFO = ["faculty", "Компьютерная безопастность", "2 курс, 7 группа", "Дневная, бюджет", "rct.truhov@bsu.by", "+375259612924", "Курчатова 8, Б84б"]
     
     
     static let customBlue = UIColor(red: 20.0 / 255.0, green: 78.0 / 255.0, blue: 157.0 / 255.0, alpha: 1.0)

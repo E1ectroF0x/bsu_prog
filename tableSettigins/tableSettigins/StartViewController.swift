@@ -13,21 +13,31 @@ class StartViewController: UIViewController {
  
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    var token = Token() {
+        didSet {
+            print(self.token)
+            DispatchQueue.main.async {
+                self.loginTextField.text = ""
+                self.passwordTextField.text = ""
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "tabBarController")
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true, completion: nil)
+            }
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func buttonTapped(_ sender: Any) {
         let login = Login(login: loginTextField.text ?? "", pass: passwordTextField.text ?? "")
         let api = ApiRequest(endpoint: "user/login")
         api.login(login) { (result) in
-            print(result)
-
+            switch result {
+            case.failure(let error) : print(error)
+            case.success(let token) : self.token = token
+            }
         }
-        
     }
-  
-
 }

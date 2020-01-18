@@ -9,10 +9,11 @@
 import UIKit
 
 class PageViewController: UIPageViewController {
-    
-    let infoTableView = InfoPageTableViewController(style: .grouped)
+    var profile = Profile()
+    var infoTableView = InfoPageTableViewController(style: .grouped)
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.infoTableView.profile = self.profile
         setViewControllers([infoTableView], direction: .forward, animated: false, completion: nil)
     }
     

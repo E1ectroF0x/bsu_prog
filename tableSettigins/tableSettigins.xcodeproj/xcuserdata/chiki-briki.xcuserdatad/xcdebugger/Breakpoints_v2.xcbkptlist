@@ -234,8 +234,8 @@
             filePath = "tableSettigins/Profile/ProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "changeTableView(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -699,14 +699,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "7F4841D2-028B-4BD1-B530-8AC299C8FFA8 - 45eae892461620ad"
+                  uuid = "7F4841D2-028B-4BD1-B530-8AC299C8FFA8 - d5ac6058f51323e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "BSU.CalendarViewController.GetStartDateDayPosition() -&gt; ()"
                   moduleName = "BSU"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chiki-briki/Documents/bsu_prog/tableSettigins/tableSettigins/Calendar/CalendarViewController.swift"
+                  urlString = "file:///Users/chiki-briki/bsu_prog/tableSettigins/tableSettigins/Calendar/CalendarViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "156"
@@ -714,14 +714,14 @@
                   offsetFromSymbolStart = "64">
                </Location>
                <Location
-                  uuid = "7F4841D2-028B-4BD1-B530-8AC299C8FFA8 - 45eae892461620ad"
+                  uuid = "7F4841D2-028B-4BD1-B530-8AC299C8FFA8 - d5ac6058f51323e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "BSU.CalendarViewController.GetStartDateDayPosition() -&gt; ()"
                   moduleName = "BSU"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chiki-briki/Documents/bsu_prog/tableSettigins/tableSettigins/Calendar/CalendarViewController.swift"
+                  urlString = "file:///Users/chiki-briki/bsu_prog/tableSettigins/tableSettigins/Calendar/CalendarViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "156"
@@ -729,14 +729,14 @@
                   offsetFromSymbolStart = "90">
                </Location>
                <Location
-                  uuid = "7F4841D2-028B-4BD1-B530-8AC299C8FFA8 - 45eae892461620ad"
+                  uuid = "7F4841D2-028B-4BD1-B530-8AC299C8FFA8 - d5ac6058f51323e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "BSU.CalendarViewController.GetStartDateDayPosition() -&gt; ()"
                   moduleName = "BSU"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chiki-briki/Documents/bsu_prog/tableSettigins/tableSettigins/Calendar/CalendarViewController.swift"
+                  urlString = "file:///Users/chiki-briki/bsu_prog/tableSettigins/tableSettigins/Calendar/CalendarViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "156"
@@ -744,14 +744,14 @@
                   offsetFromSymbolStart = "2422">
                </Location>
                <Location
-                  uuid = "7F4841D2-028B-4BD1-B530-8AC299C8FFA8 - 45eae892461620ad"
+                  uuid = "7F4841D2-028B-4BD1-B530-8AC299C8FFA8 - d5ac6058f51323e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "BSU.CalendarViewController.GetStartDateDayPosition() -&gt; ()"
                   moduleName = "BSU"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chiki-briki/Documents/bsu_prog/tableSettigins/tableSettigins/Calendar/CalendarViewController.swift"
+                  urlString = "file:///Users/chiki-briki/bsu_prog/tableSettigins/tableSettigins/Calendar/CalendarViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "156"
@@ -771,9 +771,9 @@
             filePath = "tableSettigins/StartViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "buttonTapped(_:)"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
             <Locations>
                <Location
@@ -825,14 +825,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "2090208A-8F27-4475-B55E-3ECBC178B9FD - 67c126237828875a"
+                  uuid = "2090208A-8F27-4475-B55E-3ECBC178B9FD - a5f6eb862cc4c86f"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "BSU.ApiRequest.login(_: BSU.Login, completion: (Swift.Result&lt;BSU.Token, BSU.APIError&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "BSU"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chiki-briki/Documents/bsu_prog/tableSettigins/tableSettigins/ApiRequ.swift"
+                  urlString = "file:///Users/chiki-briki/bsu_prog/tableSettigins/tableSettigins/ApiRequ.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "33"
@@ -840,19 +840,19 @@
                   offsetFromSymbolStart = "2047">
                </Location>
                <Location
-                  uuid = "2090208A-8F27-4475-B55E-3ECBC178B9FD - 374cf7ef3fb6d665"
+                  uuid = "2090208A-8F27-4475-B55E-3ECBC178B9FD - f57b3a4a6b5a9950"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in BSU.ApiRequest.login(_: BSU.Login, completion: (Swift.Result&lt;BSU.Token, BSU.APIError&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "BSU"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chiki-briki/Documents/bsu_prog/tableSettigins/tableSettigins/ApiRequ.swift"
+                  urlString = "file:///Users/chiki-briki/bsu_prog/tableSettigins/tableSettigins/ApiRequ.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "34"
                   endingLineNumber = "34"
-                  offsetFromSymbolStart = "234">
+                  offsetFromSymbolStart = "310">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -870,6 +870,86 @@
             startingLineNumber = "34"
             endingLineNumber = "34"
             landmarkName = "login(_:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E3FA86B1-0F93-41CB-9249-75C93CCBC1C5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tableSettigins/StartViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "buttonTapped(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E3FA86B1-0F93-41CB-9249-75C93CCBC1C5 - 1ff0f4ae39881f8d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;BSU.Token, BSU.APIError&gt;) -&gt; () in BSU.StartViewController.buttonTapped(Any) -&gt; ()"
+                  moduleName = "BSU"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chiki-briki/bsu_prog/tableSettigins/tableSettigins/StartViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "160">
+               </Location>
+               <Location
+                  uuid = "E3FA86B1-0F93-41CB-9249-75C93CCBC1C5 - 1ff0f4ae39881f8d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;BSU.Token, BSU.APIError&gt;) -&gt; () in BSU.StartViewController.buttonTapped(Any) -&gt; ()"
+                  moduleName = "BSU"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chiki-briki/bsu_prog/tableSettigins/tableSettigins/StartViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "205">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D2017681-7E18-446D-8385-3D23DCFB295E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tableSettigins/Profile/ProfileViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F13F877C-2119-425E-AC09-38511CB0BF37"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tableSettigins/Profile/PageViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "switchTableVC(index:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

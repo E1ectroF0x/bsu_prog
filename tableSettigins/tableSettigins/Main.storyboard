@@ -11,6 +11,7 @@
         <!--Настройки-->
         <scene sceneID="Z4c-mf-pLA">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OU7-BH-Hwi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="vwZ-xr-dpF" customClass="SettingsViewController" customModule="BSU" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Z3-Sr-x4b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -20,14 +21,14 @@
                     </view>
                     <navigationItem key="navigationItem" title="Настройки" id="R21-hV-gGV"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OU7-BH-Hwi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6228" y="-466"/>
         </scene>
         <!--Личный кабинет-->
         <scene sceneID="UTS-QG-JIp">
             <objects>
-                <viewController id="BYx-8q-bQ5" customClass="ProfileViewController" customModule="BSU" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wY1-jk-csc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="Profile" id="BYx-8q-bQ5" customClass="ProfileViewController" customModule="BSU" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O7i-AJ-ev0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,21 +96,21 @@
                         <outlet property="segment" destination="FSE-BC-nuP" id="sHL-EB-SVZ"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wY1-jk-csc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6227.536231884058" y="240.40178571428569"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="d13-V0-rgl">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="zvx-9M-VFd" customClass="PageViewController" customModule="BSU" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q8i-0C-S4X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="zvx-9M-VFd" customClass="PageViewController" customModule="BSU" customModuleProvider="target" sceneMemberID="viewController"/>
             </objects>
             <point key="canvasLocation" x="6939" y="240"/>
         </scene>
         <!--Календарь-->
         <scene sceneID="mz6-sg-SxK">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DUp-E6-7Mz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="6vt-3P-4yv" customClass="CalendarViewController" customModule="BSU" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ueM-MA-E7y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -311,13 +312,13 @@
                         <outlet property="scheduleView" destination="M0w-XR-ACb" id="nT3-2Z-tUS"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DUp-E6-7Mz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6227.536231884058" y="970.98214285714278"/>
         </scene>
         <!--Schedule Table View Controller-->
         <scene sceneID="Xa6-hd-3d4">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uDY-O3-CXp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="AT5-RB-V5X" customClass="ScheduleTableViewController" customModule="BSU" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="150" sectionHeaderHeight="18" sectionFooterHeight="18" id="OeA-Bb-ZXd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -384,13 +385,13 @@
                         </connections>
                     </tableView>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uDY-O3-CXp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7131.884057971015" y="970.98214285714278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gU7-g2-IGc">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KaP-fe-Dui" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tH4-Xz-Ia4" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="user" selectedImage="user" id="FYX-8z-M6i">
                         <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -410,13 +411,13 @@
                         <segue destination="BYx-8q-bQ5" kind="relationship" relationship="rootViewController" id="fWh-Fo-O0Z"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KaP-fe-Dui" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5317.3913043478269" y="240.40178571428569"/>
         </scene>
         <!--Start View Controller-->
         <scene sceneID="7FY-b9-cKU">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Isi-Jh-7mO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="Z1o-uM-H1B" customClass="StartViewController" customModule="BSU" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qY8-NG-EFB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -438,10 +439,9 @@
                                 <state key="normal" title="Вход"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="Z1o-uM-H1B" eventType="touchUpInside" id="Vgl-J0-IpI"/>
-                                    <segue destination="ThA-Fo-Z7e" kind="modal" modalPresentationStyle="fullScreen" id="Ogx-eV-16i"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="LUn-Gk-7aK">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="rct.lishanen" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="LUn-Gk-7aK">
                                 <rect key="frame" x="40" y="227" width="334" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -452,7 +452,7 @@
                                 <color key="textColor" red="0.078431372550000003" green="0.30588235289999999" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="0z0-UH-qsv">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1721265" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="0z0-UH-qsv">
                                 <rect key="frame" x="40" y="308" width="334" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -489,14 +489,14 @@
                         <outlet property="passwordTextField" destination="0z0-UH-qsv" id="92J-q6-Kuv"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Isi-Jh-7mO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3817" y="240"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="8J9-S6-YCT">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ThA-Fo-Z7e" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qFi-0e-Adr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tabBarController storyboardIdentifier="tabBarController" automaticallyAdjustsScrollViewInsets="NO" id="ThA-Fo-Z7e" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Tt5-GX-Wml"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="centered" itemSpacing="44" id="QVn-Sl-YGe">
@@ -513,13 +513,13 @@
                         <segue destination="s0k-Gf-HaT" kind="relationship" relationship="viewControllers" id="rY0-A2-D4P"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qFi-0e-Adr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4543" y="240"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eu7-Em-Fgg">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u6Y-iR-hsk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f4g-CZ-iIp" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="calendar" selectedImage="calendar" id="fRm-wo-WPI">
                         <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -538,13 +538,13 @@
                         <segue destination="6vt-3P-4yv" kind="relationship" relationship="rootViewController" id="4cG-CN-3hL"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="u6Y-iR-hsk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5316" y="971"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fb8-Xx-TcF">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g4D-lq-4Zi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s0k-Gf-HaT" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="gear" selectedImage="gear" id="3pl-qp-FJA">
                         <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -564,7 +564,6 @@
                         <segue destination="vwZ-xr-dpF" kind="relationship" relationship="rootViewController" id="5wS-dp-gL8"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="g4D-lq-4Zi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5316" y="-466"/>
         </scene>
