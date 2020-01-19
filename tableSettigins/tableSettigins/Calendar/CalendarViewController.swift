@@ -12,14 +12,11 @@ import UIKit
 
 class CalendarViewController: UIViewController{
     
-    
-    
-    @IBOutlet weak var Calendar: UICollectionView!
+    var lessons = [Lesson]()
     public let IDForCalendar = "C1"
-    
+    @IBOutlet weak var Calendar: UICollectionView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var scheduleView: UITableView!
-    
     
     // MARK: Date for calendar
     let Months = ["Январь",
@@ -34,15 +31,13 @@ class CalendarViewController: UIViewController{
                   "Октябрь",
                   "Ноябрь",
                   "Декабрь"]
-    let DaysOfMonth = ["Monday", "Thuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     var DaysInMonth = [31,28,31,30,31,30,31,31,30,31,30,31]
     // Calendar logic
-    var numberOfEmptyBoxes = (weekday - day % 7)      // The number of empty cells at the start of the current month
-   
+    var numberOfEmptyBoxes = 2     // The number of empty cells at the start of the current month
     var nextNumberOfEmptyBox = Int()
     var previosNumberOfEmptyBox = Int()
     var direction = 0                   // == 0 if current, == 1 if future, == -1 if in past
-    var positionIndex = (weekday - day % 7)
+    var positionIndex = 2
     var currentMonth = String()
 
     public var headerForLessonsTable = UITableViewHeaderFooterView()
@@ -53,9 +48,8 @@ class CalendarViewController: UIViewController{
            print(day)
         currentMonth = Months[month]
         dateLabel.text = "\(currentMonth) " + "\(year)"
-        
     }
-    
+
     @IBAction func back(_ sender: Any) {
         switch currentMonth {
         case "Январь":

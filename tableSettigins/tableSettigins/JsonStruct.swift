@@ -9,6 +9,22 @@
 import Foundation
 import UIKit
 
+struct DataCalendar: Decodable {
+    var data: [Lesson]
+    var status: String
+}
+
+struct Lesson: Decodable {
+    var time_start: String
+    var time_end: String
+    var audience: String
+    var building: String
+    var surname: String
+    var name: String
+    var fathername: String
+    var subject: String
+}
+
 struct DataProfile: Decodable {
     let data: Profile
 }
@@ -36,17 +52,12 @@ struct Profile: Decodable {
                        } else {
                            return "Дневная, платная"
                        }
-        case 4: return self.email
+        case 4: return "\(self.email)@bsu.by"
         case 5: return self.address
         default:
             return "error"
         }
     }
-    
-    
-    
-    
-    
     
     init() {
         self.name = String()

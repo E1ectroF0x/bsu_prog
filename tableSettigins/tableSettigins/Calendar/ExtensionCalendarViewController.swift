@@ -8,15 +8,12 @@
 
 import UIKit
 
-import Foundation
-import UIKit
-
 extension CalendarViewController: UITableViewDataSource, UITableViewDelegate {
     
     // MARK: lessonsView(UITableView) protocols methods
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Constants.lessonsNumber
+        return lessons.count
         
     }
     
@@ -27,12 +24,11 @@ extension CalendarViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "C2", for: indexPath) as! ScheduleTableViewCell
         
-        cell.lessonTime.text = Constants.currentDayTime[indexPath.row]
-        cell.lessonType.text = Constants.currentDayType[indexPath.row]
-        cell.lessonName.text = Constants.currentDayLesson[indexPath.row]
-        cell.lessonLocation.text = Constants.currentDayLocation[indexPath.row]
-        cell.teacherName.text = Constants.currentDayName[indexPath.row]
-   
+        cell.lessonTime.text = lessons[indexPath.row].time_start
+        cell.lessonType.text = lessons[indexPath.row].time_end
+        cell.lessonName.text = lessons[indexPath.row].subject
+        cell.lessonLocation.text = lessons[indexPath.row].audience
+        cell.teacherName.text = "\(lessons[indexPath.row].surname) \(lessons[indexPath.row].name) \(lessons[indexPath.row].fathername)"
         return cell
     }
     
@@ -49,9 +45,6 @@ extension CalendarViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
-    
-    
 }
 
 extension CalendarViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -73,8 +66,20 @@ extension CalendarViewController: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         day = indexPath.row + 1
+        getLessons()
         collectionView.reloadData()
         scheduleView.reloadData()
+    }
+    
+    func getLessons() {
+        let api = ApiRequest(endpoint: "api/get-shedule-day-list?date=\(year)-\(month + 1)-\(day)/")
+        api.getLesson { (result) in
+            switch result {
+            case.failure(let error) : print(error)
+            case.success(let lessons) :
+                self.lessons = lessons
+            }
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

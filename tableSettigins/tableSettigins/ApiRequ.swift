@@ -31,7 +31,7 @@ struct ApiRequest {
         let session = URLSession.shared
         session.dataTask(with: request) { (data, response, error) in
             if let response = response {
-               // print(response)
+                // print(response)
             }
             
             guard let data = data else { return }
@@ -68,6 +68,32 @@ struct ApiRequest {
                 let json = try decoder.decode(DataProfile.self, from: data)
                 let profile = json.data
                 completion(.success(profile))
+            } catch {
+                completion(.failure(.decodingProblem))
+                print(error)
+            }
+        }.resume()
+    }
+    func getLesson(completion: @escaping(Result<[Lesson], APIError>) -> Void) {
+        var request = URLRequest(url: resourse)
+        let token = UserDefaults.standard.object(forKey: "Token") as! String
+        let auth = "Bearer \(token)"
+        print(auth)
+        request.setValue(auth, forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        let session = URLSession.shared
+        session.dataTask(with: request) { (data, response, error) in
+            if let response = response {
+                print(response)
+            }
+                
+            guard let data = data else { return }
+        
+            
+            do {
+                let decoder = JSONDecoder()
+                let json = try decoder.decode(DataCalendar.self, from: data)
+                completion(.success(json.data))
             } catch {
                 completion(.failure(.decodingProblem))
                 print(error)

@@ -677,8 +677,8 @@
             filePath = "tableSettigins/Calendar/CalendarViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "GetStartDateDayPosition()"
             landmarkType = "7">
             <Locations>
@@ -693,8 +693,8 @@
                   urlString = "file:///Users/chiki-briki/bsu_prog/tableSettigins/tableSettigins/Calendar/CalendarViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "134"
-                  endingLineNumber = "134"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
                   offsetFromSymbolStart = "64">
                </Location>
                <Location
@@ -708,8 +708,8 @@
                   urlString = "file:///Users/chiki-briki/bsu_prog/tableSettigins/tableSettigins/Calendar/CalendarViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "134"
-                  endingLineNumber = "134"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
                   offsetFromSymbolStart = "90">
                </Location>
                <Location
@@ -723,8 +723,8 @@
                   urlString = "file:///Users/chiki-briki/bsu_prog/tableSettigins/tableSettigins/Calendar/CalendarViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "134"
-                  endingLineNumber = "134"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
                   offsetFromSymbolStart = "2422">
                </Location>
                <Location
@@ -738,8 +738,8 @@
                   urlString = "file:///Users/chiki-briki/bsu_prog/tableSettigins/tableSettigins/Calendar/CalendarViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "134"
-                  endingLineNumber = "134"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
                   offsetFromSymbolStart = "2979">
                </Location>
             </Locations>
@@ -1011,8 +1011,8 @@
             filePath = "tableSettigins/Calendar/CalendarViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "next(_:)"
             landmarkType = "7">
             <Locations>
@@ -1027,8 +1027,8 @@
                   urlString = "file:///Users/chiki-briki/bsu_prog/tableSettigins/tableSettigins/Calendar/CalendarViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "102"
-                  endingLineNumber = "102"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
                   offsetFromSymbolStart = "675">
                </Location>
                <Location
@@ -1042,8 +1042,8 @@
                   urlString = "file:///Users/chiki-briki/bsu_prog/tableSettigins/tableSettigins/Calendar/CalendarViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "102"
-                  endingLineNumber = "102"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
                   offsetFromSymbolStart = "690">
                </Location>
             </Locations>
@@ -1053,20 +1053,20 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "99AB9FD2-FB66-49BA-9EB3-D6C85812D25D"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "tableSettigins/Calendar/CalendarViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "CalendarViewController"
             landmarkType = "3">
             <Locations>
                <Location
                   uuid = "99AB9FD2-FB66-49BA-9EB3-D6C85812D25D - 82b323f22415a77"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "BSU.CalendarViewController.numberOfEmptyBoxes.getter : Swift.Int"
@@ -1075,13 +1075,13 @@
                   urlString = "file:///Users/chiki-briki/bsu_prog/tableSettigins/tableSettigins/Calendar/CalendarViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
                   offsetFromSymbolStart = "110">
                </Location>
                <Location
                   uuid = "99AB9FD2-FB66-49BA-9EB3-D6C85812D25D - 9deb1d3f7183a25f"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "BSU.CalendarViewController.numberOfEmptyBoxes.setter : Swift.Int"
@@ -1090,13 +1090,13 @@
                   urlString = "file:///Users/chiki-briki/bsu_prog/tableSettigins/tableSettigins/Calendar/CalendarViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
                   offsetFromSymbolStart = "118">
                </Location>
                <Location
                   uuid = "99AB9FD2-FB66-49BA-9EB3-D6C85812D25D - bedbdc695f4f807d"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "BSU.CalendarViewController.numberOfEmptyBoxes.modify : Swift.Int"
@@ -1111,7 +1111,7 @@
                </Location>
                <Location
                   uuid = "99AB9FD2-FB66-49BA-9EB3-D6C85812D25D - e657643deed0eff6"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "BSU.CalendarViewController.numberOfEmptyBoxes.modify : Swift.Int with unmangled suffix &quot;.resume.0&quot;"
@@ -1120,13 +1120,13 @@
                   urlString = "file:///Users/chiki-briki/bsu_prog/tableSettigins/tableSettigins/Calendar/CalendarViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
                   offsetFromSymbolStart = "4">
                </Location>
                <Location
                   uuid = "99AB9FD2-FB66-49BA-9EB3-D6C85812D25D - e986a7b6c3709c27"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "BSU.CalendarViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; BSU.CalendarViewController"
@@ -1135,13 +1135,13 @@
                   urlString = "file:///Users/chiki-briki/bsu_prog/tableSettigins/tableSettigins/Calendar/CalendarViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "1605">
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "1398">
                </Location>
                <Location
                   uuid = "99AB9FD2-FB66-49BA-9EB3-D6C85812D25D - 19b55ba90614237e"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "BSU.CalendarViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;BSU.CalendarViewController&gt;"
@@ -1150,11 +1150,75 @@
                   urlString = "file:///Users/chiki-briki/bsu_prog/tableSettigins/tableSettigins/Calendar/CalendarViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "1537">
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "1329">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "38D65F67-AB82-4C50-8F42-8CB78D1AD60A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tableSettigins/ApiRequ.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "getLesson(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9867DE4B-3BA4-42B4-8C22-947755A64DA8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tableSettigins/ApiRequ.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "getLesson(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "31F6B039-BE8D-420A-BA8A-958FF19F5954"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tableSettigins/Calendar/ExtensionCalendarViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3388ED73-28C6-4F23-A7DF-5BA60C84441B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tableSettigins/Calendar/ExtensionCalendarViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
