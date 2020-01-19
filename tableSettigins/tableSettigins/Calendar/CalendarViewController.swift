@@ -44,8 +44,8 @@ class CalendarViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(weekday)
-           print(day)
+        getLessons()
+        scheduleView.reloadData()
         currentMonth = Months[month]
         dateLabel.text = "\(currentMonth) " + "\(year)"
     }

@@ -23,6 +23,17 @@ struct Lesson: Decodable {
     var name: String
     var fathername: String
     var subject: String
+    
+    init() {
+        self.time_start = "null"
+        self.time_end = "null"
+        self.audience = "null"
+        self.building = "null"
+        self.surname = "null"
+        self.name = "null"
+        self.fathername = "null"
+        self.subject = "null"
+    }
 }
 
 struct DataProfile: Decodable {
