@@ -72,7 +72,7 @@ extension CalendarViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func getLessons() {
-        let api = ApiRequest(endpoint: "api/get-shedule-day-list?date=\(year)-\(month + 1)-\(day)/")
+        let api = ApiRequest(endpoint: "api/get-shedule-day-list?date=\(year)-\(month + 1)-\(day)")
         api.getLesson { (result) in
             switch result {
             case.failure(let error) : print(error)

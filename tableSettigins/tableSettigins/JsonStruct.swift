@@ -51,6 +51,7 @@ struct Profile: Decodable {
     let name:        String
     let surname:     String
     let fathername:  String
+    var image : String
     
     func getProperty(index : Int) -> String {
         switch index {
@@ -70,7 +71,15 @@ struct Profile: Decodable {
         }
     }
     
+    func getImage() -> UIImage? {
+        let base64 = self.image.replacingOccurrences(of: "data:image/jpeg;base64,", with: "")
+        let imageData = Data(base64Encoded: base64, options: .ignoreUnknownCharacters)!
+        let image = UIImage(data: imageData)
+        return image
+    }
+    
     init() {
+        self.image = String()
         self.name = String()
         self.surname =   String()
         self.fathername =  String()

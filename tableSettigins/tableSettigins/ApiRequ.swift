@@ -53,6 +53,7 @@ struct ApiRequest {
         var request = URLRequest(url: resourse)
         let token = UserDefaults.standard.object(forKey: "Token") as! String
         let auth = "Bearer \(token)"
+        print(auth)
         request.setValue(auth, forHTTPHeaderField: "Authorization")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         let session = URLSession.shared
@@ -84,7 +85,7 @@ struct ApiRequest {
         let session = URLSession.shared
         session.dataTask(with: request) { (data, response, error) in
             if let response = response {
-                print(response)
+               // print(response)
             }
                 
             guard let data = data else { return }

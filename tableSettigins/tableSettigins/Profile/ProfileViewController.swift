@@ -14,6 +14,7 @@ class ProfileViewController: UIViewController {
         didSet {
             DispatchQueue.main.async {
                 self.nameLabel.text = "\(self.profile.surname) \(self.profile.name)  \(self.profile.fathername)"
+                self.avatar.image = self.profile.getImage()
                 let pageViewController = self.children[0] as! PageViewController
                 pageViewController.profile = self.profile
                 pageViewController.nextPageWithIndex(index: 0)
