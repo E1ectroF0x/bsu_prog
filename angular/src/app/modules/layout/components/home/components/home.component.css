@@ -1,0 +1,14 @@
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+app-navbar {
+  left: 0;
+  position: fixed;
+}
+
+.side-wrapper {
+  width: calc(100% - 418px);
+  margin-left: 418px;
+}

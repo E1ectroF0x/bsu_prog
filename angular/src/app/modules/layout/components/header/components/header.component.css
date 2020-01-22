@@ -1,0 +1,21 @@
+.nav-top {
+  height: 74px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #0A3470;
+}
+
+.title {
+  color: #0A3470;
+  font-size: 26px;
+  font-weight: bold;
+  margin-left: 67px;
+}
+
+.logout {
+  color: red;
+  margin-right: 54px;
+  font-size: 16px;
+  font-weight: bold;
+}
