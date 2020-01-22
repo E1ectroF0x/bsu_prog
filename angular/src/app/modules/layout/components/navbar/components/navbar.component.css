@@ -1,0 +1,22 @@
+img {
+  margin-left: -54px;
+}
+
+.option {
+  height: 68px;
+  width: 419px;
+  display: flex;
+  align-items: center;
+}
+
+.option svg {
+  margin-left: 22px;
+}
+
+.option-text {
+  color: #0A3470;
+  font-size: 26px;
+  margin-left: 23px;
+}
+
+
