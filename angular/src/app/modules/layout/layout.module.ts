@@ -14,4 +14,5 @@ import {NavbarModule} from './components/navbar/navbar.module';
   providers: [],
   exports: []
 })
-export class LayoutModule { }
+export class LayoutModule {
+}

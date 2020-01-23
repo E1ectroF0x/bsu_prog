@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="btn-group">
+    <button class="btn">Добавить преподавателя</button>
+    <button class="btn second">Удалить преподавателя</button>
+  </div>
+
+  <div *ngFor="let teacher of _teachers">
+    <span>{{teacher.name}}</span>
+  </div>
+</div>
