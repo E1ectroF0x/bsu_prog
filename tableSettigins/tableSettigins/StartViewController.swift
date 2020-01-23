@@ -31,6 +31,8 @@ class StartViewController: UIViewController {
     
     @objc func hideKeyboard(sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
+        print("idi nax")
+        print("3123")
     }
     
     func loadProfileView() {
