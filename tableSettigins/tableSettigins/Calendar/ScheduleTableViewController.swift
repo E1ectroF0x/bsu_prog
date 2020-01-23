@@ -11,6 +11,13 @@ import UIKit
 
 class ScheduleTableViewController: UITableViewController {
     
+    var lessons = [Lesson]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,18 +36,16 @@ class ScheduleTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "C3", for: indexPath) as! ScheduleTableViewControllerCell
         
-        
-        
-        cell.timeCell.text = Constants.currentDayTime[indexPath.row]
-        cell.typeCell.text = Constants.currentDayType[indexPath.row]
-        cell.lessonCell.text = Constants.currentDayLesson[indexPath.row]
-        cell.locationCell.text = Constants.currentDayLocation[indexPath.row]
-        cell.teacherCell.text = Constants.currentDayName[indexPath.row]
+        cell.timeCell.text = lessons[indexPath.row].getProperty(index: 0)
+        cell.typeCell.text = lessons[indexPath.row].getProperty(index: 1)
+        cell.lessonCell.text = lessons[indexPath.row].getProperty(index: 2)
+        cell.locationCell.text = lessons[indexPath.row].getProperty(index: 3)
+        cell.teacherCell.text = lessons[indexPath.row].getProperty(index: 4)
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Constants.lessonsNumber
+        return lessons.count
     }
 }

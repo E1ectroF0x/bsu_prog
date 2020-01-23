@@ -73,6 +73,15 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //self.present(mainVC, animated: true, completion: nil)
+        switch indexPath.row {
+        case 5:
+            UserDefaults.standard.removeObject(forKey: "Token")
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "loginVC")
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true, completion: nil)
+        default:
+            print("1")
+        }
     }
 }

@@ -28,6 +28,7 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        avatar.layer.cornerRadius = avatar.frame.width / 2 
         let api = ApiRequest(endpoint: "api/get-private-profile/")
         api.getPrivateProfile { (result) in
             switch result {

@@ -24,11 +24,11 @@ extension CalendarViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "C2", for: indexPath) as! ScheduleTableViewCell
         
-        cell.lessonTime.text = lessons[indexPath.row].time_start
-        cell.lessonType.text = lessons[indexPath.row].time_end
-        cell.lessonName.text = lessons[indexPath.row].subject
-        cell.lessonLocation.text = lessons[indexPath.row].audience
-        cell.teacherName.text = "\(lessons[indexPath.row].surname) \(lessons[indexPath.row].name) \(lessons[indexPath.row].fathername)"
+        cell.lessonTime.text = lessons[indexPath.row].getProperty(index: 0)
+        cell.lessonType.text = lessons[indexPath.row].getProperty(index: 1)
+        cell.lessonName.text = lessons[indexPath.row].getProperty(index: 2)
+        cell.lessonLocation.text = lessons[indexPath.row].getProperty(index: 3)
+        cell.teacherName.text = lessons[indexPath.row].getProperty(index: 4)
         return cell
     }
     
@@ -44,6 +44,10 @@ extension CalendarViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let stroryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = stroryboard.instantiateViewController(withIdentifier: "ScheduleTableViewController") as! ScheduleTableViewController
+        vc.lessons = lessons
+        self.present(vc, animated: true, completion: nil)
     }
 }
 
@@ -58,7 +62,7 @@ extension CalendarViewController: UICollectionViewDelegate, UICollectionViewData
         case 1...:
             return DaysInMonth[month] + nextNumberOfEmptyBox
         case -1:
-            return DaysInMonth[month] + nextNumberOfEmptyBox
+            return DaysInMonth[month] + previosNumberOfEmptyBox
         default:
             fatalError()
         }
@@ -66,16 +70,31 @@ extension CalendarViewController: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         day = indexPath.row + 1
-        getLessons()
         collectionView.reloadData()
+        getLessons()
         scheduleView.reloadData()
     }
     
     func getLessons() {
-        let api = ApiRequest(endpoint: "api/get-shedule-day-list?date=\(year)-\(month + 1)-\(day)")
+        var dayString = String()
+        switch direction {
+        case 0:
+             dayString = "\(day - numberOfEmptyBoxes)"
+        case 1:
+             dayString = "\(day - nextNumberOfEmptyBox)"
+        case -1:
+             dayString = "\(day - previosNumberOfEmptyBox)"
+        default:
+            fatalError()
+        }
+        
+        let api = ApiRequest(endpoint: "api/get-shedule-day-list?date=\(year)-\(month + 1)-\(dayString)")
+        print("\(year)-\(month + 1)-\(dayString)")
         api.getLesson { (result) in
             switch result {
-            case.failure(let error) : print(error)
+            case.failure(let error) :
+                print(error)
+                self.lessons = [Lesson]()
             case.success(let lessons) :
                 self.lessons = lessons
             }

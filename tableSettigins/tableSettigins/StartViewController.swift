@@ -9,8 +9,8 @@
 import UIKit
 
 class StartViewController: UIViewController {
-
- 
+    
+    
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     var token = Token() {
@@ -18,15 +18,26 @@ class StartViewController: UIViewController {
             DispatchQueue.main.async {
                 self.loginTextField.text = ""
                 self.passwordTextField.text = ""
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "tabBarController")
-                vc.modalPresentationStyle = .fullScreen
-                self.present(vc, animated: true, completion: nil)
+                self.loadProfileView()
             }
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard(sender:)))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func hideKeyboard(sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
+    }
+    
+    func loadProfileView() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "tabBarController")
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
     }
     
     @IBAction func buttonTapped(_ sender: Any) {

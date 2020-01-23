@@ -57,6 +57,9 @@ class CreditTableViewController: UITableViewController {
         return 0
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
 }
 
 

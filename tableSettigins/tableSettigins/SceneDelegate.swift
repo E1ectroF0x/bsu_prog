@@ -11,12 +11,28 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
-   
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         if #available(iOS 13.0, *) {
             window?.overrideUserInterfaceStyle = .light
         }
+        
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        window?.windowScene = windowScene
+        
+        if UserDefaults.standard.object(forKey: "Token") != nil {
+            let vc = storyboard.instantiateViewController(withIdentifier: "tabBarController")
+            window?.rootViewController = vc
+        } else {
+            let vc = storyboard.instantiateViewController(withIdentifier: "loginVC")
+            window?.rootViewController = vc
+        }
+       
+        window?.backgroundColor = UIColor.white
+        window?.makeKeyAndVisible()
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {

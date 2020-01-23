@@ -12,7 +12,19 @@ import UIKit
 
 class CalendarViewController: UIViewController{
     
-    var lessons = [Lesson]()
+    var lessons = [Lesson]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.scheduleView.reloadData()
+                if self.lessons.count == 0 {
+                    self.scheduleView.isHidden = true
+                } else {
+                    self.scheduleView.isHidden = false
+                }
+                
+            }
+        }
+    }
     public let IDForCalendar = "C1"
     @IBOutlet weak var Calendar: UICollectionView!
     @IBOutlet weak var dateLabel: UILabel!
@@ -56,24 +68,24 @@ class CalendarViewController: UIViewController{
             month = 11
             year -= 1
             direction = -1
-    
+
             if year % 4 == 0 {
                 DaysInMonth[1] = 29
             } else {
                 DaysInMonth[1] = 28
             }
-            
+
             GetStartDateDayPosition()
-            
+
             currentMonth = Months[month]
             dateLabel.text = "\(currentMonth) " + "\(year)"
             Calendar.reloadData()
         default:
             month -= 1
             direction = -1
-            
+
             GetStartDateDayPosition()
-            
+
             currentMonth = Months[month]
             dateLabel.text = "\(currentMonth) " + "\(year)"
             Calendar.reloadData()
@@ -84,8 +96,8 @@ class CalendarViewController: UIViewController{
             day = -1
         }
     }
-    
-    
+
+
     @IBAction func next(_ sender: Any) {
         if year % 4 == 0 {
             DaysInMonth[1] = 29
@@ -98,19 +110,19 @@ class CalendarViewController: UIViewController{
             month = 0
             year += 1
             direction = 1
-       
+
             GetStartDateDayPosition()
-            
+
             currentMonth = Months[month]
             dateLabel.text = "\(currentMonth) " + "\(year)"
             Calendar.reloadData()
         default:
             direction = 1
-            
+
             GetStartDateDayPosition()
-            
+
             month += 1
-            
+
             currentMonth = Months[month]
             dateLabel.text = "\(currentMonth) " + "\(year)"
             Calendar.reloadData()
@@ -120,7 +132,7 @@ class CalendarViewController: UIViewController{
         } else {
             day = -1
         }
-        
+
     }
     
     

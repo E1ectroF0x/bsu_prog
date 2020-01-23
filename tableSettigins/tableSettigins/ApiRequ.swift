@@ -31,7 +31,7 @@ struct ApiRequest {
         let session = URLSession.shared
         session.dataTask(with: request) { (data, response, error) in
             if let response = response {
-                // print(response)
+                 print(response)
             }
             
             guard let data = data else { return }
@@ -85,7 +85,7 @@ struct ApiRequest {
         let session = URLSession.shared
         session.dataTask(with: request) { (data, response, error) in
             if let response = response {
-               // print(response)
+              //  print(response)
             }
                 
             guard let data = data else { return }
