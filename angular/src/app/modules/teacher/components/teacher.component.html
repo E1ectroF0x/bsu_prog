@@ -1,10 +1,6 @@
 <div class="container">
   <div class="btn-group">
-    <button class="btn">Добавить преподавателя</button>
-    <button class="btn second">Удалить преподавателя</button>
+    <button class="btn" [class.selected]="_selectedButton">Добавить преподавателя</button>
   </div>
-
-  <div *ngFor="let teacher of _teachers">
-    <span>{{teacher.name}}</span>
-  </div>
+  <app-teacher-table [_teachers]="_teachers"></app-teacher-table>
 </div>
