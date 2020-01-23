@@ -11,11 +11,14 @@ import {Teacher} from '../teacher.model';
 export class TeacherComponent implements OnInit{
 
   public _teachers: Teacher[];
+  public _selectedButton: boolean;
+
 
   constructor(private teacherService: TeacherService) { }
 
   ngOnInit(): void {
     this.teacherService.getAll().subscribe(teachers => this._teachers = teachers);
+    this._selectedButton = false;
   }
 
 }
