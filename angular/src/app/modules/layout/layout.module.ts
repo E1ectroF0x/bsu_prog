@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {HeaderModule} from './components/header/header.module';
 import {HomeModule} from './components/home/home.module';
 import {NavbarModule} from './components/navbar/navbar.module';
+import {TeacherModule} from '../teacher/teacher.module';
 
 
 @NgModule({
@@ -9,10 +10,10 @@ import {NavbarModule} from './components/navbar/navbar.module';
   imports: [
     HeaderModule,
     NavbarModule,
-    HomeModule
+    HomeModule,
+    TeacherModule
   ],
   providers: [],
   exports: []
 })
-export class LayoutModule {
-}
+export class LayoutModule {}
