@@ -1,0 +1,27 @@
+<div class="container">
+  <form method="post">
+    <div class="input-group">
+      <div class="input-option">
+        <label for="surname">Фамилия:<input type="text" placeholder="Иванов" id="surname" name="surname" [(ngModel)]="_teacher.surname"></label>
+      </div>
+      <div class="input-option">
+        <label for="name">Имя:<input type="text" placeholder="Иван" id="name" name="name" [(ngModel)]="_teacher.name"></label>
+      </div>
+      <div class="input-option">
+        <label for="lastname">Отчество:<input type="text" placeholder="Иванович" id="lastname" name="fathername" [(ngModel)]="_teacher.fathername"></label>
+      </div>
+    </div>
+    <div class="date-dep-group">
+      <div class="input-option-date">
+        <label for="birthday">Дата рождения:</label>
+        <input type="date" id="birthday" name="birthdate" [(ngModel)]="_teacher.birthdate">
+      </div>
+      <div class="input-option-dep">
+        <label for="dep">Кафедра:</label>
+        <input type="number" id="dep" name="department_id" [(ngModel)]="_teacher.department_id">
+      </div>
+      <button class="btn-submit" type="submit" (click)="_saveTeacher(_teacher)">Подтвердить</button>
+    </div>
+
+  </form>
+</div>
