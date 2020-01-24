@@ -25,11 +25,14 @@ class CalendarViewController: UIViewController{
             }
         }
     }
+    let leftAndRightPaddings: CGFloat = 74.0
+    let numberOfItems: CGFloat = 7.0
     public let IDForCalendar = "C1"
     @IBOutlet weak var Calendar: UICollectionView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var scheduleView: UITableView!
     
+    @IBOutlet weak var weekdayStack: UIStackView!
     // MARK: Date for calendar
     let Months = ["Январь",
                   "Февраль",
@@ -51,7 +54,7 @@ class CalendarViewController: UIViewController{
     var direction = 0                   // == 0 if current, == 1 if future, == -1 if in past
     var positionIndex = 2
     var currentMonth = String()
-
+    
     public var headerForLessonsTable = UITableViewHeaderFooterView()
     
     override func viewDidLoad() {
@@ -60,32 +63,55 @@ class CalendarViewController: UIViewController{
         scheduleView.reloadData()
         currentMonth = Months[month]
         dateLabel.text = "\(currentMonth) " + "\(year)"
+        layout()
     }
-
+    
+    func layout() {
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+        let side = (view.frame.width - leftAndRightPaddings) / numberOfItems
+        layout.itemSize = CGSize(width: side, height: side)
+        Calendar.collectionViewLayout = layout
+        let constant = side * CGFloat((numberOfEmptyBoxes + 7 + DaysInMonth[month]) / 7).rounded(.up)
+        Calendar.translatesAutoresizingMaskIntoConstraints = false
+        scheduleView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            Calendar.topAnchor.constraint(equalTo: weekdayStack.topAnchor, constant: 30),
+            Calendar.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            Calendar.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+            Calendar.widthAnchor.constraint(equalToConstant: view.frame.width),
+            Calendar.heightAnchor.constraint(equalToConstant: constant + 100),
+            scheduleView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
+            scheduleView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            scheduleView.widthAnchor.constraint(equalToConstant: view.frame.width),
+            scheduleView.heightAnchor.constraint(equalToConstant: view.frame.height - constant - 300)])
+                                    
+    }
+    
     @IBAction func back(_ sender: Any) {
         switch currentMonth {
         case "Январь":
             month = 11
             year -= 1
             direction = -1
-
+            
             if year % 4 == 0 {
                 DaysInMonth[1] = 29
             } else {
                 DaysInMonth[1] = 28
             }
-
+            
             GetStartDateDayPosition()
-
+            
             currentMonth = Months[month]
             dateLabel.text = "\(currentMonth) " + "\(year)"
             Calendar.reloadData()
         default:
             month -= 1
             direction = -1
-
+            
             GetStartDateDayPosition()
-
+            
             currentMonth = Months[month]
             dateLabel.text = "\(currentMonth) " + "\(year)"
             Calendar.reloadData()
@@ -96,8 +122,8 @@ class CalendarViewController: UIViewController{
             day = -1
         }
     }
-
-
+    
+    
     @IBAction func next(_ sender: Any) {
         if year % 4 == 0 {
             DaysInMonth[1] = 29
@@ -110,19 +136,19 @@ class CalendarViewController: UIViewController{
             month = 0
             year += 1
             direction = 1
-
+            
             GetStartDateDayPosition()
-
+            
             currentMonth = Months[month]
             dateLabel.text = "\(currentMonth) " + "\(year)"
             Calendar.reloadData()
         default:
             direction = 1
-
+            
             GetStartDateDayPosition()
-
+            
             month += 1
-
+            
             currentMonth = Months[month]
             dateLabel.text = "\(currentMonth) " + "\(year)"
             Calendar.reloadData()
@@ -132,7 +158,7 @@ class CalendarViewController: UIViewController{
         } else {
             day = -1
         }
-
+        
     }
     
     

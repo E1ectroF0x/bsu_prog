@@ -136,10 +136,9 @@ extension CalendarViewController: UICollectionViewDelegate, UICollectionViewData
         
         if  indexPath.row + 1 == day{
             cell.backgroundColor = Constants.customBlue
-            cell.layer.cornerRadius = 24.0
+            cell.layer.cornerRadius = cell.frame.width / 2
             cell.cellDateLabel.textColor = UIColor.white
         }
         return cell
     }
-    
 }
