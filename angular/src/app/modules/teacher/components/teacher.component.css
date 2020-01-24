@@ -3,6 +3,12 @@
   margin-left: 87px;
 }
 
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
 .btn {
   height: 29px;
   width: 237px;
@@ -11,4 +17,5 @@
   font-size: 16px;
   font-weight: bold;
   color: #0A3470;
+  box-shadow: 0 3px 6px #0A3470;
 }
