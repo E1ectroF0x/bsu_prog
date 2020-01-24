@@ -7,7 +7,7 @@ import {Teacher} from '../modules/teacher/teacher.model';
 @Injectable()
 export class TeacherService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getAll(): Observable<Teacher[]> {
     return this.http.get<Teacher[]>('/api/teachers/all');
