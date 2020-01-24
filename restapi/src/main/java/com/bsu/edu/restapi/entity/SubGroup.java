@@ -4,15 +4,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-public class Subgroup {
+public class SubGroup {
     private Long id;
     private int max_students_amount;
     private int current_student_amount;
     private Long group_id;
 
-    public Subgroup(){}
+    public SubGroup(){}
 
-    public Subgroup(int max_students_amount, int current_student_amount, Long group_id) {
+    public SubGroup(int max_students_amount, int current_student_amount, Long group_id) {
         this.max_students_amount = max_students_amount;
         this.current_student_amount = current_student_amount;
         this.group_id = group_id;
