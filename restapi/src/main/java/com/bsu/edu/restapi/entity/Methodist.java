@@ -5,17 +5,19 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity(name = "department")
-public class Department {
+@Entity(name = "methodist")
+public class Methodist {
     private Long id;
-    private String name;
+    private Long user_id;
     private Long faculty_id;
+    private String name;
 
-    public Department(){}
+    public Methodist() {}
 
-    public Department(String name, Long faculty_id) {
-        this.name = name;
+    public Methodist(Long user_id, Long faculty_id, String name) {
+        this.user_id = user_id;
         this.faculty_id = faculty_id;
+        this.name = name;
     }
 
     @Id
@@ -28,12 +30,12 @@ public class Department {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public Long getUser_id() {
+        return user_id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUser_id(Long user_id) {
+        this.user_id = user_id;
     }
 
     public Long getFaculty_id() {
@@ -42,5 +44,13 @@ public class Department {
 
     public void setFaculty_id(Long faculty_id) {
         this.faculty_id = faculty_id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

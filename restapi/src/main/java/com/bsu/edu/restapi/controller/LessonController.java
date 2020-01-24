@@ -19,9 +19,9 @@ public class LessonController {
     public List<Lesson> getAll() {
         return lessonService.getAllLessons();
     }
-
+//+
     @GetMapping(value = "/{id}")
-    public Lesson get(@PathVariable Long id) {
+    public Lesson getById(@PathVariable Long id) {
         return lessonService.getLessonById(id);
     }
 

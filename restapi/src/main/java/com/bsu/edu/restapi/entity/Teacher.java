@@ -10,13 +10,13 @@ public class Teacher {
     private String name;
     private String surname;
     private String fathername;
-    private Date birthdate;
+    private String birthdate;
     private Long department_id;
     private Long user_id;
 
     public Teacher() { }
 
-    public Teacher(String name, String surname, String fathername, Date birthdate, Long department_id, Long user_id) {
+    public Teacher(String name, String surname, String fathername, String birthdate, Long department_id, Long user_id) {
         this.name = name;
         this.surname = surname;
         this.fathername = fathername;
@@ -35,9 +35,7 @@ public class Teacher {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
-    }
+    public String getName() { return name; }
 
     public void setName(String name) {
         this.name = name;
@@ -59,11 +57,11 @@ public class Teacher {
         this.fathername = fathername;
     }
 
-    public Date getBirthdate() {
+    public String getBirthdate() {
         return birthdate;
     }
 
-    public void setBirthdate(Date birthdate) {
+    public void setBirthdate(String birthdate) {
         this.birthdate = birthdate;
     }
 

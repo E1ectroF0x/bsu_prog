@@ -5,16 +5,21 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity(name = "department")
-public class Department {
+@Entity(name = "speciality")
+public class Speciality {
+
     private Long id;
     private String name;
+    private int amount;
+    private int pay_amount;
     private Long faculty_id;
 
-    public Department(){}
+    public Speciality(){}
 
-    public Department(String name, Long faculty_id) {
+    public Speciality(String name, int amount, int pay_amount, Long faculty_id) {
         this.name = name;
+        this.amount = amount;
+        this.pay_amount = pay_amount;
         this.faculty_id = faculty_id;
     }
 
@@ -34,6 +39,22 @@ public class Department {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
+    public int getPay_amount() {
+        return pay_amount;
+    }
+
+    public void setPay_amount(int pay_amount) {
+        this.pay_amount = pay_amount;
     }
 
     public Long getFaculty_id() {

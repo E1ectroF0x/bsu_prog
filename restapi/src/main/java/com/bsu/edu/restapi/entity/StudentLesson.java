@@ -5,17 +5,16 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity(name = "audience_lesson")
-public class AudienceLesson {
-
+@Entity(name = "student_lesson")
+public class StudentLesson {
     private Long id;
-    private Long audience_id;
+    private Long student_id;
     private Long lesson_id;
 
-    public AudienceLesson() {}
+    public StudentLesson(){}
 
-    public AudienceLesson(Long audience_id, Long lesson_id) {
-        this.audience_id = audience_id;
+    public StudentLesson(Long student_id, Long lesson_id) {
+        this.student_id = student_id;
         this.lesson_id = lesson_id;
     }
 
@@ -29,12 +28,12 @@ public class AudienceLesson {
         this.id = id;
     }
 
-    public Long getAudience_id() {
-        return audience_id;
+    public Long getStudent_id() {
+        return student_id;
     }
 
-    public void setAudience_id(Long audience_id) {
-        this.audience_id = audience_id;
+    public void setStudent_id(Long student_id) {
+        this.student_id = student_id;
     }
 
     public Long getLesson_id() {

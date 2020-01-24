@@ -1,0 +1,32 @@
+table {
+  margin-left: 37px;
+  border-collapse: collapse;
+}
+
+table th {
+  font-size: 16px;
+  font-weight: bold;
+  color: #0A3470;
+  text-align: start;
+  padding-bottom: 10px;
+}
+
+table td {
+  height: 50px;
+  width: 140px;
+  border: 1px solid #707070;
+  font-size: 16px;
+  font-weight: bold;
+  color: #0A3470;
+  text-align: center;
+  box-shadow: 0 3px 6px #0A3470;
+}
+
+#id {
+  width: 50px;
+  border: none;
+  box-shadow: none;
+}
+#id2 {
+  box-shadow: none;
+}

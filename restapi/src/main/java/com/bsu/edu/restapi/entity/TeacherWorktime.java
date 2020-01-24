@@ -5,21 +5,21 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity(name = "building_worktime")
-public class BuildingWorktime {
+@Entity(name = "teacher_worktime")
+public class TeacherWorktime {
     private Long id;
     private int day;
     private String worktime_from;
     private String worktime_to;
-    private Long building_id;
+    private Long teacher_id;
 
-    public BuildingWorktime(){}
+    public TeacherWorktime(){}
 
-    public BuildingWorktime(int day, String worktime_from, String worktime_to, Long building_id) {
+    public TeacherWorktime(int day, String worktime_from, String worktime_to, Long teacher_id) {
         this.day = day;
         this.worktime_from = worktime_from;
         this.worktime_to = worktime_to;
-        this.building_id = building_id;
+        this.teacher_id = teacher_id;
     }
 
     @Id
@@ -56,11 +56,11 @@ public class BuildingWorktime {
         this.worktime_to = worktime_to;
     }
 
-    public Long getBuilding_id() {
-        return building_id;
+    public Long getTeacher_id() {
+        return teacher_id;
     }
 
-    public void setBuilding_id(Long building_id) {
-        this.building_id = building_id;
+    public void setTeacher_id(Long teacher_id) {
+        this.teacher_id = teacher_id;
     }
 }
