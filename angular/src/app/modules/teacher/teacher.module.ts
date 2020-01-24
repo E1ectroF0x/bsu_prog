@@ -2,14 +2,22 @@ import {NgModule} from '@angular/core';
 import {TeacherComponent} from './components/teacher.component';
 import {TeacherService} from '../../services/teacher.service';
 import {BrowserModule} from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http';
+import {TeacherTableComponent} from './components/table/teacher-table.component';
+import {AddTeacherComponent} from './components/add/add-teacher.component';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
   declarations: [
-    TeacherComponent
+    TeacherComponent,
+    TeacherTableComponent,
+    AddTeacherComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     TeacherService
@@ -18,6 +26,4 @@ import {BrowserModule} from '@angular/platform-browser';
     TeacherComponent
   ]
 })
-export class TeacherModule {
-
-}
+export class TeacherModule { }
