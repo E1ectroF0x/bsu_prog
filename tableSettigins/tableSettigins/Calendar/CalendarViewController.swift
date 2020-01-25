@@ -8,31 +8,26 @@
 
 import UIKit
 
-import UIKit
-
 class CalendarViewController: UIViewController{
     
     var lessons = [Lesson]() {
         didSet {
             DispatchQueue.main.async {
                 self.scheduleView.reloadData()
-                if self.lessons.count == 0 {
-                    self.scheduleView.isHidden = true
-                } else {
-                    self.scheduleView.isHidden = false
-                }
-                
+                self.scheduleView.isHidden = self.lessons.count == 0 ? true : false
             }
         }
     }
     let leftAndRightPaddings: CGFloat = 74.0
     let numberOfItems: CGFloat = 7.0
     public let IDForCalendar = "C1"
+    
     @IBOutlet weak var Calendar: UICollectionView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var scheduleView: UITableView!
     
     @IBOutlet weak var weekdayStack: UIStackView!
+    
     // MARK: Date for calendar
     let Months = ["Январь",
                   "Февраль",
@@ -95,11 +90,7 @@ class CalendarViewController: UIViewController{
             year -= 1
             direction = -1
             
-            if year % 4 == 0 {
-                DaysInMonth[1] = 29
-            } else {
-                DaysInMonth[1] = 28
-            }
+            DaysInMonth[1] = year % 4 == 0 ?29 :28
             
             GetStartDateDayPosition()
             
@@ -116,21 +107,13 @@ class CalendarViewController: UIViewController{
             dateLabel.text = "\(currentMonth) " + "\(year)"
             Calendar.reloadData()
         }
-        if current_month_i == month && current_year_i == year {
-            day = current_day_i
-        } else {
-            day = -1
-        }
+        day = current_month_i == month && current_year_i == year ? current_day_i: -1
+                   
     }
     
     
     @IBAction func next(_ sender: Any) {
-        if year % 4 == 0 {
-            DaysInMonth[1] = 29
-        }
-        else {
-            DaysInMonth[1] = 28
-        }
+        DaysInMonth[1] = year % 4 == 0 ?29 :28
         switch currentMonth {
         case "Декабрь":
             month = 0
@@ -153,11 +136,8 @@ class CalendarViewController: UIViewController{
             dateLabel.text = "\(currentMonth) " + "\(year)"
             Calendar.reloadData()
         }
-        if current_month_i == month && current_year_i == year {
-            day = current_day_i
-        } else {
-            day = -1
-        }
+         day = current_month_i == month && current_year_i == year ? current_day_i: -1
+                   
         
     }
     
@@ -197,5 +177,3 @@ class CalendarViewController: UIViewController{
     }
     
 }
-
-
