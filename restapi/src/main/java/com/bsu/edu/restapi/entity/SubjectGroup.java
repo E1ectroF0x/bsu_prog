@@ -1,16 +1,18 @@
 package com.bsu.edu.restapi.entity;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@Entity(name = "subject_group")
 public class SubjectGroup {
     private Long id;
     private Long subject_id;
     private Long group_id;
     private Long subgroup_id;
 
-    SubjectGroup(){}
+    public SubjectGroup(){}
 
     public SubjectGroup(Long subject_id, Long group_id, Long subgroup_id) {
         this.subject_id = subject_id;

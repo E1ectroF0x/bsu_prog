@@ -1,16 +1,18 @@
 package com.bsu.edu.restapi.entity;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@Entity(name = "methodist")
 public class Methodist {
     private Long id;
     private Long user_id;
     private Long faculty_id;
     private String name;
 
-    Methodist(){}
+    public Methodist() {}
 
     public Methodist(Long user_id, Long faculty_id, String name) {
         this.user_id = user_id;

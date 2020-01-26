@@ -1,9 +1,11 @@
 package com.bsu.edu.restapi.entity;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@Entity(name = "student")
 public class Student {
     private Long id;
     private String name;

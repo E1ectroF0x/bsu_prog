@@ -1,10 +1,13 @@
 package com.bsu.edu.restapi.entity;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@Entity(name = "speciality")
 public class Speciality {
+
     private Long id;
     private String name;
     private int amount;

@@ -1,9 +1,11 @@
 package com.bsu.edu.restapi.entity;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@Entity(name = "subgroup")
 public class SubGroup {
     private Long id;
     private int max_students_amount;
