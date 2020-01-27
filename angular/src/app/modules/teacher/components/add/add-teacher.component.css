@@ -1,0 +1,52 @@
+.container {
+  margin-right: 100px;
+}
+
+.input-option {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.btn-submit {
+  margin-left: 10px;
+  height: 30px;
+  width: 200px;
+  border: 1px solid #0A3470;
+  background-color: rgba(10, 52, 112, 1);
+  color: #ffffff;
+  box-shadow: 0 3px 6px #0A3470;
+}
+
+.input-option-dep {
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.input-option-date {
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+input {
+  width: 200px;
+  height: 30px;
+  box-shadow: 0 3px 6px #0A3470;
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #0A3470;
+}
+
+::placeholder {
+  padding-left: 10px;
+  color: rgba(10, 52, 112, .53);
+  font-weight: bold;
+}
+
+input, label {
+  display: block;
+}

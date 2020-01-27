@@ -1,0 +1,20 @@
+<table>
+  <thead>
+    <tr>
+      <!-- <th id="id2"></th> -->
+      <th>Фамилия:</th>
+      <th>Имя:</th>
+      <th>Отчество:</th>
+      <th>Дата рождения:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let teacher of _teachers">
+      <!-- <td id="id">{{teacher.id}}</td> -->
+      <td>{{teacher.secondName}}</td>
+      <td>{{teacher.name}}</td>
+      <td>{{teacher.lastName}}</td>
+      <td>{{teacher.birthday}}</td>
+    </tr>
+  </tbody>
+</table>

@@ -8,17 +8,11 @@ import {Teacher} from '../models/teacher.model';
   templateUrl: 'teacher.component.html',
   styleUrls: ['teacher.component.css']
 })
-export class TeacherComponent implements OnInit{
+export class TeacherComponent {
 
-  public _teachers: Teacher[];
   public _selectedButton: boolean;
 
 
-  constructor(private teacherService: TeacherService) { }
-
-  ngOnInit(): void {
-    this.teacherService.getAll().subscribe(teachers => this._teachers = teachers);
-    this._selectedButton = false;
-  }
+  constructor() { }
 
 }

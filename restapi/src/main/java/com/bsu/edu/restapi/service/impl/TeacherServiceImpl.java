@@ -72,6 +72,7 @@ public class TeacherServiceImpl implements TeacherService {
 
     /* @Override
     public void saveTeacher(Teacher teacher) {
+        teacher.setUser_id(27L);
         teacherRepository.save(teacher);
     } */
 
