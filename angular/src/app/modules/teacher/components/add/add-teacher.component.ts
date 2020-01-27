@@ -11,12 +11,12 @@ import {SaveTeacherModel} from '../../models/save-teacher.model';
 })
 export class AddTeacherComponent {
 
-  public _teacher: SaveTeacherModel = new SaveTeacherModel();
+  public _teacher: Teacher = new Teacher();
 
   constructor(private teacherService: TeacherService) { }
 
-  public _saveTeacher(model: SaveTeacherModel) {
-    this.teacherService.save(model).subscribe(data => console.log("OKAT"));
+  public _saveTeacher(model: Teacher) {
+    this.teacherService.save(model).subscribe(data => console.log("OKAY"));
   }
 
 }
