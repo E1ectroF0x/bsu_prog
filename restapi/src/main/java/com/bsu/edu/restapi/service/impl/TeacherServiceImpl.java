@@ -48,7 +48,6 @@ public class TeacherServiceImpl implements TeacherService {
         Teacher teacher = new Teacher(model.getName(), model.getSecondName(), model.getLastName(),
                 model.getBirthday(), departmentService.getDepartmentByName(model.getName()).getId(), savedUser.getId());
         teacherRepository.save(teacher);
-        log.debug("Teacher with userId = {} and username: {} successfully saved", savedUser.getId(), username);
     }
 
     @Override
