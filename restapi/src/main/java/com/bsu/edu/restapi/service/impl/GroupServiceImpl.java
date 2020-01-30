@@ -1,5 +1,6 @@
 package com.bsu.edu.restapi.service.impl;
 
+import com.bsu.edu.restapi.DTO.GroupDTO;
 import com.bsu.edu.restapi.entity.Group;
 import com.bsu.edu.restapi.repository.GroupRepository;
 import com.bsu.edu.restapi.service.GroupService;
@@ -14,9 +15,10 @@ public class GroupServiceImpl implements GroupService {
     @Autowired
     GroupRepository groupRepository;
 
+
     @Override
-    public Group getById(Long id) {
-        return groupRepository.findById(id).orElse(null);
+    public GroupDTO getGroupById(Long id) {
+        return null;
     }
 
     @Override
@@ -32,5 +34,10 @@ public class GroupServiceImpl implements GroupService {
     @Override
     public void deleteById(Long id) {
         groupRepository.deleteById(id);
+    }
+
+    @Override
+    public Group getGroupByDTO(GroupDTO model) {
+        return null;
     }
 }

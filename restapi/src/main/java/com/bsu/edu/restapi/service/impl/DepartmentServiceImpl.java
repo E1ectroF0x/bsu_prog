@@ -33,7 +33,9 @@ public class DepartmentServiceImpl implements DepartmentService {
     public List<DepartmentDTO> getAllDepartmentsByFaculty(String facultyName) {
         List<Department> departments = (List<Department>) departmentRepository.findAll();
         List<DepartmentDTO> departmentDTOs = new ArrayList<>(Collections.emptyList());
-        departments.forEach(department -> departmentDTOs.add(convert(department)));
+        departments.stream().filter(department ->
+                facultyName.equals(facultyService.getFacultyById(department.getFaculty_id()).getName()))
+                .forEach(department -> departmentDTOs.add(convert(department)));
         return departmentDTOs;
     }
 

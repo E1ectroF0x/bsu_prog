@@ -15,16 +15,9 @@ public class DepartmentController {
     @Autowired
     private DepartmentService departmentService;
 
-
     @GetMapping(value = "/{id}")
     public DepartmentDTO getById(@PathVariable Long id) {
         return departmentService.getDepartmentById(id);
-    }
-
-    //?
-    @GetMapping(value = "/{name}")
-    public Department getDepartmentByName(@PathVariable String name){
-        return departmentService.getDepartmentByName(name);
     }
 
     @GetMapping(value = "/all")

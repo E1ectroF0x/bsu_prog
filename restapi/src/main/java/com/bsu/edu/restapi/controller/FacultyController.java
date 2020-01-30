@@ -21,9 +21,4 @@ public class FacultyController {
         return facultyService.getFacultyById(id);
     }
 
-    @GetMapping(value = "/{name}")
-    public Faculty getFacultyById(@PathVariable String name){
-        return facultyService.getFacultyByName(name);
-    }
-
 }

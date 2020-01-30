@@ -18,6 +18,8 @@ import java.util.List;
 @Slf4j
 public class TeacherServiceImpl implements TeacherService {
 
+    private Teacher teacher = null;
+
     @Autowired
     private TeacherRepository teacherRepository;
 
@@ -26,6 +28,10 @@ public class TeacherServiceImpl implements TeacherService {
 
     @Autowired
     private DepartmentService departmentService;
+
+    public TeacherServiceImpl() {
+        this.teacher = new Teacher();
+    }
 
     @Override
     public List<TeacherDTO> getAllTeachers() {
@@ -40,13 +46,17 @@ public class TeacherServiceImpl implements TeacherService {
 
     @Override
     public void saveTeacher(TeacherDTO model) {
-        String username = model.getSecondName() + model.getName().substring(0, 1).toUpperCase()
+        String username = "rct." + model.getSecondName() + model.getName().substring(0, 1).toUpperCase()
                 + model.getLastName().substring(0, 1).toUpperCase();
 
         // TODO: make password generation
         User savedUser = userService.saveUser(new User(username,"1111111", null, 10, null));
-        Teacher teacher = new Teacher(model.getName(), model.getSecondName(), model.getLastName(),
-                model.getBirthday(), departmentService.getDepartmentByName(model.getName()).getId(), savedUser.getId());
+        this.teacher.setName(model.getName());
+        this.teacher.setSurname(model.getSecondName());
+        this.teacher.setFathername(model.getLastName());
+        this.teacher.setBirthdate(model.getBirthday());
+        this.teacher.setDepartment_id(departmentService.getDepartmentByName(model.getDepartmentName()).getId());
+        this.teacher.setUser_id(savedUser.getId());
         teacherRepository.save(teacher);
     }
 

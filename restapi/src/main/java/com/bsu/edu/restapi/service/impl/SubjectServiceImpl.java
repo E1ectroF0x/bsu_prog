@@ -1,5 +1,6 @@
 package com.bsu.edu.restapi.service.impl;
 
+import com.bsu.edu.restapi.entity.Group;
 import com.bsu.edu.restapi.entity.Lesson;
 import com.bsu.edu.restapi.entity.Subject;
 import com.bsu.edu.restapi.repository.SubjectRepository;
@@ -18,6 +19,11 @@ public class SubjectServiceImpl implements SubjectService {
     @Override
     public Subject getSubjectById(Long id) {
         return subjectRepository.findById(id).orElse(null);
+    }
+
+    @Override
+    public Group getSubjectByName(String name) {
+        return null;
     }
 
     @Override

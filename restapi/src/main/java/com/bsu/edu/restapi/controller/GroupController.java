@@ -14,10 +14,6 @@ public class GroupController {
     @Autowired
     private GroupService groupService;
 
-    @RequestMapping(value = "/{id}")
-    public Group getById(@PathVariable Long id){
-        return groupService.getById(id);
-    }
 
     @RequestMapping(value = "/all")
     public List<Group> getAll(){
