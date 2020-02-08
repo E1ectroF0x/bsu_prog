@@ -9,14 +9,16 @@ import com.bsu.edu.restapi.service.GroupService;
 import com.bsu.edu.restapi.service.StudentService;
 import com.bsu.edu.restapi.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+@Service
 public class StudentServiceImpl implements StudentService {
 
-    private Student student =null;
+    private Student student = null;
 
     @Autowired
     StudentRepository studentRepository;
@@ -27,14 +29,22 @@ public class StudentServiceImpl implements StudentService {
     @Autowired
     UserService userService;
 
-    public StudentServiceImpl(Student student) {
-        this.student = student;
+    public StudentServiceImpl() {
+        this.student = new Student();
+    }
+
+    @Override
+    public List<StudentDTO> getAllStudents() {
+        List<Student> students = (List<Student>) studentRepository.findAll();
+        List<StudentDTO> _students = new ArrayList<>();
+        students.forEach(student -> _students.add(convert(student)));
+        return _students;
     }
 
     @Override
     public List<StudentDTO> getStudentsByGroup(GroupDTO group) {
         List<Student> students = (List<Student>) studentRepository.findAll();
-        List<StudentDTO> _students = new ArrayList<>(Collections.emptyList());
+        List<StudentDTO> _students = new ArrayList<>();
         students.stream().filter(student -> student.getGroup_id().equals(groupService.getGroupByDTO(group).getId()))
                 .forEach(student -> _students.add(convert(student)));
         return _students;

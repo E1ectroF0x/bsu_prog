@@ -13,12 +13,15 @@ import java.util.List;
 public class GroupServiceImpl implements GroupService {
 
     @Autowired
-    GroupRepository groupRepository;
+    private GroupRepository groupRepository;
 
+    @Autowired
+    private SpecialityService specialityService;
 
     @Override
     public GroupDTO getGroupById(Long id) {
-        return null;
+        Group group = groupRepository.findById(id).orElse(null);
+        return convert(group);
     }
 
     @Override
@@ -40,4 +43,13 @@ public class GroupServiceImpl implements GroupService {
     public Group getGroupByDTO(GroupDTO model) {
         return null;
     }
+
+    private GroupDTO convert(Group group) {
+        GroupDTO model = new GroupDTO();
+        model.setNumber(group.getNumber_group());
+        model.setCourse(String.valueOf(group.getCourse()));
+        model.setSpeciality(specialityService.findById(group.getSpeciality()));
+        return null;
+    }
+
 }

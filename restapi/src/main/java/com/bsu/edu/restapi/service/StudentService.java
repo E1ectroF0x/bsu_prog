@@ -7,6 +7,7 @@ import java.util.List;
 
 public interface StudentService {
 
+    public List<StudentDTO> getAllStudents();
     public List<StudentDTO> getStudentsByGroup(GroupDTO group);
     public void saveStudent(StudentDTO model);
 
