@@ -4,9 +4,11 @@ import com.bsu.edu.restapi.DTO.GroupDTO;
 import com.bsu.edu.restapi.entity.Group;
 import com.bsu.edu.restapi.repository.GroupRepository;
 import com.bsu.edu.restapi.service.GroupService;
+import com.bsu.edu.restapi.service.SpecialityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -25,8 +27,11 @@ public class GroupServiceImpl implements GroupService {
     }
 
     @Override
-    public List<Group> getAll() {
-        return (List<Group>) groupRepository.findAll();
+    public List<GroupDTO> getAll() {
+         List<Group> groups = (List<Group>) groupRepository.findAll();
+         List<GroupDTO> _groups = new ArrayList<>();
+         groups.forEach(group -> _groups.add(convert(group)));
+         return _groups;
     }
 
     @Override
@@ -41,7 +46,10 @@ public class GroupServiceImpl implements GroupService {
 
     @Override
     public Group getGroupByDTO(GroupDTO model) {
-        return null;
+        List<Group> groups = (List<Group>) groupRepository.findAll();
+        return groups.stream().filter(g -> g.getNumber_group().equals(model.getNumber())
+                                                   && String.valueOf(g.getCourse()).equals(model.getCourse()))
+                                     .findFirst().orElse(null);
     }
 
     private GroupDTO convert(Group group) {

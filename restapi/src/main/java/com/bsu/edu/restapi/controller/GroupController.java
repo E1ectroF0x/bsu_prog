@@ -1,5 +1,6 @@
 package com.bsu.edu.restapi.controller;
 
+import com.bsu.edu.restapi.DTO.GroupDTO;
 import com.bsu.edu.restapi.entity.Group;
 import com.bsu.edu.restapi.service.GroupService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,7 @@ public class GroupController {
     private GroupService groupService;
 
     @RequestMapping(value = "/all")
-    public List<Group> getAll(){
+    public List<GroupDTO> getAll(){
         return groupService.getAll();
     }
 

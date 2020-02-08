@@ -3,6 +3,7 @@ package com.bsu.edu.restapi.service.impl;
 import com.bsu.edu.restapi.DTO.SpecialityDTO;
 import com.bsu.edu.restapi.entity.Speciality;
 import com.bsu.edu.restapi.repository.SpecialityRepository;
+import com.bsu.edu.restapi.service.SpecialityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

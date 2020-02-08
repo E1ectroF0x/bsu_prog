@@ -48,6 +48,14 @@ public class LessonServiceImpl implements LessonService {
         this.lessonRepository.save(this.lesson);
     }
 
+    @Override
+    public void deleteLesson(LessonDTO model) {
+        List<Lesson> lessons = (List<Lesson>) lessonRepository.findAll();
+        lessons.stream().filter(l -> (l.getGroup_id()).equals(groupService.getGroupByDTO(model.getGroup()).getId())
+                && subjectService.getSubjectById(l.getSubject_id()).getName().equals(model.getName()))
+                .findFirst().ifPresent(lesson -> lessonRepository.delete(lesson));
+    }
+
     private LessonDTO convert(Lesson lesson) {
         return new LessonDTO(subjectService.getSubjectById(lesson.getSubject_id()).getName(),
                 groupService.getGroupById(lesson.getGroup_id()));

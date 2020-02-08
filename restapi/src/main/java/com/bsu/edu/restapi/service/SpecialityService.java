@@ -1,4 +1,4 @@
-package com.bsu.edu.restapi.service.impl;
+package com.bsu.edu.restapi.service;
 
 import com.bsu.edu.restapi.DTO.SpecialityDTO;
 
