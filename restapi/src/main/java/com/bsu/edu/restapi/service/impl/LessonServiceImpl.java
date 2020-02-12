@@ -3,7 +3,7 @@ package com.bsu.edu.restapi.service.impl;
 import com.bsu.edu.restapi.DTO.GroupDTO;
 import com.bsu.edu.restapi.DTO.LessonDTO;
 import com.bsu.edu.restapi.entity.Lesson;
-import com.bsu.edu.restapi.repository.*;
+import com.bsu.edu.restapi.repository.LessonRepository;
 import com.bsu.edu.restapi.service.GroupService;
 import com.bsu.edu.restapi.service.LessonService;
 import com.bsu.edu.restapi.service.SubjectService;
@@ -17,7 +17,7 @@ import java.util.List;
 @Service
 public class LessonServiceImpl implements LessonService {
 
-    private Lesson lesson = null;
+    private Lesson lesson;
 
     @Autowired
     private LessonRepository lessonRepository;
