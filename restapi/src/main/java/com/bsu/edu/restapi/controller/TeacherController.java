@@ -17,19 +17,20 @@ public class TeacherController {
     private TeacherService teacherService;
 
     @GetMapping(value = "/all")
-    public List<TeacherDTO> getAll() {
-        log.debug("Getting all teachers");
+    public List<TeacherDTO> getAllTeachers() {
         return teacherService.getAllTeachers();
     }
 
     @DeleteMapping
-    public void deleteById(@RequestParam String name, @RequestParam String secondName, @RequestParam String lastName) {
+    public void deleteTeacherByFIO(@RequestParam String name, @RequestParam String secondName, @RequestParam String lastName) {
         teacherService.deleteTeacherByFIO(name, secondName, lastName);
     }
 
     @PostMapping
-    public void save(@RequestBody TeacherDTO model) {
+    public void saveTeacher(@RequestBody TeacherDTO model) {
         teacherService.saveTeacher(model);
     }
+
+
 
 }

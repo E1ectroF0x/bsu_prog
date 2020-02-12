@@ -5,16 +5,16 @@ public class TeacherDTO {
     private String secondName;
     private String lastName;
     private String birthday;
-    private Long departmentId;
+    private String departmentName;
 
     public TeacherDTO() {}
 
-    public TeacherDTO(String name, String secondName, String lastName, String birthday, Long departmentId) {
+    public TeacherDTO(String name, String secondName, String lastName, String birthday, String departmentName) {
         this.name = name;
         this.secondName = secondName;
         this.lastName = lastName;
         this.birthday = birthday;
-        this.departmentId = departmentId;
+        this.departmentName = departmentName;
     }
 
     public String getName() {
@@ -49,11 +49,11 @@ public class TeacherDTO {
         this.birthday = birthday;
     }
 
-    public Long getDepartmentId() {
-        return departmentId;
+    public String getDepartmentName() {
+        return departmentName;
     }
 
-    public void setDepartmentId(Long departmentId) {
-        this.departmentId = departmentId;
+    public void setDepartmentName(String departmentName) {
+        this.departmentName = departmentName;
     }
 }

@@ -1,6 +1,8 @@
 package com.bsu.edu.restapi.controller;
 
 
+import com.bsu.edu.restapi.DTO.GroupDTO;
+import com.bsu.edu.restapi.DTO.LessonDTO;
 import com.bsu.edu.restapi.entity.Lesson;
 import com.bsu.edu.restapi.service.LessonService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,24 +17,18 @@ public class LessonController {
     @Autowired
     private LessonService lessonService;
 
-    @GetMapping(value = "/all")
-    public List<Lesson> getAll() {
-        return lessonService.getAllLessons();
-    }
-//+
-    @GetMapping(value = "/{id}")
-    public Lesson getById(@PathVariable Long id) {
-        return lessonService.getLessonById(id);
-    }
-
-    @DeleteMapping(value = "/{id}")
-    public void delete(@PathVariable Long id) {
-        lessonService.deleteLessonById(id);
+    @GetMapping
+    public List<LessonDTO> getLessonByGroup(@RequestBody GroupDTO group){
+        return lessonService.getLessonByGroup(group);
     }
 
     @PostMapping
-    public void save(@RequestBody Lesson lesson) {
+    public void save(@RequestBody LessonDTO lesson ){
         lessonService.saveLesson(lesson);
     }
 
+    @DeleteMapping
+    public void delete(@RequestBody LessonDTO lesson){
+        lessonService.deleteLesson(lesson);
+    }
 }

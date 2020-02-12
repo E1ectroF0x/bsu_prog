@@ -4,6 +4,7 @@ import com.bsu.edu.restapi.DTO.TeacherDTO;
 import com.bsu.edu.restapi.entity.Teacher;
 import com.bsu.edu.restapi.entity.User;
 import com.bsu.edu.restapi.repository.TeacherRepository;
+import com.bsu.edu.restapi.service.DepartmentService;
 import com.bsu.edu.restapi.service.TeacherService;
 import com.bsu.edu.restapi.service.UserService;
 import lombok.extern.slf4j.Slf4j;
@@ -12,11 +13,12 @@ import org.springframework.stereotype.Service;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.Stream;
 
 @Service
 @Slf4j
 public class TeacherServiceImpl implements TeacherService {
+
+    private Teacher teacher = null;
 
     @Autowired
     private TeacherRepository teacherRepository;
@@ -24,36 +26,38 @@ public class TeacherServiceImpl implements TeacherService {
     @Autowired
     private UserService userService;
 
-    /* @Override
-    public Teacher getTeacherById(Long id) {
-        return teacherRepository.findById(id).orElse(null);
-    } */
+    @Autowired
+    private DepartmentService departmentService;
 
+    public TeacherServiceImpl() {
+        this.teacher = new Teacher();
+    }
 
     @Override
     public List<TeacherDTO> getAllTeachers() {
-        //return (List<Teacher>) teacherRepository.findAll();
         List<Teacher> teachers = (List<Teacher>) teacherRepository.findAll();
         List<TeacherDTO> teacherModels = new java.util.ArrayList<>(Collections.emptyList());
         teachers.forEach(teacher -> teacherModels.
                         add(new TeacherDTO(teacher.getName(), teacher.getSurname(), teacher.getFathername(),
-                                teacher.getBirthdate(), teacher.getDepartment_id())));
+                                teacher.getBirthdate(),
+                                departmentService.getDepartmentById(teacher.getDepartment_id()).getName())));
         return teacherModels;
     }
 
-    // public User(String username, String password_hash, String refresh_token, Integer status, String auth_key) {
-
     @Override
     public void saveTeacher(TeacherDTO model) {
-        String username = model.getSecondName() + model.getName().substring(0, 1).toUpperCase()
+        String username = "rct." + model.getSecondName() + model.getName().substring(0, 1).toUpperCase()
                 + model.getLastName().substring(0, 1).toUpperCase();
 
         // TODO: make password generation
         User savedUser = userService.saveUser(new User(username,"1111111", null, 10, null));
-        Teacher teacher = new Teacher(model.getName(), model.getSecondName(), model.getLastName(),
-                model.getBirthday(), model.getDepartmentId(), savedUser.getId());
+        this.teacher.setName(model.getName());
+        this.teacher.setSurname(model.getSecondName());
+        this.teacher.setFathername(model.getLastName());
+        this.teacher.setBirthdate(model.getBirthday());
+        this.teacher.setDepartment_id(departmentService.getDepartmentByName(model.getDepartmentName()).getId());
+        this.teacher.setUser_id(savedUser.getId());
         teacherRepository.save(teacher);
-        log.debug("Teacher with userId = {} and username: {} successfully saved", savedUser.getId(), username);
     }
 
     @Override
@@ -69,15 +73,4 @@ public class TeacherServiceImpl implements TeacherService {
             userService.deleteUserById(_teacher.getUser_id());
         }
     }
-
-    /* @Override
-    public void saveTeacher(Teacher teacher) {
-        teacher.setUser_id(27L);
-        teacherRepository.save(teacher);
-    } */
-
-    /*@Override
-    public void deleteTeacherById(Long id) {
-        teacherRepository.deleteById(id);
-    } */
 }

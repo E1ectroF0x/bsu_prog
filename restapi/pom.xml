@@ -8,6 +8,19 @@
     <artifactId>restapi</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <repositories>
+        <repository>
+            <id>restapi</id>
+            <url>https://pkgs.dev.azure.com/foxelectro1/BSU_prog/_packaging/restapi/maven/v1</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -25,11 +38,13 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
         </dependency>
+
 
         <dependency>
             <groupId>org.mariadb.jdbc</groupId>
@@ -51,5 +66,12 @@
             </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>restapi</id>
+            <url>https://pkgs.dev.azure.com/foxelectro1/BSU_prog/_packaging/restapi/maven/v1</url>
+        </repository>
+    </distributionManagement>
 
 </project>
