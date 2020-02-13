@@ -1,6 +1,6 @@
 package com.bsu.edu.restapi.DTO;
 
-public class IOSLessons {
+public class IOSLesson {
 
     private String time_start;
     private String time_end;
@@ -12,10 +12,10 @@ public class IOSLessons {
     private String subject;
     private String type;
 
-    public IOSLessons() {}
+    public IOSLesson() {}
 
-    public IOSLessons(String time_start, String time_end, String building,
-                      String audience, String surname, String name, String fathername, String subject, String type) {
+    public IOSLesson(String time_start, String time_end, String building,
+                     String audience, String surname, String name, String fathername, String subject, String type) {
         this.time_start = time_start;
         this.time_end = time_end;
         this.building = building;
