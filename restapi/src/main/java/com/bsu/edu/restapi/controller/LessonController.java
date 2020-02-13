@@ -28,7 +28,7 @@ public class LessonController {
     }
 
     @DeleteMapping
-    public void delete(@RequestBody LessonDTO lesson){
+    public void delete(@RequestBody LessonDTO lesson) {
         lessonService.deleteLesson(lesson);
     }
 }
