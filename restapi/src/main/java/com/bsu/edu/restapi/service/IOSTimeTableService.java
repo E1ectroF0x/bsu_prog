@@ -1,10 +1,10 @@
 package com.bsu.edu.restapi.service;
 
-import com.bsu.edu.restapi.DTO.IOSDTO;
+import com.bsu.edu.restapi.DTO.IOSLessons;
 
 import java.util.List;
 
 public interface IOSTimeTableService {
 
-    public List<IOSDTO> getAllLessonsByMonth(int month);
+    public List<IOSLessons> getAllLessonsByMonth(int month);
 }

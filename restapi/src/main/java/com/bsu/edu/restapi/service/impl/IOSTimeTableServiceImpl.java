@@ -1,6 +1,6 @@
 package com.bsu.edu.restapi.service.impl;
 
-import com.bsu.edu.restapi.DTO.IOSDTO;
+import com.bsu.edu.restapi.DTO.IOSLessons;
 import com.bsu.edu.restapi.entity.*;
 import com.bsu.edu.restapi.repository.*;
 import com.bsu.edu.restapi.service.IOSTimeTableService;
@@ -15,7 +15,7 @@ public class IOSTimeTableServiceImpl implements IOSTimeTableService {
 
     private Lesson lesson;
 
-    public IOSTimeTableServiceImpl(Lesson lesson) {
+    public IOSTimeTableServiceImpl() {
         this.lesson = new Lesson();
     }
 
@@ -56,8 +56,8 @@ public class IOSTimeTableServiceImpl implements IOSTimeTableService {
     private SubjectRepository subjectRepository;
 
     @Override
-    public List<IOSDTO> getAllLessonsByMonth(int month) {
-        List<IOSDTO> lessonDTOS = new ArrayList<>();
+    public List<IOSLessons> getAllLessonsByMonth(int month) {
+        List<IOSLessons> lessonDTOS = new ArrayList<>();
         List<LessonDate> lessonDates = (List<LessonDate>)lessonDateRepository.findAll();
         lessonDates.stream().filter(lesson ->
                 (month > convertInt(lesson.getDate_start()) && month < convertInt(lesson.getDate_end())))
@@ -69,7 +69,7 @@ public class IOSTimeTableServiceImpl implements IOSTimeTableService {
         return Integer.valueOf(date.substring(5, 6));
     }
 
-    private IOSDTO convert(LessonDate model) {
+    private IOSLessons convert(LessonDate model) {
         List<AudienceLesson> audienceLessons = (List<AudienceLesson>) audienceLessonRepository.findAll();
         List<LessonTime> lessonTimes = (List<LessonTime>) lessonTimeRepository.findAll();
         List<Group> groups = (List<Group>) groupRepository.findAll();
@@ -84,7 +84,7 @@ public class IOSTimeTableServiceImpl implements IOSTimeTableService {
                                 .findFirst().orElse(null);
 
         Group _group = groups.stream().filter(group -> _lesson.getGroup_id().equals(group.getId())).findFirst().orElse(null);
-        Speciality speciality = specialityRepository.findById(_group.getSpeciality()).orElse(null);
+        Speciality speciality = specialityRepository.findById(_group.getSpeciality_id()).orElse(null);
         Faculty faculty = facultyRepository.findById(speciality.getFaculty_id()).orElse(null);
         Building building = buildingRepository.findById(faculty.getBuilding_id()).orElse(null);
 
@@ -93,28 +93,28 @@ public class IOSTimeTableServiceImpl implements IOSTimeTableService {
         Teacher teacher = teacherRepository.findById(lessonTeacher.getTeacher_id()).orElse(null);
         Subject subject = subjectRepository.findById(_lesson.getSubject_id()).orElse(null);
 
-        IOSDTO iosdto = new IOSDTO();
-        iosdto.setAudience(audience.getNumber_audience());
-        iosdto.setTime_end(lessonTime.getTime_end());
-        iosdto.setTime_start(lessonTime.getTime_start());
-        iosdto.setBuilding(building.getAddress());
-        iosdto.setName(teacher.getName());
-        iosdto.setFathername(teacher.getFathername());
-        iosdto.setSurname(teacher.getSurname());
-        iosdto.setSubject(subject.getName());
+        IOSLessons IOSLessons = new IOSLessons();
+        IOSLessons.setAudience(audience.getNumber_audience());
+        IOSLessons.setTime_end(lessonTime.getTime_end());
+        IOSLessons.setTime_start(lessonTime.getTime_start());
+        IOSLessons.setBuilding(building.getAddress());
+        IOSLessons.setName(teacher.getName());
+        IOSLessons.setFathername(teacher.getFathername());
+        IOSLessons.setSurname(teacher.getSurname());
+        IOSLessons.setSubject(subject.getName());
         switch ((subject.getSubject_type_id()).toString()){
             case "1":
-                iosdto.setType("Лабораторное занятие");
+                IOSLessons.setType("Лабораторное занятие");
                 break;
             case "2":
-                iosdto.setType("Лекционное заянтие");
+                IOSLessons.setType("Лекционное заянтие");
                 break;
             case "3":
-                iosdto.setType("Практическое занятие");
+                IOSLessons.setType("Практическое занятие");
                 break;
         }
 
-        return iosdto;
+        return IOSLessons;
     }
 
 }
