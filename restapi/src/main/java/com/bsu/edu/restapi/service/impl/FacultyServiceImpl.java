@@ -10,6 +10,7 @@ import com.bsu.edu.restapi.service.FacultyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -31,6 +32,14 @@ public class FacultyServiceImpl implements FacultyService {
     public Faculty getFacultyByName(String name) {
         List<Faculty> faculties = (List<Faculty>) facultyRepository.findAll();
         return faculties.stream().filter(faculty -> faculty.getName().equals(name)).findFirst().orElse(null);
+    }
+
+    @Override
+    public List<FacultyDTO> getAll() {
+        List<Faculty> faculties = (List<Faculty>) facultyRepository.findAll();
+        List<FacultyDTO> _faculties = new ArrayList<>();
+        faculties.forEach(faculty -> _faculties.add(convert(faculty)));
+        return _faculties;
     }
 
     private FacultyDTO convert(Faculty faculty) {
