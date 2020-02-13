@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-import java.time.
+import java.time.*;
 
 @Service
 public class IOSTimeTableServiceImpl implements IOSTimeTableService {
@@ -144,10 +144,8 @@ public class IOSTimeTableServiceImpl implements IOSTimeTableService {
         calendar.set(Integer.parseInt(_lessonDate.getDate_start().substring(0,3)),
                 Integer.parseInt(_lessonDate.getDate_start().substring(5,6)),Integer.parseInt(_lessonDate.getDate_start().substring(8, 9)));
         Integer dayOfWeek2 = calendar.get(calendar.DAY_OF_WEEK);
-        if (dayOfWeek.equals(dayOfWeek2))
-            return true;
-        return false;
 
+        return dayOfWeek.equals(dayOfWeek2);
     }
 
 }
