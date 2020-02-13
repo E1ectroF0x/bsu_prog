@@ -8,9 +8,10 @@ import com.bsu.edu.restapi.service.IOSTimeTableService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.YearMonth;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
+import java.time.*;
 
 @Service
 public class IOSTimeTableServiceImpl implements IOSTimeTableService {
@@ -80,7 +81,7 @@ public class IOSTimeTableServiceImpl implements IOSTimeTableService {
         return models;
     }
 
-    private Integer convertInt(String date){
+    private Integer convertOnMonth(String date){
         return Integer.valueOf(date.substring(5, 6));
     }
 
@@ -128,6 +129,23 @@ public class IOSTimeTableServiceImpl implements IOSTimeTableService {
                 break;
         }
         return iosLesson;
+    }
+
+    private boolean isThisDayOfMonth(int month, int day, Lesson lesson){
+        Calendar calendar = Calendar.getInstance();
+        if (month > 8)
+            calendar.set(2019, month, day);
+        else
+            calendar.set(2020, month, day);
+        Integer dayOfWeek = calendar.get(calendar.DAY_OF_WEEK);
+        List<LessonDate> lessonDates = (List<LessonDate>) lessonDateRepository.findAll();
+        LessonDate _lessonDate = lessonDates.stream().filter(lessonDate -> lessonDate.getLesson_id()
+                .equals(lesson.getId())).findFirst().orElse(null);
+        calendar.set(Integer.parseInt(_lessonDate.getDate_start().substring(0,3)),
+                Integer.parseInt(_lessonDate.getDate_start().substring(5,6)),Integer.parseInt(_lessonDate.getDate_start().substring(8, 9)));
+        Integer dayOfWeek2 = calendar.get(calendar.DAY_OF_WEEK);
+
+        return dayOfWeek.equals(dayOfWeek2);
     }
 
 }
