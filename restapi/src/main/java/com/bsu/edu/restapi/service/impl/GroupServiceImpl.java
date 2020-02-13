@@ -22,8 +22,10 @@ public class GroupServiceImpl implements GroupService {
 
     @Override
     public GroupDTO getGroupById(Long id) {
-        Group group = groupRepository.findById(id).orElse(null);
-        return convert(group);
+        //Group group = groupRepository.findById(id).orElse(null);
+        List<Group> groups = (List<Group>) groupRepository.findAll();
+        Group model = groups.stream().filter(group -> id.equals(group.getId())).findFirst().orElse(null);
+        return convert(model);
     }
 
     @Override
@@ -56,7 +58,7 @@ public class GroupServiceImpl implements GroupService {
         GroupDTO model = new GroupDTO();
         model.setNumber(group.getNumber_group());
         model.setCourse(String.valueOf(group.getCourse()));
-        model.setSpeciality(specialityService.findById(group.getSpeciality()));
+        model.setSpeciality(specialityService.findById(group.getSpeciality_id()));
         return null;
     }
 

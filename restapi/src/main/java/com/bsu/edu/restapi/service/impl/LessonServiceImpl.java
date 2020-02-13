@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Stream;
 
 @Service
 public class LessonServiceImpl implements LessonService {
@@ -35,6 +36,7 @@ public class LessonServiceImpl implements LessonService {
     @Override
     public List<LessonDTO> getLessonByGroup(GroupDTO group) {
         List<Lesson> lessons = (List<Lesson>) lessonRepository.findAll();
+        //Stream.of((List<Lesson>) lessonRepository.findAll());
         List<LessonDTO> _lessons = new ArrayList<>(Collections.emptyList());
         lessons.stream().filter(lesson -> lesson.getGroup_id().equals(groupService.getGroupByDTO(group).getId()))
                 .forEach(lesson -> _lessons.add(convert(lesson)));

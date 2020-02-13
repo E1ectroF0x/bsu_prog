@@ -10,18 +10,18 @@ public class Group {
     private long id;
     private String number_group;
     private int course;
-    private int max_student_amount;
-    private int min_student_amount;
-    private Long speciality;
+    private int max_students_amount;
+    private int current_student_amount;
+    private Long speciality_id;
 
     public Group(){}
 
-    public Group(String number_group, int course, int max_student_amount, int min_student_amount, Long speciality) {
+    public Group(String number_group, int course, int max_students_amount, int current_student_amount, Long speciality_id) {
         this.number_group = number_group;
         this.course = course;
-        this.max_student_amount = max_student_amount;
-        this.min_student_amount = min_student_amount;
-        this.speciality = speciality;
+        this.max_students_amount = max_students_amount;
+        this.current_student_amount = current_student_amount;
+        this.speciality_id = speciality_id;
     }
 
     @Id
@@ -50,27 +50,27 @@ public class Group {
         this.course = course;
     }
 
-    public int getMax_student_amount() {
-        return max_student_amount;
+    public int getMax_students_amount() {
+        return max_students_amount;
     }
 
-    public void setMax_student_amount(int max_student_amount) {
-        this.max_student_amount = max_student_amount;
+    public void setMax_students_amount(int max_student_amount) {
+        this.max_students_amount = max_student_amount;
     }
 
-    public int getMin_student_amount() {
-        return min_student_amount;
+    public int getCurrent_student_amount() {
+        return current_student_amount;
     }
 
-    public void setMin_student_amount(int min_student_amount) {
-        this.min_student_amount = min_student_amount;
+    public void setCurrent_student_amount(int min_student_amount) {
+        this.current_student_amount = min_student_amount;
     }
 
-    public Long getSpeciality() {
-        return speciality;
+    public Long getSpeciality_id() {
+        return speciality_id;
     }
 
-    public void setSpeciality(Long speciality) {
-        this.speciality = speciality;
+    public void setSpeciality_id(Long speciality) {
+        this.speciality_id = speciality;
     }
 }
