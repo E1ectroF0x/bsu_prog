@@ -18,8 +18,6 @@ import java.util.List;
 @Slf4j
 public class TeacherServiceImpl implements TeacherService {
 
-    private Teacher teacher = null;
-
     @Autowired
     private TeacherRepository teacherRepository;
 
@@ -29,9 +27,7 @@ public class TeacherServiceImpl implements TeacherService {
     @Autowired
     private DepartmentService departmentService;
 
-    public TeacherServiceImpl() {
-        this.teacher = new Teacher();
-    }
+    public TeacherServiceImpl() {}
 
     @Override
     public List<TeacherDTO> getAllTeachers() {
@@ -51,12 +47,13 @@ public class TeacherServiceImpl implements TeacherService {
 
         // TODO: make password generation
         User savedUser = userService.saveUser(new User(username,"1111111", null, 10, null,""));
-        this.teacher.setName(model.getName());
-        this.teacher.setSurname(model.getSecondName());
-        this.teacher.setFathername(model.getLastName());
-        this.teacher.setBirthdate(model.getBirthday());
-        this.teacher.setDepartment_id(departmentService.getDepartmentByName(model.getDepartmentName()).getId());
-        this.teacher.setUser_id(savedUser.getId());
+        Teacher teacher = new Teacher();
+        teacher.setName(model.getName());
+        teacher.setSurname(model.getSecondName());
+        teacher.setFathername(model.getLastName());
+        teacher.setBirthdate(model.getBirthday());
+        teacher.setDepartment_id(departmentService.getDepartmentByName(model.getDepartmentName()).getId());
+        teacher.setUser_id(savedUser.getId());
         teacherRepository.save(teacher);
     }
 

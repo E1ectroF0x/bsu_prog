@@ -3,5 +3,5 @@ export class Teacher {
   secondName: string;
   lastName: string;
   birthday: string;
-  departmentId: string;
+  departmentName: string;
 }
