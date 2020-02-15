@@ -12,6 +12,6 @@ public interface TeacherService {
     public List<TeacherDTO> getAllTeachers();
     public void saveTeacher(TeacherDTO teacher);
     //public void deleteTeacherById(Long id);
-    public void deleteTeacherByFIO(String name, String secondName, String lastName);
+    public void deleteTeacher(TeacherDTO model);
 
 }
