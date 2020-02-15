@@ -5,7 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity(name = "group")
+@Entity(name = "groupp")
 public class Group {
     private Long id;
     private String number_group;
