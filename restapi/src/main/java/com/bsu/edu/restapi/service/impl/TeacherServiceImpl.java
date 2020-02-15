@@ -18,8 +18,6 @@ import java.util.List;
 @Slf4j
 public class TeacherServiceImpl implements TeacherService {
 
-    private Teacher teacher = null;
-
     @Autowired
     private TeacherRepository teacherRepository;
 
@@ -29,9 +27,7 @@ public class TeacherServiceImpl implements TeacherService {
     @Autowired
     private DepartmentService departmentService;
 
-    public TeacherServiceImpl() {
-        this.teacher = new Teacher();
-    }
+    public TeacherServiceImpl() {}
 
     @Override
     public List<TeacherDTO> getAllTeachers() {
@@ -50,23 +46,24 @@ public class TeacherServiceImpl implements TeacherService {
                 + model.getLastName().substring(0, 1).toUpperCase();
 
         // TODO: make password generation
-        User savedUser = userService.saveUser(new User(username,"1111111", null, 10, null));
-        this.teacher.setName(model.getName());
-        this.teacher.setSurname(model.getSecondName());
-        this.teacher.setFathername(model.getLastName());
-        this.teacher.setBirthdate(model.getBirthday());
-        this.teacher.setDepartment_id(departmentService.getDepartmentByName(model.getDepartmentName()).getId());
-        this.teacher.setUser_id(savedUser.getId());
+        User savedUser = userService.saveUser(new User(username,"1111111", null, 10, null,""));
+        Teacher teacher = new Teacher();
+        teacher.setName(model.getName());
+        teacher.setSurname(model.getSecondName());
+        teacher.setFathername(model.getLastName());
+        teacher.setBirthdate(model.getBirthday());
+        teacher.setDepartment_id(departmentService.getDepartmentByName(model.getDepartmentName()).getId());
+        teacher.setUser_id(savedUser.getId());
         teacherRepository.save(teacher);
     }
 
     @Override
-    public void deleteTeacherByFIO(String name, String secondName, String lastName) {
+    public void deleteTeacher(TeacherDTO model) {
         List<Teacher> teachers = (List<Teacher>) teacherRepository.findAll();
         Teacher _teacher = teachers.stream()
-                .filter(teacher -> (teacher.getName().equals(name)
-                    && teacher.getSurname().equals(secondName)
-                    && teacher.getFathername().equals(lastName)))
+                .filter(teacher -> (teacher.getName().equals(model.getName())
+                    && teacher.getSurname().equals(model.getLastName())
+                    && teacher.getFathername().equals(model.getSecondName())))
                 .findFirst().orElse(null);
         if (_teacher != null) {
             teacherRepository.delete(_teacher);

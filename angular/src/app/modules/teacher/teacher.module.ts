@@ -6,6 +6,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {TeacherTableComponent} from './components/table/teacher-table.component';
 import {AddTeacherComponent} from './components/add/add-teacher.component';
 import {FormsModule} from '@angular/forms';
+import {FacultyService} from '../../services/faculty.service';
+import {DepartmentService} from '../../services/department.service';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import {FormsModule} from '@angular/forms';
     FormsModule
   ],
   providers: [
-    TeacherService
+    TeacherService,
+    FacultyService,
+    DepartmentService
   ],
   exports: [
     TeacherComponent

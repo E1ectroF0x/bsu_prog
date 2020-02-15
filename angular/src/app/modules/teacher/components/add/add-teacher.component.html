@@ -1,27 +1,37 @@
 <div class="container">
   <form method="post">
-    <div class="input-group">
-      <div class="input-option">
-        <label for="surname">Фамилия:<input type="text" placeholder="Иванов" id="surname" name="surname" [(ngModel)]="_teacher.secondName"></label>
+    <div class="row">
+      <div class="form-data">
+        <label for="lastName">Фамилия:</label>
+        <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="_teacher.lastName">
       </div>
-      <div class="input-option">
-        <label for="name">Имя:<input type="text" placeholder="Иван" id="name" name="name" [(ngModel)]="_teacher.name"></label>
+      <div class="form-data">
+        <label for="firstName">Имя:</label>
+        <input type="text" class="form-control" id="firstName" name="name" [(ngModel)]="_teacher.name">
       </div>
-      <div class="input-option">
-        <label for="lastname">Отчество:<input type="text" placeholder="Иванович" id="lastname" name="lastName" [(ngModel)]="_teacher.lastName"></label>
+      <div class="form-data">
+        <label for="secondName">Отчество:</label>
+        <input type="text" class="form-control" id="secondName" name="secondName" [(ngModel)]="_teacher.secondName">
       </div>
-    </div>
-    <div class="date-dep-group">
-      <div class="input-option-date">
+      <div class="form-data">
         <label for="birthday">Дата рождения:</label>
-        <input type="date" id="birthday" name="birthday" [(ngModel)]="_teacher.birthday">
+        <input type="date" class="form-control" id="birthday" name="birthday" [(ngModel)]="_teacher.birthday">
       </div>
-      <div class="input-option-dep">
-        <label for="dep">Кафедра:</label>
-        <input type="number" id="dep" name="departmentId" [(ngModel)]="_teacher.departmentId">
-      </div>
-      <button class="btn-submit" type="submit" (click)="_saveTeacher(_teacher)">Подтвердить</button>
     </div>
-
+    <div class="row">
+      <div class="form-data">
+        <label for="faculties">Факультет:</label>
+        <select class="custom-select" id="faculties" [(ngModel)]="_selectedFaculty" name="faculty-selector" (change)="_loadDepartments()">
+          <option *ngFor="let faculty of _faculties">{{faculty.name}}</option>
+        </select>
+      </div>
+      <div class="form-data">
+        <label for="department">Кафедра:</label>
+        <select class="custom-select" id="department" name="department-selector" [(ngModel)]="_teacher.departmentName">
+          <option *ngFor="let department of _departments">{{department.name}}</option>
+        </select>
+      </div>
+      <button type="button" class="btn btn-primary" (click)="_saveTeacher(_teacher)">Добавить преподавателя</button>
+    </div>
   </form>
 </div>

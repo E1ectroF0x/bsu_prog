@@ -22,8 +22,8 @@ public class TeacherController {
     }
 
     @DeleteMapping
-    public void deleteTeacherByFIO(@RequestParam String name, @RequestParam String secondName, @RequestParam String lastName) {
-        teacherService.deleteTeacherByFIO(name, secondName, lastName);
+    public void deleteTeacherByFIO(@RequestBody TeacherDTO model) {
+        teacherService.deleteTeacher(model);
     }
 
     @PostMapping
