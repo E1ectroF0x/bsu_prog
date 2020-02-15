@@ -14,15 +14,17 @@ public class User {
     private String refresh_token;
     private Integer status;
     private String auth_key;
+    private String image;
 
     public User() { }
 
-    public User(String username, String password_hash, String refresh_token, Integer status, String auth_key) {
+    public User(String username, String password_hash, String refresh_token, Integer status, String auth_key, String image) {
         this.username = username;
         this.password_hash = password_hash;
         this.refresh_token = refresh_token;
         this.status = status;
         this.auth_key = auth_key;
+        this.image = image;
     }
 
 
@@ -74,5 +76,13 @@ public class User {
 
     public void setAuth_key(String auth_key) {
         this.auth_key = auth_key;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }

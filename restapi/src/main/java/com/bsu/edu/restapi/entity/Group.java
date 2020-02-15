@@ -7,7 +7,7 @@ import javax.persistence.Id;
 
 @Entity(name = "group")
 public class Group {
-    private long id;
+    private Long id;
     private String number_group;
     private int course;
     private int max_students_amount;
