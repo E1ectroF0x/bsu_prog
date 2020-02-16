@@ -30,7 +30,7 @@ public class StudentController {
         this.studentService.saveStudent(model);
     }
 
-    @PostMapping
+    @PostMapping(value = "/ios")
     public IOSStudentDTO getStudent(@RequestBody LoginDTO model){
         return this.iosStudentService.getStudent(model);
     }

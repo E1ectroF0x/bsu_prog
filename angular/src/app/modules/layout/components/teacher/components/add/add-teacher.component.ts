@@ -1,11 +1,11 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnDestroy, OnInit, Output} from '@angular/core';
 import {Teacher} from '../../models/teacher.model';
-import {TeacherService} from '../../../../services/teacher.service';
+import {TeacherService} from '../../../../../../services/teacher.service';
 import {FacultyModel} from '../../models/faculty.model';
-import {FacultyService} from '../../../../services/faculty.service';
+import {FacultyService} from '../../../../../../services/faculty.service';
 import {Subscription} from 'rxjs';
 import {DepartmentModel} from '../../models/department.model';
-import {DepartmentService} from '../../../../services/department.service';
+import {DepartmentService} from '../../../../../../services/department.service';
 
 
 @Component({
@@ -14,6 +14,8 @@ import {DepartmentService} from '../../../../services/department.service';
   styleUrls: ['./add-teacher.component.css']
 })
 export class AddTeacherComponent implements OnInit, OnDestroy {
+
+  @Output() public _update: EventEmitter<any> = new EventEmitter<any>();
 
   public _teacher: Teacher = new Teacher();
   public _faculties: FacultyModel[];
@@ -46,7 +48,10 @@ export class AddTeacherComponent implements OnInit, OnDestroy {
 
   public _saveTeacher(model: Teacher): void {
     console.log(model);
-    this.subscriptions.push(this.teacherService.save(model).subscribe(data => console.log("OKAY")))
+    this.subscriptions.push(this.teacherService.save(model).subscribe(data => {
+      console.log("OKAY");
+      this._update.emit();
+    }))
   }
 
   ngOnDestroy(): void {

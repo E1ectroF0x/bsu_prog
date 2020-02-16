@@ -1,13 +1,8 @@
-.btn-group {
-  margin-top: 34px;
-  margin-left: 87px;
-}
-
 .content {
  /* display: flex;
   justify-content: space-between;
   margin-top: 60px; */
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .btn {
@@ -21,6 +16,27 @@
   box-shadow: 0 3px 6px #0A3470;
 }
 
-.table-component {
-  margin-top: 20px;
+.add-component {
+  margin-left: 10px;
 }
+
+.table-component {
+  margin-left: 40px;
+  margin-top: 30px;
+}
+
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+app-navbar {
+  left: 0;
+  position: fixed;
+}
+
+.side-wrapper {
+  width: calc(100% - 418px);
+  margin-left: 418px;
+}
+

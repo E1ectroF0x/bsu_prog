@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {Teacher} from '../modules/teacher/models/teacher.model';
+import {Teacher} from '../modules/layout/components/teacher/models/teacher.model';
 
 
 @Injectable()
@@ -16,6 +16,7 @@ export class TeacherService {
   save(model: Teacher): Observable<void> {
     return this.http.post<void>('/api/teachers', model);
   }
+
 
   delete(model: Teacher): Observable<void> {
     const fd = new FormData();

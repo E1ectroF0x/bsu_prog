@@ -32,3 +32,15 @@ table td {
   box-shadow: none;
 }
 */
+
+#teacher-table th {
+  width: 200px;
+}
+
+.thead {
+  background-color: #0A3470;
+  color: #ffffff;
+}
+
+.column {
+}
