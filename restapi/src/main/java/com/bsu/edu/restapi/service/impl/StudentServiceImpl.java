@@ -54,7 +54,7 @@ public class StudentServiceImpl implements StudentService {
     public void saveStudent(StudentDTO model) {
         String username = "rct." + model.getSecondName() + model.getName().substring(0, 1).toUpperCase()
                 + model.getLastName().substring(0, 1).toUpperCase();
-        User savedUser = userService.saveUser(new User(username,"1111111", null, 10, null));
+        User savedUser = userService.saveUser(new User(username,"1111111", null, 10, null, ""));
         this.student.setName(model.getName());
         this.student.setSurname(model.getSecondName());
         this.student.setFathername(model.getLastName());

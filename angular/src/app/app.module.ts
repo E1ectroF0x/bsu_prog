@@ -6,9 +6,11 @@ import {LayoutModule} from './modules/layout/layout.module';
 import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from './modules/layout/components/home/components/home.component';
 import {TeacherModule} from './modules/teacher/teacher.module';
+import {LoginComponent} from './modules/layout/components/login/login.component';
 
 const appRoutes: Routes = [
-  {path: '', component: HomeComponent}
+  {path: '', component: HomeComponent},
+  {path: 'login', component: LoginComponent}
 ];
 
 @NgModule({

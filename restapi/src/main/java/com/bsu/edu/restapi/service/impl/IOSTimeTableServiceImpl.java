@@ -89,24 +89,54 @@ public class IOSTimeTableServiceImpl implements IOSTimeTableService {
         List<LessonTime> lessonTimes = (List<LessonTime>) lessonTimeRepository.findAll();
         LessonTime lessonTime = lessonTimes.stream().filter(lesson -> lesson.getLesson_id().equals(model.getId()))
                 .findFirst().orElse(null);
+        if (lessonTime == null) {
+            return  new IOSLesson();
+        }
 
         List<Group> groups = (List<Group>) groupRepository.findAll();
         Group _group = groups.stream().filter(group -> model.getGroup_id().equals(group.getId())).findFirst().orElse(null);
+        if (_group == null) {
+            return new IOSLesson();
+        }
         Speciality speciality = specialityRepository.findById(_group.getSpeciality_id()).orElse(null);
+        if (speciality == null) {
+            return new IOSLesson();
+        }
         Faculty faculty = facultyRepository.findById(speciality.getFaculty_id()).orElse(null);
+        if (faculty == null) {
+            return new IOSLesson();
+        }
         Building building = buildingRepository.findById(faculty.getBuilding_id()).orElse(null);
+        if (building == null) {
+            return new IOSLesson();
+        }
 
         List<AudienceLesson> audienceLessons = (List<AudienceLesson>) audienceLessonRepository.findAll();
         AudienceLesson audienceLesson = audienceLessons.stream().filter(lesson -> (lesson.getLesson_id())
                 .equals(model.getId())).findFirst().orElse(null);
+        if (audienceLesson == null) {
+            return new IOSLesson();
+        }
         Audience audience = audienceRepository.findById(audienceLesson.getId()).orElse(null);
+        if (audience == null) {
+            return new IOSLesson();
+        }
 
         List<LessonTeacher> lessonTeachers = (List<LessonTeacher>) lessonTeacherRepository.findAll();
         LessonTeacher lessonTeacher = lessonTeachers.stream().filter(lesson ->
                 lesson.getLesson_id().equals(model.getId())).findFirst().orElse(null);
+        if (lessonTeacher == null) {
+            return new IOSLesson();
+        }
         Teacher teacher = teacherRepository.findById(lessonTeacher.getTeacher_id()).orElse(null);
+        if (teacher == null) {
+            return new IOSLesson();
+        }
 
         Subject subject = subjectRepository.findById(model.getSubject_id()).orElse(null);
+        if (subject == null) {
+            return new IOSLesson();
+        }
 
         IOSLesson iosLesson = new IOSLesson();
         iosLesson.setTime_end(lessonTime.getTime_end());

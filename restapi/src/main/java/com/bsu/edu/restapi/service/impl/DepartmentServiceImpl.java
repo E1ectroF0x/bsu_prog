@@ -47,14 +47,14 @@ public class DepartmentServiceImpl implements DepartmentService {
 
     @Override
     public DepartmentDTO getDepartmentById(Long id) {
-        Department department = departmentRepository.findById(id).orElse(null);
+        Department department = departmentRepository.findById(id).orElse(new Department());
         return convert(department);
     }
 
     @Override
     public Department getDepartmentByName(String name) {
         List<Department> departments = (List<Department>) departmentRepository.findAll();
-        return departments.stream().filter(item -> item.getName().equals(name)).findFirst().orElse(null);
+        return departments.stream().filter(item -> item.getName().equals(name)).findFirst().orElse(new Department());
     }
 
     private DepartmentDTO convert(Department department) {

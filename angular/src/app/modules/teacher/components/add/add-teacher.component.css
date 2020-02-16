@@ -53,3 +53,18 @@ input, label {
 }
 
  */
+
+.container {
+  margin-left: 20px;
+}
+
+.form-data {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.submit-btn {
+  margin-left: 10px;
+  margin-top: 10px;
+  background-color: #0A3470;
+}

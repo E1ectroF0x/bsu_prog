@@ -25,6 +25,9 @@ public class GroupServiceImpl implements GroupService {
         //Group group = groupRepository.findById(id).orElse(null);
         List<Group> groups = (List<Group>) groupRepository.findAll();
         Group model = groups.stream().filter(group -> id.equals(group.getId())).findFirst().orElse(null);
+        if (model == null) {
+            return new GroupDTO();
+        }
         return convert(model);
     }
 
