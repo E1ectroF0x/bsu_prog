@@ -286,8 +286,8 @@
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="teacher" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6l-5E-ntF">
-                                                    <rect key="frame" x="16" y="85" width="390" height="20.333333333333329"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="teacher" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6l-5E-ntF">
+                                                    <rect key="frame" x="16" y="89" width="390" height="20.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -339,7 +339,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Календарь" id="AbJ-Hg-Szh"/>
                     <connections>
-                        <outlet property="Calendar" destination="GgA-99-KW7" id="C0l-V9-gfz"/>
+                        <outlet property="calendar" destination="GgA-99-KW7" id="C0l-V9-gfz"/>
                         <outlet property="dateLabel" destination="wBL-NI-FYb" id="hlp-sp-DTa"/>
                         <outlet property="scheduleView" destination="M0w-XR-ACb" id="nT3-2Z-tUS"/>
                         <outlet property="weekdayStack" destination="U38-dt-hqu" id="b1Y-gP-Zb3"/>

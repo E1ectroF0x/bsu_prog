@@ -1,11 +1,3 @@
-//
-//  ExtensionCalendarViewController.swift
-//  tableSettigins
-//
-//  Created by Li on 12/21/19.
-//  Copyright © 2019 Li. All rights reserved.
-//
-
 import UIKit
 
 extension CalendarViewController: UITableViewDataSource, UITableViewDelegate {
@@ -56,20 +48,25 @@ extension CalendarViewController: UICollectionViewDelegate, UICollectionViewData
     // MARK: Calendar(UICollectionView) protocols methods
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        switch direction {
-        case 0:
-            return DaysInMonth[month] + numberOfEmptyBoxes
-        case 1...:
-            return DaysInMonth[month] + nextNumberOfEmptyBox
-        case -1:
-            return DaysInMonth[month] + previosNumberOfEmptyBox
-        default:
-            fatalError()
-        }
+
+        return DaysInMonth[month] + numberOfEmptyBoxes
+//        switch direction {
+//        case 0:
+//            return DaysInMonth[month] + numberOfEmptyBoxes
+//        case 1...:
+//            return DaysInMonth[month] + nextNumberOfEmptyBox
+//        case -1:
+//            return DaysInMonth[month] + previosNumberOfEmptyBox
+//        default:
+//            fatalError()
+//        }
     }
     
+    
+    //MARK: Changed Method
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        day = indexPath.row + 1
+        day = indexPath.row + 1 - numberOfEmptyBoxes
         collectionView.reloadData()
         getLessons()
         scheduleView.reloadData()
@@ -77,16 +74,17 @@ extension CalendarViewController: UICollectionViewDelegate, UICollectionViewData
     
     func getLessons() {
         var dayString = String()
-        switch direction {
-        case 0:
-             dayString = "\(day - numberOfEmptyBoxes)"
-        case 1:
-             dayString = "\(day - nextNumberOfEmptyBox)"
-        case -1:
-             dayString = "\(day - previosNumberOfEmptyBox)"
-        default:
-            fatalError()
-        }
+        dayString = "\(day)"
+//        switch direction {
+//        case 0:
+//             dayString = "\(day - numberOfEmptyBoxes)"
+//        case 1:
+//             dayString = "\(day - nextNumberOfEmptyBox)"
+//        case -1:
+//             dayString = "\(day - previosNumberOfEmptyBox)"
+//        default:
+//            fatalError()
+//        }
         
         let api = ApiRequest(endpoint: "api/get-shedule-day-list?date=\(year)-\(month + 1)-\(dayString)")
         print("\(year)-\(month + 1)-\(dayString)")
@@ -109,17 +107,17 @@ extension CalendarViewController: UICollectionViewDelegate, UICollectionViewData
         if cell.isHidden {
             cell.isHidden = false
         }
-        
-        switch direction {
-        case 0:
-            cell.cellDateLabel.text = "\(indexPath.row + 1 - numberOfEmptyBoxes)"
-        case 1:
-            cell.cellDateLabel.text = "\(indexPath.row + 1 - nextNumberOfEmptyBox)"
-        case -1:
-            cell.cellDateLabel.text = "\(indexPath.row + 1 - previosNumberOfEmptyBox)"
-        default:
-            fatalError()
-        }
+          cell.cellDateLabel.text = "\(indexPath.row + 1 - numberOfEmptyBoxes)"
+//        switch direction {
+//        case 0:
+//            cell.cellDateLabel.text = "\(indexPath.row + 1 - numberOfEmptyBoxes)"
+//        case 1:
+//            cell.cellDateLabel.text = "\(indexPath.row + 1 - numberOfEmptyBoxes)"
+//        case -1:
+//            cell.cellDateLabel.text = "\(indexPath.row + 1 - numberOfEmptyBoxes)"
+//        default:
+//            fatalError()
+//        }
         
         if Int(cell.cellDateLabel.text!)! < 1 {
             cell.isHidden = true
@@ -134,7 +132,7 @@ extension CalendarViewController: UICollectionViewDelegate, UICollectionViewData
             break
         }
         
-        if  indexPath.row + 1 == day{
+        if  indexPath.row + 1 == day + numberOfEmptyBoxes{
             cell.backgroundColor = Constants.customBlue
             cell.layer.cornerRadius = cell.frame.width / 2
             cell.cellDateLabel.textColor = UIColor.white

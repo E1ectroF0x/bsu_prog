@@ -9,16 +9,16 @@
 import Foundation
 
 let date = Date()
-let calendar = Calendar.current
+let calendarForEblya = Calendar.current
 
-var day = calendar.component(.day, from: date)
-var weekday = calendar.component(.weekday, from: date)
-var month = calendar.component(.month, from: date) - 1
-var year = calendar.component(.year, from: date)
+var day = calendarForEblya.component(.day, from: date)
+var weekday = calendarForEblya.component(.weekday, from: date)
+var month = calendarForEblya.component(.month, from: date) - 1
+var year = calendarForEblya.component(.year, from: date)
 
-let current_day_i = calendar.component(.day, from: date)
-let current_month_i = calendar.component(.month, from: date) - 1
-var current_year_i = calendar.component(.year, from: date)
+let current_day_i = calendarForEblya.component(.day, from: date)
+let current_month_i = calendarForEblya.component(.month, from: date) - 1
+var current_year_i = calendarForEblya.component(.year, from: date)
 
 
 
