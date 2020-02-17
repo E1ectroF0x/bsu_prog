@@ -2,7 +2,7 @@
   <div class="title">
     <span>{{title}}</span>
   </div>
-  <div class="logout">
-    <span>Выход</span>
+  <div class="logout" *ngIf="_isAuth()">
+    <span class="logout-btn" (click)="_logout()">Выход</span>
   </div>
 </nav>

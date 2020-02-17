@@ -19,4 +19,16 @@ img {
   margin-left: 23px;
 }
 
+.selected span {
+  color: #ffffff;
+}
+
+.selected svg {
+  fill: #CECECE;
+}
+
+.selected {
+  background-color: #0A3470;
+}
+
 

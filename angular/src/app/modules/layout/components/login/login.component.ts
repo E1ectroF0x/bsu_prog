@@ -28,9 +28,9 @@ export class LoginComponent implements OnInit, OnDestroy {
           this.storageService.setToken(authToken.token);
           this.subscriptions.push(this.usersService.getAuthorizedUser().subscribe((userModel: UserModel) => {
             this.storageService.setCurrentUser(userModel);
+            this.router.navigateByUrl('');
           }))
         }
-      this.router.navigateByUrl('');
     }))
   }
 

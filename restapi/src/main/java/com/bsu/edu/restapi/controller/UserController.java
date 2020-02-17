@@ -2,14 +2,17 @@ package com.bsu.edu.restapi.controller;
 
 import com.bsu.edu.restapi.entity.User;
 import com.bsu.edu.restapi.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Slf4j
 @RestController
 @RequestMapping(value = "api/users")
 public class UserController {
@@ -31,8 +34,10 @@ public class UserController {
     @GetMapping("/current")
     public User getCurrentUser() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        // todo exclude password from model!
-        return userService.getUserByUsername(((org.springframework.security.core.userdetails.User) authentication.getPrincipal()).getUsername());
+        SecurityContext context = SecurityContextHolder.getContext();
+        log.info("CONTEXT: {}", SecurityContextHolder.getContext());
+        User user = userService.getUserByUsername(((org.springframework.security.core.userdetails.User) authentication.getPrincipal()).getUsername());
+        return user;
     }
 
 }

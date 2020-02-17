@@ -3,6 +3,7 @@ package com.bsu.edu.restapi.controller;
 import com.bsu.edu.restapi.DTO.LoginDTO;
 import com.bsu.edu.restapi.entity.AuthToken;
 import com.bsu.edu.restapi.security.TokenProvider;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -11,7 +12,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
-//AuthenticationController has API exposed to generate JWT token
+@Slf4j
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api/token")
@@ -32,6 +33,7 @@ public class AuthenticationController {
                 )
         );
         SecurityContextHolder.getContext().setAuthentication(authentication);
+        log.info("AUTH CONTEXT: {}", SecurityContextHolder.getContext());
         final String token = tokenProvider.generateToken(authentication);
         return ResponseEntity.ok(new AuthToken(token));
     }

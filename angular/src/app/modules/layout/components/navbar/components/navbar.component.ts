@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 
 @Component({
@@ -7,5 +7,7 @@ import {Component} from '@angular/core';
   styleUrls: ['navbar.component.css']
 })
 export class NavbarComponent {
+
+  @Input() public _selectedPage: string;
 
 }
