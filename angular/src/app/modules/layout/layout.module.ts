@@ -9,6 +9,8 @@ import {UsersService} from '../../services/user.service';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import {AuthService} from '../../services/auth.service';
+import {TimetableComponent} from './components/timetable/components/timetable.component';
+import {TimetableModule} from './components/timetable/timetable.module';
 
 
 @NgModule({
@@ -20,6 +22,7 @@ import {AuthService} from '../../services/auth.service';
     NavbarModule,
     HomeModule,
     TeacherModule,
+    TimetableModule,
     ReactiveFormsModule,
     FormsModule,
     RouterModule

@@ -63,12 +63,15 @@ public class IOSTimeTableServiceImpl implements IOSTimeTableService {
         List<IOSDTO> models = new ArrayList<>();
         List<Lesson> lessons = (List<Lesson>) lessonRepository.findAll();
         int monthdays;
+        /*
         if (month < 9) {
             monthdays = YearMonth.of(2019, month).lengthOfMonth();
         }
         else {
             monthdays = YearMonth.of(2020, month).lengthOfMonth();
         }
+         */
+        monthdays = YearMonth.of(2020, month).lengthOfMonth();
         for (int i=1; i<=monthdays; i++) {
             final int day = i;
             List<IOSLesson> iosLessons = new ArrayList<>();
@@ -77,6 +80,7 @@ public class IOSTimeTableServiceImpl implements IOSTimeTableService {
             IOSDTO model = new IOSDTO();
             model.setDay(day);
             model.setLessons(iosLessons);
+            models.add(model);
         }
         return models;
     }

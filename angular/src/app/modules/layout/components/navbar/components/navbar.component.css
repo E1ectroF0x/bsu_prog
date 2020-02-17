@@ -7,6 +7,7 @@ img {
   width: 419px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .option svg {
@@ -17,6 +18,14 @@ img {
   color: #0A3470;
   font-size: 26px;
   margin-left: 23px;
+}
+
+.option:hover {
+  background-color: #ececec;
+}
+
+.selected:hover {
+  background-color: #0A3470;
 }
 
 .selected span {

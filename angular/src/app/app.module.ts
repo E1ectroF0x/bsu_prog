@@ -8,12 +8,13 @@ import {HomeComponent} from './modules/layout/components/home/components/home.co
 import {TeacherModule} from './modules/layout/components/teacher/teacher.module';
 import {LoginComponent} from './modules/layout/components/login/login.component';
 import {TeacherComponent} from './modules/layout/components/teacher/components/teacher.component';
+import {TimetableComponent} from './modules/layout/components/timetable/components/timetable.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'teachers', component: TeacherComponent}
-  //{path: 'timetable', component: TimetableComponent}
+  {path: 'teachers', component: TeacherComponent},
+  {path: 'timetable', component: TimetableComponent}
 ];
 
 @NgModule({
@@ -24,7 +25,6 @@ const appRoutes: Routes = [
     BrowserModule,
     LayoutModule,
     TeacherModule,
-    //TimetableModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

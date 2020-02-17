@@ -1,6 +1,6 @@
 <img src="./assets/logo-nav-1.png" alt="logo">
 <div class="nav-list">
-  <div class="option" [class.selected]="_selectedPage == 'Расписание'">
+  <div class="option" [class.selected]="_selectedPage == 'Расписание'" (click)="_click_redirect('/timetable')">
     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
       <path id="iconmonstr-calendar-6" d="M30,2.5V30H0V2.5H3.75V3.75a2.5,2.5,0,1,0,5,0V2.5h12.5V3.75a2.5,2.5,0,0,0,5,0V2.5ZM27.5,10H2.5V27.5h25ZM25,1.25a1.25,1.25,0,0,0-2.5,0v2.5a1.25,1.25,0,0,0,2.5,0ZM7.5,3.75a1.25,1.25,0,1,1-2.5,0V1.25a1.25,1.25,0,1,1,2.5,0ZM8.75,18.411l1.069-.989a20.656,20.656,0,0,1,3.45,2.067A29.841,29.841,0,0,1,20.9,12.951l.349.8c-2.676,2.336-4.636,4.936-7.459,10A53.49,53.49,0,0,0,8.75,18.411Z"/>
     </svg>
@@ -24,7 +24,7 @@
     </svg>
     <span class="option-text">Специальность</span>
   </div>
-  <div class="option" [class.selected]="_selectedPage == 'Преподаватели'">
+  <div class="option" [class.selected]="_selectedPage == 'Преподаватели'" (click)="_click_redirect('/teachers')">
     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
       <path id="iconmonstr-school-25" d="M17.75,21.9A19.618,19.618,0,0,1,26,19.4v8.1A32.952,32.952,0,0,0,17.75,30Zm-1.5,0A19.618,19.618,0,0,0,8,19.4v8.1A32.952,32.952,0,0,1,16.25,30ZM6.5,25.547a16.647,16.647,0,0,1-4.494-1.8L2,21.22c-.012-2.659.132-4.18,3.972-4.886,4.208-.774,8.7-1.646,6.362-4.4C6.482,5.028,11.12,0,17,0s10.494,4.989,4.665,11.932c-2.294,2.731,2.064,3.61,6.363,4.4,3.855.71,3.986,2.239,3.971,4.918l0,2.5a16.647,16.647,0,0,1-4.494,1.8v-7.5l-1.623.111A21.292,21.292,0,0,0,17,20.815a21.292,21.292,0,0,0-8.877-2.66L6.5,18.043v7.5Z" transform="translate(-2)" fill-rule="evenodd"/>
     </svg>

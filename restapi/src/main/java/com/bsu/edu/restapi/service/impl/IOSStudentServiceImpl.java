@@ -41,7 +41,9 @@ public class IOSStudentServiceImpl implements IOSStudentService {
         User _user = users.stream().filter(user -> model.getLogin().equals(user.getUsername())
                                             && model.getPassword().equals(user.getPassword_hash()))
                                                 .findFirst().orElse(null);
-        Student _student = studentRepository.findById(_user.getId()).orElse(null);
+        //Student _student = studentRepository.findById(_user.getId()).orElse(null);
+        List<Student> students = (List<Student>) studentRepository.findAll();
+        Student _student = students.stream().filter(st -> st.getUser_id().equals(_user.getId())).findFirst().orElse(null);
         Group _group = groupRepository.findById(_student.getGroup_id()).orElse(null);
         Speciality _speciality = specialityRepository.findById(_group.getSpeciality_id()).orElse(null);
         Faculty _faculty = facultyRepository.findById(_speciality.getFaculty_id()).orElse(null);
