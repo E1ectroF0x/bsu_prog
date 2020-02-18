@@ -5,13 +5,13 @@ import java.util.List;
 public class IOSDTO {
 
     private int day;
-    private List<IOSLesson> lessons;
+    private List<IOSLesson> data;
 
     public IOSDTO() { }
 
-    public IOSDTO(int day, List<IOSLesson> lessons) {
+    public IOSDTO(int day, List<IOSLesson> data) {
         this.day = day;
-        this.lessons = lessons;
+        this.data = data;
     }
 
     public int getDay() {
@@ -22,11 +22,11 @@ public class IOSDTO {
         this.day = day;
     }
 
-    public List<IOSLesson> getLessons() {
-        return lessons;
+    public List<IOSLesson> getData() {
+        return data;
     }
 
-    public void setLessons(List<IOSLesson> lessons) {
-        this.lessons = lessons;
+    public void setData(List<IOSLesson> data) {
+        this.data = data;
     }
 }

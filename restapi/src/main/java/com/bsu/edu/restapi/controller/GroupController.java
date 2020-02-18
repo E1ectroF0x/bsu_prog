@@ -30,4 +30,9 @@ public class GroupController {
         groupService.set(group);
     }
 
+    @GetMapping(value = "/all/{name}")
+    public List<GroupDTO> getAllGroupsBySpecialityName(@PathVariable String name){
+        return groupService.getAllGroupsBySpecialityName(name);
+    }
+
 }

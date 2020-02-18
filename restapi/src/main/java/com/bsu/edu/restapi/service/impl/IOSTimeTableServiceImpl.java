@@ -79,7 +79,7 @@ public class IOSTimeTableServiceImpl implements IOSTimeTableService {
                     .forEach(lesson -> iosLessons.add(convert(lesson)));
             IOSDTO model = new IOSDTO();
             model.setDay(day);
-            model.setLessons(iosLessons);
+            model.setData(iosLessons);
             models.add(model);
         }
         return models;

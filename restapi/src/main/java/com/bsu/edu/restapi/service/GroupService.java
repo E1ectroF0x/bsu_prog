@@ -7,9 +7,10 @@ import java.util.List;
 
 public interface GroupService {
 
-    public GroupDTO getGroupById(Long id);
-    public List<GroupDTO> getAll();
-    public void set(Group group);
-    public void deleteById(Long id);
-    public Group getGroupByDTO(GroupDTO model);
+    GroupDTO getGroupById(Long id);
+    List<GroupDTO> getAll();
+    List<GroupDTO> getAllGroupsBySpecialityName(String name);
+    void set(Group group);
+    void deleteById(Long id);
+    Group getGroupByDTO(GroupDTO model);
 }

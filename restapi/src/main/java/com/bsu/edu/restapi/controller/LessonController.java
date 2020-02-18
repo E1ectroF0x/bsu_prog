@@ -23,7 +23,7 @@ public class LessonController {
 
     @GetMapping
     public List<LessonDTO> getLessonByGroup(@RequestBody GroupDTO group){
-        return lessonService.getLessonByGroup(group);
+        return lessonService.getLessonsByGroup(group);
     }
 
     @GetMapping(value = "/{month}")

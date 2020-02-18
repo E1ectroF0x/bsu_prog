@@ -33,7 +33,7 @@ public class LessonServiceImpl implements LessonService {
     }
 
     @Override
-    public List<LessonDTO> getLessonByGroup(GroupDTO group) {
+    public List<LessonDTO> getLessonsByGroup(GroupDTO group) {
         List<Lesson> lessons = (List<Lesson>) lessonRepository.findAll();
         List<LessonDTO> _lessons = new ArrayList<>(Collections.emptyList());
         lessons.stream().filter(lesson -> lesson.getGroup_id().equals(groupService.getGroupByDTO(group).getId()))
