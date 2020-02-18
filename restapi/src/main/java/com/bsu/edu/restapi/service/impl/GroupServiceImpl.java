@@ -2,6 +2,7 @@ package com.bsu.edu.restapi.service.impl;
 
 import com.bsu.edu.restapi.DTO.GroupDTO;
 import com.bsu.edu.restapi.entity.Group;
+import com.bsu.edu.restapi.entity.Speciality;
 import com.bsu.edu.restapi.repository.GroupRepository;
 import com.bsu.edu.restapi.service.GroupService;
 import com.bsu.edu.restapi.service.SpecialityService;
@@ -37,6 +38,18 @@ public class GroupServiceImpl implements GroupService {
          List<GroupDTO> _groups = new ArrayList<>();
          groups.forEach(group -> _groups.add(convert(group)));
          return _groups;
+    }
+
+    @Override
+    public List<GroupDTO> getAllGroupsBySpecialityName(String name) {
+        List<Speciality> specialities = new ArrayList<>();
+        List<GroupDTO> groupDTOS = new ArrayList<>();
+        List<Group> groups = new ArrayList<>();
+        Speciality speciality = specialities.stream().filter(speciality1 -> speciality1.getName().equals(name))
+                                                        .findFirst().orElse(null);
+        groups.stream().filter(group -> group.getSpeciality_id().equals(speciality.getId()))
+                .forEach(group -> groupDTOS.add(convert(group)));
+        return groupDTOS;
     }
 
     @Override

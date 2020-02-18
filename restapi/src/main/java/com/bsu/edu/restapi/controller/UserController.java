@@ -35,9 +35,15 @@ public class UserController {
     public User getCurrentUser() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         SecurityContext context = SecurityContextHolder.getContext();
-        log.info("CONTEXT: {}", SecurityContextHolder.getContext());
         User user = userService.getUserByUsername(((org.springframework.security.core.userdetails.User) authentication.getPrincipal()).getUsername());
         return user;
     }
+
+    /*
+    Get all groups by speciality name
+    Get all specialities by faculty name
+    Get lessons By Group
+    */
+
 
 }

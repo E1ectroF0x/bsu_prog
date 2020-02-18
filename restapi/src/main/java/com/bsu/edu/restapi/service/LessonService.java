@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface LessonService {
 
-    public List<LessonDTO> getLessonByGroup(GroupDTO group);
+    public List<LessonDTO> getLessonsByGroup(GroupDTO group);
     public void saveLesson(LessonDTO model);
     public void deleteLesson(LessonDTO group);
     /*
