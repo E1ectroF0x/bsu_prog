@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+struct MonthCalendar: Decodable {
+    var monthLessons: [DataCalendar]
+}
+
 struct DataCalendar: Decodable {
     var data: [Lesson]
     var status: String

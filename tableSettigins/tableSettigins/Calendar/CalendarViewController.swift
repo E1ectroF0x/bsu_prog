@@ -28,7 +28,7 @@ class CalendarViewController: UIViewController{
    
     
     
-    var numberOfEmptyBoxes = 2    // The number of empty cells at the start of the current month
+    var numberOfEmptyBoxes = 2   // The number of empty cells at the start of the current month
   //  var nextNumberOfEmptyBox = Int()
    // var previosNumberOfEmptyBox = Int()
    // var direction = 0                   // == 0 if current, == 1 if future, == -1 if in past
@@ -84,7 +84,7 @@ class CalendarViewController: UIViewController{
             year -= 1
          //   direction = -1
             
-            DaysInMonth[1] = year % 4 == 0 ?29 :28
+            DaysInMonth[1] = year % 4 == 0 ? 29 : 28
             getNumberOfEmptyCellsInCollectionView(calendar: calendarForEblya, month: month, year: year)
                        
      // GetStartDateDayPosition()
@@ -103,7 +103,7 @@ class CalendarViewController: UIViewController{
             calendar.reloadData()
         }
         day = current_month_i == month && current_year_i == year ? current_day_i: -1
-                   
+        layout()
     }
     
     
@@ -135,8 +135,8 @@ class CalendarViewController: UIViewController{
             dateLabel.text = "\(currentMonth) " + "\(year)"
             calendar.reloadData()
         }
-         day = current_month_i == month && current_year_i == year ? current_day_i: -1
-                   
+        day = current_month_i == month && current_year_i == year ? current_day_i: -1
+        layout()
     }
     
     
@@ -176,23 +176,24 @@ class CalendarViewController: UIViewController{
     //MARK: methods for eblya with Layout
     func layout() {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 4, bottom: 0, right: 4)
         let side = (view.frame.width - leftAndRightPaddings) / numberOfItems
         layout.itemSize = CGSize(width: side, height: side)
         calendar.collectionViewLayout = layout
-        let constant = side * CGFloat((numberOfEmptyBoxes + 7 + DaysInMonth[month]) / 7).rounded(.up)
+        //let constant = side * CGFloat((numberOfEmptyBoxes + 7 + DaysInMonth[month]) / 7).rounded(.up)
+        let weeks = (CGFloat(numberOfEmptyBoxes + DaysInMonth[month]) / 7).rounded(.up)
+        let my = (side + 16) * weeks
+        view.updateConstraints()
         calendar.translatesAutoresizingMaskIntoConstraints = false
         scheduleView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             calendar.topAnchor.constraint(equalTo: weekdayStack.topAnchor, constant: 30),
             calendar.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
             calendar.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
-            calendar.widthAnchor.constraint(equalToConstant: view.frame.width),
-            calendar.heightAnchor.constraint(equalToConstant: constant + 100),
+            calendar.heightAnchor.constraint(equalToConstant: my),
             scheduleView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
             scheduleView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
             scheduleView.widthAnchor.constraint(equalToConstant: view.frame.width),
-            scheduleView.heightAnchor.constraint(equalToConstant: view.frame.height - constant - 300)])
-                                    
+            scheduleView.topAnchor.constraint(equalTo: calendar.bottomAnchor, constant: 10)])
     }
 }
